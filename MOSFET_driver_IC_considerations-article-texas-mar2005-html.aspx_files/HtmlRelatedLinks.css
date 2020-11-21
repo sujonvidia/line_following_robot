@@ -1,0 +1,222 @@
+#ERA_RC {
+}
+
+.zeroHtmlResultsLink
+{
+	cursor:hand;
+}
+
+.zeroHtmlResultsLink img
+{
+	border: none;
+}
+
+/* Main related links container. */
+.eraLinksContainer 
+{
+	padding:3px 0 0 0;	
+	background: #fff;
+	border-left:1px solid #4682B4;
+	border-right:1px solid #4682B4;
+	
+}
+
+/* Related Microsites container. */
+div.eraRelatedMicrosites,div.eraMoreRelatedMicrosites
+{
+
+	padding:5px 10px 0 10px;
+	background:transparent;
+	
+}
+
+.eraHeader, .eraeraHeader
+{
+}
+
+.eraRelatedMicrosites .eraeraHeader
+{
+	display:none;
+}
+
+.eraRelatedContent, .eraRelatedContent, .eraRelatedNews
+{
+}
+
+/* Styles for the organization sort */
+.eraRelatedMicrosites .eraIndentedSiteName
+{
+	font-weight:bold;
+	padding:0 0 0 0;
+}
+
+.eraRelatedMicrosites .eraIndentedLink
+{
+	padding:0 0 0 0;
+}
+
+.eraMoreRelatedMicrosites .eraIndentedLink
+{
+	padding:0 0 0 0;
+	font-weight:bold;
+}
+
+.eraMoreRelatedMicrosites .eraIndentedSiteName
+{
+	padding:0 0 0 5px;
+	font-weight:bold;
+}
+
+.eraMoreeraHeader
+{
+	display:none;
+}
+
+/* Recent News container. */
+.eraRecentNews 
+{
+}
+
+.eraRecentNews .eraHeader
+{
+}
+
+/* Related client content container. */
+.eraRelatedContent 
+{
+}
+
+.eraRelatedContent .eraHeader
+{
+}
+
+/* HTML related links script helper classes */
+#ERA_RC DIV.body 
+{ 
+	font-size: 11px;
+	margin: 0px;
+	padding: 0;
+	border: none;
+	font-family: verdana,arial,sans-serif;
+	background:#FFF;
+	
+}
+
+#ERA_RC DIV.a 
+{
+	display: block;
+	color: #000000;
+	text-decoration: none;
+	
+}
+
+#ERA_RC DIV.a:hover
+{
+	text-decoration: underline;
+}
+
+#ERA_RC DIV.b 
+{
+	font-weight: normal;
+}
+
+#relatedLinksDrop .eraLinksContainer 
+{
+
+}
+
+#relatedLinksScroll .eraLinksContainer 
+{
+	font-size: 10px;
+	overflow: hidden;
+}
+
+#relatedLinksHeaderWrapper
+{
+	background: url(../images/era-logo.gif) no-repeat left top transparent;
+	height: 40px;
+	border-left:1px solid #4682B4;
+	border-top:1px solid #4682B4;
+	border-right:1px solid #4682B4;
+}
+
+
+
+#relatedLinksScroll #eraLinksScrollUp, #relatedLinksScroll #eraLinksScrollDown 
+{
+	display: none;
+}
+
+#relatedLinksDrop #eraLinksScrollUp, #relatedLinksDrop #eraLinksScrollDown 
+{
+	display: none;
+}
+
+.eraRelatedMicrosites {
+	padding:0;
+}
+
+.eraRelatedMicrosites div, .eraMoreRelatedMicrosites div { 
+	padding:2px 0 5px 0;
+	margin:0;
+	background:0;
+	border-top:0;
+}
+
+.eraRelatedMicrosites div A, .eraMoreRelatedMicrosites div A {
+	padding:0;
+	color:#000;
+	font-family:arial, Helvetica, sans-serif;
+	text-decoration:none;
+	font-size:11px;
+}
+
+.eraRelatedMicrosites div A strong {
+	font-weight:bold;
+	color:#000;
+}
+
+.eraRelatedMicrosites div A:hover, .eraMoreRelatedMicrosites div A:hover {
+	text-decoration:underline;
+}
+
+div.eraMoreRelatedLinks {
+	
+}
+
+#relatedLinksFooterWrapper
+{
+	background:#E0EAF4;
+	margin:0;
+	height:5px;
+	overflow:hidden;
+	border-left:1px solid #4682B4;
+	border-bottom:1px solid #4682B4;
+	border-right:1px solid #4682B4;
+
+
+}
+
+div.eraMoreRelatedLinks A {
+	color:#4B6A81;
+	padding:2px 16px 5px 0;
+	font:bold 10px arial;
+	text-decoration:0;
+	text-align:right;
+}	
+
+.eraMicrositeName
+{
+	font-weight:bold;
+
+}
+/* Zero links styles. */
+.zeroHtmlResultsLink
+{
+	cursor:hand;
+}
+
+.zeroHtmlResultsLink img
+{
+	border: none;
+}

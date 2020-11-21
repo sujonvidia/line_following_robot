@@ -1,0 +1,1565 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- The head element section is duplicated between MainMasterPage.master and MainFormMasterPage.master pages; KEEP THEM SYNCHRONIZED! -->
+<html xmlns="http://www.w3.org/1999/xhtml"><script id="abine.stub.Google Analytics">var abPrm={};var abNoOp=function(i,a){return (a&&a.length?a[0]:null)||true;},abSC=function(n,v){document.cookie=n+'='+v+';path=/;expires='+(new Date((new Date()).getTime()+(30000*60*60*24))).toGMTString();},abGC=function(n){return document.cookie.indexOf(n+'=')!=-1;},abAddNoOpMethods=function(o,m){m=m.split(',');for(var i=0;i<m.length;i++){if(m[i].match(/^#/)){o['get'+m[i].substr(1)]=o['set'+m[i].substr(1)]=abNoOp;}else{o[m[i]]=abNoOp;}}};var abTrkr={},abGT=function(){return abTrkr},_gat={_getTracker:abGT,_createTracker:abGT,_getTrackerByName:abGT,_anonymizeIp:abNoOp},urchinTracker=__utmSetTrans=__utmLinkerUrl=__utmLinkPost=__utmSetVar=__utmVisitorCode=abNoOp,_gaq={_createAsyncTracker:abTrkr,_getAsyncTracker:abTrkr,push:function(a){for (var b = arguments, c = 0, d = 0; d < b.length; d++) {try {if (typeof b[d] === 'function') b[d]();else {var e = '', f = b[d][0], k = f.lastIndexOf('.');k > 0 && (e = f[z](0, k), f = f[z](k + 1));var p = e == '_gat' ? _gat : e == '_gaq' ? _gaq : _gat._getTracker(e);p[f].apply(p, b[d].slice(1))}} catch (r) {c++}}return c;}};abAddNoOpMethods(abTrkr,'_deleteCustomVar,_getName,_getAccount,_getVersion,_getVisitorCustomVar,_initData,_setAccount,_setCookiePersistence,_setCustomVar,_setSampleRate,_setSessionTimeout,_setSessionCookieTimeout,_setVar,_setVisitorCookieTimeout,_trackPageview,_setAllowAnchor,_setCampContentKey,_setCampMediumKey,_setCampNameKey,_setCampNOKey,_setCampSourceKey,_setCampTermKey,_setCampaignTrack,_setCampaignCookieTimeout,_setCookieTimeout,_setReferrerOverride,_cookiePathCopy,_getLinkerUrl,_linkByPost,_setAllowHash,_setAllowLinker,_setCookiePath,_setDomainName,_addItem,_addTrans,_trackTrans,_trackEvent,_addIgnoredOrganic,_addIgnoredRef,_addOrganic,_clearIgnoredOrganic,_clearIgnoredRef,_clearOrganic,_trackSocial,_getClientInfo,_getDetectFlash,_getDetectTitle,_setClientInfo,_setDetectFlash,_setDetectTitle,_getLocalGifPath,_getServiceMode,_setLocalGifPath,_setLocalRemoteServerMode,_setLocalServerMode,_setRemoteServerMode,_trackPageLoadTime');abTrkr._link=__utmLinker=function(l){if(l)location.href=l;};</script><head id="ctl00_Head1"><title>
+	MOSFET driver IC considerations - Electronic Products
+</title><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<!--CSS -->
+	<link rel="stylesheet" type="text/css" href="MOSFET_driver_IC_considerations-article-texas-mar2005-html.aspx_files/EPnewstyles2011_02.css"><link rel="stylesheet" type="text/css" href="MOSFET_driver_IC_considerations-article-texas-mar2005-html.aspx_files/epstyle12.css"><link rel="stylesheet" type="text/css" href="MOSFET_driver_IC_considerations-article-texas-mar2005-html.aspx_files/TopNav.css"><link rel="stylesheet" href="MOSFET_driver_IC_considerations-article-texas-mar2005-html.aspx_files/dhtmlwindow.css" type="text/css"><link rel="stylesheet" type="text/css" href="MOSFET_driver_IC_considerations-article-texas-mar2005-html.aspx_files/lightbox.css" media="screen"><link rel="shortcut icon" href="http://www2.electronicproducts.com/images/faviconep.ico"><link rel="stylesheet" href="MOSFET_driver_IC_considerations-article-texas-mar2005-html.aspx_files/modal_zindex.css" type="text/css"><link rel="alternate" type="application/rss+xml" title="New Products (RSS 2.0)" href="http://www2.electronicproducts.com/rssFeed.aspx">
+	<!--CSS -->
+	<!--JS -->
+	<script type="text/javascript" language="javascript" src="MOSFET_driver_IC_considerations-article-texas-mar2005-html.aspx_files/chainedselects.js"></script>
+	<script type="text/javascript" language="javascript" src="MOSFET_driver_IC_considerations-article-texas-mar2005-html.aspx_files/search_class_nano.js"></script>
+	<script type="text/javascript" language="javascript" src="MOSFET_driver_IC_considerations-article-texas-mar2005-html.aspx_files/search_class_dropdowns.js"></script>
+	<script type="text/javascript" language="javascript" src="MOSFET_driver_IC_considerations-article-texas-mar2005-html.aspx_files/dhtmlwindow_zindex.js"></script></head><body><div id="dhtmlwindowholder"><span style="display:none">.</span></div>
+	<script type="text/javascript" language="javascript" src="MOSFET_driver_IC_considerations-article-texas-mar2005-html.aspx_files/modal.js"></script><div id="interVeil"></div>
+	<script type="text/javascript" language="javascript" src="MOSFET_driver_IC_considerations-article-texas-mar2005-html.aspx_files/searchformmanager1.js"></script>
+	<script type="text/javascript" language="javascript" src="MOSFET_driver_IC_considerations-article-texas-mar2005-html.aspx_files/lightbox_zindex.js"></script>
+	<script type="text/javascript" language="javascript" src="MOSFET_driver_IC_considerations-article-texas-mar2005-html.aspx_files/WelcomeAdv.js"></script>
+	<script type="text/javascript" language="javascript" src="MOSFET_driver_IC_considerations-article-texas-mar2005-html.aspx_files/PopUnder.js"></script>
+	<!--JS -->
+	<script type="text/javascript">
+		window.onload = function body() {
+			ShowAdvertisements();
+		};
+	</script>
+<link href="MOSFET_driver_IC_considerations-article-texas-mar2005-html.aspx_files/WebResource.css" type="text/css" rel="stylesheet"><meta name="description"><style type="text/css">
+	.ctl00_Header_TopNav_Menu1_0 { background-color:white;visibility:hidden;display:none;position:absolute;left:0px;top:0px; }
+	.ctl00_Header_TopNav_Menu1_1 { text-decoration:none; }
+	.ctl00_Header_TopNav_Menu1_2 {  }
+	.ctl00_Header_TopNav_Menu2_0 { background-color:white;visibility:hidden;display:none;position:absolute;left:0px;top:0px; }
+	.ctl00_Header_TopNav_Menu2_1 { text-decoration:none; }
+	.ctl00_Header_TopNav_Menu2_2 {  }
+
+</style>
+
+	<div style="background-color: #ffffff; width: 1000px;" class="center site-width">
+		<form name="aspnetForm" method="post" action="PageSearch.aspx?FName=texas.mar2005.html" id="aspnetForm">
+<div>
+<input name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUKMTQ2NDYxMTkwMGRkcYeDIykwui4EC7BjxcZOGjWPzoM=" type="hidden">
+</div>
+
+
+<script src="MOSFET_driver_IC_considerations-article-texas-mar2005-html.aspx_files/WebResource_002.js" type="text/javascript"></script>
+<script src="MOSFET_driver_IC_considerations-article-texas-mar2005-html.aspx_files/WebResource.js" type="text/javascript"></script>
+		<div style="border: solid 0px #ff0000; width: 1000px; background-color: #ffffff;
+			text-align: left;">
+			
+			<!-- Header -->
+			<div id="EPheader2011" class="border-padding site-width">
+				
+<!-- Header -->
+<div class="site-width">
+	
+	<div class="border-padding" style="width: 741px; height: 90px; margin: 5px auto 15px;
+		padding: 0px; background-color: rgb(255, 255, 255);">
+		<div class="float-left" style="width: 13px; margin-top: 15px;">
+			<img class=" dsmwrgqfbvacogsltxta" src="MOSFET_driver_IC_considerations-article-texas-mar2005-html.aspx_files/adlabel_v113x60.gif" id="ctl00_Header_Advertisement" alt="Advertisement">
+		</div>
+		<div class="float-left" style="width: 728px;">
+			<script language="JavaScript" type="text/javascript" src="MOSFET_driver_IC_considerations-article-texas-mar2005-html.aspx_files/a_003.js"></script><noscript><a href="http://ad.doubleclick.net/jump/hbp.ep/;pos=leader;tile=1;sz=728x90;u=-1;ord=634586064200647642346739964?"><img src="http://ad.doubleclick.net/ad/hbp.ep/;pos=leader;tile=1;sz=728x90;u=-1;ord=634586064200647642346739964?" width="728" height="90" border="0" alt=""></a></noscript>
+		</div>
+	</div>
+	
+	<div id="logo-date-signin-search">
+		<div id="eplogo">
+			<a href="http://www2.electronicproducts.com/" id="ctl00_Header_aHome">
+				<img src="MOSFET_driver_IC_considerations-article-texas-mar2005-html.aspx_files/EP_Logo.gif" alt="Hearst Electronic Products" height="69" width="243"></a></div>
+		<div id="date-signin-register">
+			Sunday, December 4, 2011
+			&nbsp;&nbsp;
+			
+			<a style="color: black;" href="http://www2.electronicproducts.com/login.aspx?returnUrl=MOSFET_driver_IC_considerations-article-texas-mar2005-html-aspx">
+				Sign In</a>&nbsp;&nbsp; <span id="ctl00_Header_Register">|&nbsp;&nbsp;
+					<a style="color: black;" href="http://www2.electronicproducts.com/Register.aspx?returnUrl=MOSFET_driver_IC_considerations-article-texas-mar2005-html-aspx">Register</a> &nbsp;&nbsp;
+			</span>
+		</div>
+		<div id="SiteSearchForm">
+			<div style="float: right; margin-top: 2px">
+				<!-- <input type="image" src="images/Search_Button-gray.gif" alt="Search" /> -->
+				<img src="MOSFET_driver_IC_considerations-article-texas-mar2005-html.aspx_files/Search_Button-gray.gif" id="ctl00_Header_Img1" alt="Search" type="button" name="btnSearch" value="Search" onclick="return SearchDetails('', getRadioValue( document.getElementsByName('SearchType') ) );" style="vertical-align: middle;">
+			</div>
+			<div style="float: right">
+				<input onkeypress="return EnterFunc(event.keyCode,'')" id="Text1" name="txtSearch" maxlength="26" style="height: 20px; width: 168px; margin: 2px 8px 0pt 5px; padding: 0pt;" type="text">
+			</div>
+			<div style="width: 450px; float: right; margin-top: 7px;">
+				<input checked="checked" style="margin: 0pt; padding: 0pt;" value="all" name="SearchType" type="radio">
+				<span style=" padding: 0px; margin: 0 8px 0 5px">All</span><input style="margin: 0pt; padding: 0pt;" value="fa" name="SearchType" type="radio"><span style="margin: 0 8px 0 5px">Feature
+						Article </span>
+				<input style="margin: 0pt; padding: 0pt;" value="nhp" name="SearchType" type="radio">
+				<span style="margin: 0 8px 0 5px">Product</span>
+				<input style="margin: 0pt; padding: 0pt;" value="rd" name="SearchType" type="radio">
+				<span style="margin: 0 8px 0 5px">Reference Design</span><input style="margin: 0pt; padding: 0pt;" value="v" name="SearchType" type="radio"><span style="margin: 0 8px 0 5px">Video</span>
+			</div>
+			<script language="javascript" type="text/javascript">
+				var qry = queryString("Qry");
+				var aType = queryString("aType");
+
+				if (aType != null && aType.length > 0)
+					setRadioValue(document.getElementsByName('SearchType'), queryString("aType"));
+				else
+					setRadioValue(document.getElementsByName('SearchType'), 'all');
+
+				if (qry != null && qry.length > 0)
+					document.getElementById('Text1').value = unescape(qry);
+				else
+					document.getElementById('Text1').value = '';
+			</script>
+		</div>
+	</div>
+	<!-- Menu -->
+	<div id="Menu" style="width: 980px; margin: 0px auto; margin: 0px;">
+		<div style="background-color: #F7F6F3;">
+			
+
+<div id="navbar" align="left">
+	
+<div class="Row-One" id="ctl00_Header_TopNav_Menu1">
+	<div class="AspNet-Menu-Horizontal">
+			<ul class="AspNet-Menu">
+				<li class="AspNet-Menu-Leaf">
+					<a href="http://www2.electronicproducts.com/Default.aspx" class="AspNet-Menu-Link">
+						Home</a>
+				</li>
+				<li class="AspNet-Menu-Leaf">
+					<a href="http://www2.electronicproducts.com/Articles.aspx" class="AspNet-Menu-Link">
+						Articles</a>
+				</li>
+				<li class="AspNet-Menu-Leaf">
+					<a href="http://www2.electronicproducts.com/ProductsMain.aspx" class="AspNet-Menu-Link">
+						Products</a>
+				</li>
+				<li class="AspNet-Menu-Leaf">
+					<a href="http://www2.electronicproducts.com/News.aspx" class="AspNet-Menu-Link">
+						News</a>
+				</li>
+				<li class="AspNet-Menu-Leaf">
+					<a href="http://www2.electronicproducts.com/WhatsInside.aspx" class="AspNet-Menu-Link">
+						What's Inside</a>
+				</li>
+				<li class="AspNet-Menu-Leaf">
+					<a href="http://www2.electronicproducts.com/Energy.aspx" class="AspNet-Menu-Link">
+						Energy Saving</a>
+				</li>
+				<li class="AspNet-Menu-Leaf">
+					<a href="http://www2.electronicproducts.com/Video.aspx" class="AspNet-Menu-Link">
+						Video</a>
+				</li>
+				<li class="AspNet-Menu-Leaf">
+					<a href="http://www2.electronicproducts.com/TechXchange_Forum.aspx" class="AspNet-Menu-Link">
+						Forums</a>
+				</li>
+				<li class="AspNet-Menu-Leaf">
+					<a href="http://www2.electronicproducts.com/Purchasing_Pro.aspx" class="AspNet-Menu-Link">
+						Purchasing Pro</a>
+				</li>
+				<li class="AspNet-Menu-Leaf">
+					<a href="http://www2.electronicproducts.com/Electronic_Resources.aspx" class="AspNet-Menu-Link">
+						e-Books</a>
+				</li>
+				<li class="AspNet-Menu-Leaf">
+					<a href="http://www2.electronicproducts.com/Development_Tools.aspx" class="AspNet-Menu-Link">
+						Dev Tools</a>
+				</li>
+				<li class="AspNet-Menu-Leaf">
+					<a href="http://www2.electronicproducts.com/ElectronicProductsBlogs.aspx" class="AspNet-Menu-Link">
+						Blogs</a>
+				</li>
+				<li class="AspNet-Menu-Leaf">
+					<a href="http://www2.electronicproducts.com/New_Product_Introductions_Plus.aspx" class="AspNet-Menu-Link">
+						New Product Introductions +</a>
+				</li>
+			</ul>
+
+	</div>
+</div>
+	
+<div class="Row-Two" id="ctl00_Header_TopNav_Menu2">
+	<div class="AspNet-Menu-Horizontal">
+			<ul class="AspNet-Menu">
+				<li class="AspNet-Menu-WithChildren">
+					<a href="http://www2.electronicproducts.com/" class="AspNet-Menu-Link">
+						Technology Centers <img src="MOSFET_driver_IC_considerations-article-texas-mar2005-html.aspx_files/down-arrow-gray.png" alt="" height="5" width="10"></a>
+					<ul>
+						<li class="AspNet-Menu-WithChildren">
+							<a href="http://www2.electronicproducts.com/AnalogMixICs.aspx" class="AspNet-Menu-Link">
+								Analog / Mixed Signal ICs</a>
+							<ul>
+								<li class="AspNet-Menu-Leaf">
+									<a href="http://www2.electronicproducts.com/Amplifiers.aspx" class="AspNet-Menu-Link">
+										Amplifiers</a>
+								</li>
+								<li class="AspNet-Menu-Leaf">
+									<a href="http://www2.electronicproducts.com/Communications.aspx" class="AspNet-Menu-Link">
+										Communications</a>
+								</li>
+								<li class="AspNet-Menu-Leaf">
+									<a href="http://www2.electronicproducts.com/CommunicationsInterface.aspx" class="AspNet-Menu-Link">
+										Communications / Interface</a>
+								</li>
+								<li class="AspNet-Menu-Leaf">
+									<a href="http://www2.electronicproducts.com/Comparators.aspx" class="AspNet-Menu-Link">
+										Comparators</a>
+								</li>
+								<li class="AspNet-Menu-Leaf">
+									<a href="http://www2.electronicproducts.com/Diodes.aspx" class="AspNet-Menu-Link">
+										Diodes</a>
+								</li>
+								<li class="AspNet-Menu-Leaf">
+									<a href="http://www2.electronicproducts.com/DiscretePowerTransistors.aspx" class="AspNet-Menu-Link">
+										Discrete, Power Transistors</a>
+								</li>
+								<li class="AspNet-Menu-Leaf">
+									<a href="http://www2.electronicproducts.com/DriversDisplayLEDetc%29.aspx" class="AspNet-Menu-Link">
+										Drivers (Display, LED, etc.)</a>
+								</li>
+								<li class="AspNet-Menu-Leaf">
+									<a href="http://www2.electronicproducts.com/PLLsTimingDevices.aspx" class="AspNet-Menu-Link">
+										PLLs, Timing Devices</a>
+								</li>
+								<li class="AspNet-Menu-Leaf">
+									<a href="http://www2.electronicproducts.com/PowerManagement.aspx" class="AspNet-Menu-Link">
+										Power Management</a>
+								</li>
+								<li class="AspNet-Menu-Leaf">
+									<a href="http://www2.electronicproducts.com/PowerSemiconductors.aspx" class="AspNet-Menu-Link">
+										Power Semiconductors</a>
+								</li>
+								<li class="AspNet-Menu-Leaf">
+									<a href="http://www2.electronicproducts.com/Sensors.aspx" class="AspNet-Menu-Link">
+										Sensors</a>
+								</li>
+								<li class="AspNet-Menu-Leaf">
+									<a href="http://www2.electronicproducts.com/SoCs_ASICs_ASSPs_MEMS.aspx" class="AspNet-Menu-Link">
+										SoCs, ASICs, ASSPs, MEMS</a>
+								</li>
+								<li class="AspNet-Menu-Leaf">
+									<a href="http://www2.electronicproducts.com/StandardLinear.aspx" class="AspNet-Menu-Link">
+										Standard Linear</a>
+								</li>
+								<li class="AspNet-Menu-Leaf">
+									<a href="http://www2.electronicproducts.com/TransistorsDiodes.aspx" class="AspNet-Menu-Link">
+										Transistors / Diodes</a>
+								</li>
+							</ul>
+						</li>
+						<li class="AspNet-Menu-WithChildren">
+							<a href="http://www2.electronicproducts.com/BoardLevel.aspx" class="AspNet-Menu-Link">
+								Board Level Products</a>
+							<ul>
+								<li class="AspNet-Menu-Leaf">
+									<a href="http://www2.electronicproducts.com/CommunicationBoards.aspx" class="AspNet-Menu-Link">
+										Communication Boards</a>
+								</li>
+								<li class="AspNet-Menu-Leaf">
+									<a href="http://www2.electronicproducts.com/Interface.aspx" class="AspNet-Menu-Link">
+										Interface</a>
+								</li>
+								<li class="AspNet-Menu-Leaf">
+									<a href="http://www2.electronicproducts.com/MemoryStorage.aspx" class="AspNet-Menu-Link">
+										Memory/Storage</a>
+								</li>
+								<li class="AspNet-Menu-Leaf">
+									<a href="http://www2.electronicproducts.com/Multimedia.aspx" class="AspNet-Menu-Link">
+										Multimedia</a>
+								</li>
+								<li class="AspNet-Menu-Leaf">
+									<a href="http://www2.electronicproducts.com/SignalProcessing.aspx" class="AspNet-Menu-Link">
+										Signal Processing</a>
+								</li>
+								<li class="AspNet-Menu-Leaf">
+									<a href="http://www2.electronicproducts.com/SingleBoardComputer.aspx" class="AspNet-Menu-Link">
+										Single Board Computer</a>
+								</li>
+							</ul>
+						</li>
+						<li class="AspNet-Menu-WithChildren">
+							<a href="http://www2.electronicproducts.com/ComputerPeripherals.aspx" class="AspNet-Menu-Link">
+								Computer Peripherals</a>
+							<ul>
+								<li class="AspNet-Menu-Leaf">
+									<a href="http://www2.electronicproducts.com/CommunicationPeripherals.aspx" class="AspNet-Menu-Link">
+										Communication Peripherals</a>
+								</li>
+								<li class="AspNet-Menu-Leaf">
+									<a href="http://www2.electronicproducts.com/DisplayGraphics.aspx" class="AspNet-Menu-Link">
+										Display / Graphics</a>
+								</li>
+								<li class="AspNet-Menu-Leaf">
+									<a href="http://www2.electronicproducts.com/InputOutput.aspx" class="AspNet-Menu-Link">
+										Input / Output</a>
+								</li>
+								<li class="AspNet-Menu-Leaf">
+									<a href="http://www2.electronicproducts.com/Storage.aspx" class="AspNet-Menu-Link">
+										Storage</a>
+								</li>
+								<li class="AspNet-Menu-Leaf">
+									<a href="http://www2.electronicproducts.com/Systems.aspx" class="AspNet-Menu-Link">
+										Systems</a>
+								</li>
+							</ul>
+						</li>
+						<li class="AspNet-Menu-WithChildren">
+							<a href="http://www2.electronicproducts.com/ComputerSystems.aspx" class="AspNet-Menu-Link">
+								Computer Systems</a>
+							<ul>
+								<li class="AspNet-Menu-Leaf">
+									<a href="http://www2.electronicproducts.com/Modules.aspx" class="AspNet-Menu-Link">
+										Modules</a>
+								</li>
+								<li class="AspNet-Menu-Leaf">
+									<a href="http://www2.electronicproducts.com/Servers.aspx" class="AspNet-Menu-Link">
+										Servers</a>
+								</li>
+								<li class="AspNet-Menu-Leaf">
+									<a href="http://www2.electronicproducts.com/StandaloneMobile.aspx" class="AspNet-Menu-Link">
+										Standalone/Mobile</a>
+								</li>
+							</ul>
+						</li>
+						<li class="AspNet-Menu-WithChildren">
+							<a href="http://www2.electronicproducts.com/DigitalICs.aspx" class="AspNet-Menu-Link">
+								Digital ICs</a>
+							<ul>
+								<li class="AspNet-Menu-Leaf">
+									<a href="http://www2.electronicproducts.com/CommunicationsInterface.aspx" class="AspNet-Menu-Link">
+										Communications / Interface</a>
+								</li>
+								<li class="AspNet-Menu-Leaf">
+									<a href="http://www2.electronicproducts.com/Memory.aspx" class="AspNet-Menu-Link">
+										Memory</a>
+								</li>
+								<li class="AspNet-Menu-Leaf">
+									<a href="http://www2.electronicproducts.com/MicroprocessorsMicrocontrollersDSPs.aspx" class="AspNet-Menu-Link">
+										Microprocessors, Microcontrollers, DSPs</a>
+								</li>
+								<li class="AspNet-Menu-Leaf">
+									<a href="http://www2.electronicproducts.com/SoCs_ASICs_ASSPs_MEMS.aspx" class="AspNet-Menu-Link">
+										SoCs, ASICs, ASSPs, MEMS</a>
+								</li>
+								<li class="AspNet-Menu-Leaf">
+									<a href="http://www2.electronicproducts.com/StandardandProgrammableLogic.aspx" class="AspNet-Menu-Link">
+										Standard and Programmable Logic</a>
+								</li>
+								<li class="AspNet-Menu-Leaf">
+									<a href="http://www2.electronicproducts.com/VideoGraphicsAudio.aspx" class="AspNet-Menu-Link">
+										Video/Graphics/Audio</a>
+								</li>
+							</ul>
+						</li>
+						<li class="AspNet-Menu-WithChildren">
+							<a href="http://www2.electronicproducts.com/Semiconductors.aspx" class="AspNet-Menu-Link">
+								Discrete Semiconductors</a>
+							<ul>
+								<li class="AspNet-Menu-Leaf">
+									<a href="http://www2.electronicproducts.com/TransistorsDiodes.aspx" class="AspNet-Menu-Link">
+										Transistors / Diodes</a>
+								</li>
+								<li class="AspNet-Menu-Leaf">
+									<a href="http://www2.electronicproducts.com/PowerSemiconductors.aspx" class="AspNet-Menu-Link">
+										Power Semiconductors</a>
+								</li>
+							</ul>
+						</li>
+						<li class="AspNet-Menu-WithChildren">
+							<a href="http://www2.electronicproducts.com/Components.aspx" class="AspNet-Menu-Link">
+								Electromechanical Components</a>
+							<ul>
+								<li class="AspNet-Menu-Leaf">
+									<a href="http://www2.electronicproducts.com/ElectromechanicalSwitches.aspx" class="AspNet-Menu-Link">
+										Electromechanical Switches</a>
+								</li>
+								<li class="AspNet-Menu-Leaf">
+									<a href="http://www2.electronicproducts.com/MotorsandControllers.aspx" class="AspNet-Menu-Link">
+										Motors and Controllers</a>
+								</li>
+								<li class="AspNet-Menu-Leaf">
+									<a href="http://www2.electronicproducts.com/RelaysandSolenoids.aspx" class="AspNet-Menu-Link">
+										Relays and Solenoids</a>
+								</li>
+							</ul>
+						</li>
+						<li class="AspNet-Menu-WithChildren">
+							<a href="http://www2.electronicproducts.com/Interconnections.aspx" class="AspNet-Menu-Link">
+								Interconnections</a>
+							<ul>
+								<li class="AspNet-Menu-Leaf">
+									<a href="http://www2.electronicproducts.com/Connectors.aspx" class="AspNet-Menu-Link">
+										Connectors</a>
+								</li>
+								<li class="AspNet-Menu-Leaf">
+									<a href="http://www2.electronicproducts.com/Sockets.aspx" class="AspNet-Menu-Link">
+										Sockets and Pins</a>
+								</li>
+								<li class="AspNet-Menu-Leaf">
+									<a href="http://www2.electronicproducts.com/WireandCable.aspx" class="AspNet-Menu-Link">
+										Wire and  Cable</a>
+								</li>
+							</ul>
+						</li>
+						<li class="AspNet-Menu-WithChildren">
+							<a href="http://www2.electronicproducts.com/Manufacturing.aspx" class="AspNet-Menu-Link">
+								Manufacturing</a>
+							<ul>
+								<li class="AspNet-Menu-Leaf">
+									<a href="http://www2.electronicproducts.com/ICandboardassembly.aspx" class="AspNet-Menu-Link">
+										IC and board assembly</a>
+								</li>
+							</ul>
+						</li>
+						<li class="AspNet-Menu-WithChildren">
+							<a href="http://www2.electronicproducts.com/Optoelectronics.aspx" class="AspNet-Menu-Link">
+								Optoelectronics</a>
+							<ul>
+								<li class="AspNet-Menu-Leaf">
+									<a href="http://www2.electronicproducts.com/Displays.aspx" class="AspNet-Menu-Link">
+										Displays</a>
+								</li>
+								<li class="AspNet-Menu-Leaf">
+									<a href="http://www2.electronicproducts.com/FiberopticConnectorsCablesTransceivers.aspx" class="AspNet-Menu-Link">
+										Fiber-optic Connectors, Cables, Transceivers</a>
+								</li>
+								<li class="AspNet-Menu-Leaf">
+									<a href="http://www2.electronicproducts.com/HardwareandAccessories.aspx" class="AspNet-Menu-Link">
+										Hardware and Accessories</a>
+								</li>
+								<li class="AspNet-Menu-Leaf">
+									<a href="http://www2.electronicproducts.com/ImageSensorsandOpticalDetectors.aspx" class="AspNet-Menu-Link">
+										Image Sensors and Optical Detectors</a>
+								</li>
+								<li class="AspNet-Menu-Leaf">
+									<a href="http://www2.electronicproducts.com/LampsandBulbs.aspx" class="AspNet-Menu-Link">
+										Lamps and Bulbs</a>
+								</li>
+								<li class="AspNet-Menu-Leaf">
+									<a href="http://www2.electronicproducts.com/Lasers.aspx" class="AspNet-Menu-Link">
+										Lasers</a>
+								</li>
+								<li class="AspNet-Menu-Leaf">
+									<a href="http://www2.electronicproducts.com/LEDs.aspx" class="AspNet-Menu-Link">
+										LEDs</a>
+								</li>
+								<li class="AspNet-Menu-Leaf">
+									<a href="http://www2.electronicproducts.com/OptocouplersandOptoisolators.aspx" class="AspNet-Menu-Link">
+										Optocouplers and Optoisolators</a>
+								</li>
+							</ul>
+						</li>
+						<li class="AspNet-Menu-WithChildren">
+							<a href="http://www2.electronicproducts.com/PackagingHardware.aspx" class="AspNet-Menu-Link">
+								Packaging &amp; Hardware</a>
+							<ul>
+								<li class="AspNet-Menu-Leaf">
+									<a href="http://www2.electronicproducts.com/AdhesivesSealantsCoatings.aspx" class="AspNet-Menu-Link">
+										Adhesives, Sealants, Coatings</a>
+								</li>
+								<li class="AspNet-Menu-Leaf">
+									<a href="http://www2.electronicproducts.com/DevicePackaging.aspx" class="AspNet-Menu-Link">
+										Device Packaging</a>
+								</li>
+								<li class="AspNet-Menu-Leaf">
+									<a href="http://www2.electronicproducts.com/EnclosuresCabinetsandChassis.aspx" class="AspNet-Menu-Link">
+										Enclosures, Cabinets, and Chassis</a>
+								</li>
+								<li class="AspNet-Menu-Leaf">
+									<a href="http://www2.electronicproducts.com/FastenersRetainersPanelsClips.aspx" class="AspNet-Menu-Link">
+										Fasteners, Retainers, Panels, Clips</a>
+								</li>
+								<li class="AspNet-Menu-Leaf">
+									<a href="http://www2.electronicproducts.com/PrototypingToolsEquipmentServices.aspx" class="AspNet-Menu-Link">
+										Prototyping Tools, Equipment, Services</a>
+								</li>
+								<li class="AspNet-Menu-Leaf">
+									<a href="http://www2.electronicproducts.com/ShieldingandInsulation.aspx" class="AspNet-Menu-Link">
+										Shielding and Insulation</a>
+								</li>
+							</ul>
+						</li>
+						<li class="AspNet-Menu-WithChildren">
+							<a href="http://www2.electronicproducts.com/Passive.aspx" class="AspNet-Menu-Link">
+								Passive Components</a>
+							<ul>
+								<li class="AspNet-Menu-Leaf">
+									<a href="http://www2.electronicproducts.com/Antennas.aspx" class="AspNet-Menu-Link">
+										Antennas</a>
+								</li>
+								<li class="AspNet-Menu-Leaf">
+									<a href="http://www2.electronicproducts.com/Capacitors.aspx" class="AspNet-Menu-Link">
+										Capacitors</a>
+								</li>
+								<li class="AspNet-Menu-Leaf">
+									<a href="http://www2.electronicproducts.com/CircuitProtection.aspx" class="AspNet-Menu-Link">
+										Circuit Protection</a>
+								</li>
+								<li class="AspNet-Menu-Leaf">
+									<a href="http://www2.electronicproducts.com/MagneticsInductorsTransformers.aspx" class="AspNet-Menu-Link">
+										Magnetics, Inductors, Transformers</a>
+								</li>
+								<li class="AspNet-Menu-Leaf">
+									<a href="http://www2.electronicproducts.com/OscillatorsCrystalsSawFilters.aspx" class="AspNet-Menu-Link">
+										Oscillators, Crystals, Saw Filters</a>
+								</li>
+								<li class="AspNet-Menu-Leaf">
+									<a href="http://www2.electronicproducts.com/ResistorsandPotentiometers.aspx" class="AspNet-Menu-Link">
+										Resistors and Potentiometers</a>
+								</li>
+							</ul>
+						</li>
+						<li class="AspNet-Menu-WithChildren">
+							<a href="http://www2.electronicproducts.com/Power.aspx" class="AspNet-Menu-Link">
+								Power Products</a>
+							<ul>
+								<li class="AspNet-Menu-Leaf">
+									<a href="http://www2.electronicproducts.com/AcdcPowerSupplies.aspx" class="AspNet-Menu-Link">
+										Ac/dc Power Supplies</a>
+								</li>
+								<li class="AspNet-Menu-Leaf">
+									<a href="http://www2.electronicproducts.com/BatteriesandFuelCells.aspx" class="AspNet-Menu-Link">
+										Batteries and Fuel Cells</a>
+								</li>
+								<li class="AspNet-Menu-Leaf">
+									<a href="http://www2.electronicproducts.com/Dcdcconverters.aspx" class="AspNet-Menu-Link">
+										Dc/dc converters</a>
+								</li>
+								<li class="AspNet-Menu-Leaf">
+									<a href="http://www2.electronicproducts.com/Inverters.aspx" class="AspNet-Menu-Link">
+										Inverters</a>
+								</li>
+								<li class="AspNet-Menu-Leaf">
+									<a href="http://www2.electronicproducts.com/PowerandControl.aspx" class="AspNet-Menu-Link">
+										Power and Control</a>
+								</li>
+								<li class="AspNet-Menu-Leaf">
+									<a href="http://www2.electronicproducts.com/PowerManagement.aspx" class="AspNet-Menu-Link">
+										Power Management</a>
+								</li>
+								<li class="AspNet-Menu-Leaf">
+									<a href="http://www2.electronicproducts.com/PowerSemiconductors.aspx" class="AspNet-Menu-Link">
+										Power Semiconductors</a>
+								</li>
+							</ul>
+						</li>
+						<li class="AspNet-Menu-WithChildren">
+							<a href="http://www2.electronicproducts.com/RF-Microwave.aspx" class="AspNet-Menu-Link">
+								RF &amp; Microwave Components</a>
+							<ul>
+								<li class="AspNet-Menu-Leaf">
+									<a href="http://www2.electronicproducts.com/MicrowaveComponents.aspx" class="AspNet-Menu-Link">
+										Microwave Components</a>
+								</li>
+								<li class="AspNet-Menu-Leaf">
+									<a href="http://www2.electronicproducts.com/RFandMicrowave.aspx" class="AspNet-Menu-Link">
+										RF and Microwave</a>
+								</li>
+							</ul>
+						</li>
+						<li class="AspNet-Menu-WithChildren">
+							<a href="http://www2.electronicproducts.com/Sensors-Transducer.aspx" class="AspNet-Menu-Link">
+								Sensors and Transducers</a>
+							<ul>
+								<li class="AspNet-Menu-Leaf">
+									<a href="http://www2.electronicproducts.com/ImageSensorsandOpticalDetectors.aspx" class="AspNet-Menu-Link">
+										Image Sensors and Optical Detectors</a>
+								</li>
+								<li class="AspNet-Menu-Leaf">
+									<a href="http://www2.electronicproducts.com/Sensors.aspx" class="AspNet-Menu-Link">
+										Sensors</a>
+								</li>
+								<li class="AspNet-Menu-Leaf">
+									<a href="http://www2.electronicproducts.com/SensorsandTransducers.aspx" class="AspNet-Menu-Link">
+										Sensors and Transducers</a>
+								</li>
+								<li class="AspNet-Menu-Leaf">
+									<a href="http://www2.electronicproducts.com/Transducers.aspx" class="AspNet-Menu-Link">
+										Transducers</a>
+								</li>
+							</ul>
+						</li>
+						<li class="AspNet-Menu-WithChildren">
+							<a href="http://www2.electronicproducts.com/Software.aspx" class="AspNet-Menu-Link">
+								Software</a>
+							<ul>
+								<li class="AspNet-Menu-Leaf">
+									<a href="http://www2.electronicproducts.com/DevelopmentToolsandSoftware.aspx" class="AspNet-Menu-Link">
+										Development Tools and Software</a>
+								</li>
+								<li class="AspNet-Menu-Leaf">
+									<a href="http://www2.electronicproducts.com/EDASoftwareandHardware.aspx" class="AspNet-Menu-Link">
+										EDA Software and Hardware</a>
+								</li>
+								<li class="AspNet-Menu-Leaf">
+									<a href="http://www2.electronicproducts.com/System.aspx" class="AspNet-Menu-Link">
+										System</a>
+								</li>
+								<li class="AspNet-Menu-Leaf">
+									<a href="http://www2.electronicproducts.com/TestandMeasurementSoftware.aspx" class="AspNet-Menu-Link">
+										Test and Measurement, Software</a>
+								</li>
+							</ul>
+						</li>
+						<li class="AspNet-Menu-WithChildren">
+							<a href="http://www2.electronicproducts.com/Test-Measurement.aspx" class="AspNet-Menu-Link">
+								Test and Measurement</a>
+							<ul>
+								<li class="AspNet-Menu-Leaf">
+									<a href="http://www2.electronicproducts.com/ATE.aspx" class="AspNet-Menu-Link">
+										ATE</a>
+								</li>
+								<li class="AspNet-Menu-Leaf">
+									<a href="http://www2.electronicproducts.com/BenchtopRackMountable.aspx" class="AspNet-Menu-Link">
+										Benchtop, Rack Mountable</a>
+								</li>
+								<li class="AspNet-Menu-Leaf">
+									<a href="http://www2.electronicproducts.com/PanelMetersDataLoggersMonitorsProcessControl.aspx" class="AspNet-Menu-Link">
+										Panel Meters / Data Loggers / Monitors / Process Control</a>
+								</li>
+								<li class="AspNet-Menu-Leaf">
+									<a href="http://www2.electronicproducts.com/PortableHandheld.aspx" class="AspNet-Menu-Link">
+										Portable / Handheld</a>
+								</li>
+								<li class="AspNet-Menu-Leaf">
+									<a href="http://www2.electronicproducts.com/TestandMeasurementSoftware.aspx" class="AspNet-Menu-Link">
+										Test and Measurement, Software</a>
+								</li>
+							</ul>
+						</li>
+						<li class="AspNet-Menu-WithChildren">
+							<a href="http://www2.electronicproducts.com/ThermalManagement.aspx" class="AspNet-Menu-Link">
+								Thermal Management </a>
+							<ul>
+								<li class="AspNet-Menu-Leaf">
+									<a href="http://www2.electronicproducts.com/FansandBlowers.aspx" class="AspNet-Menu-Link">
+										Fans and Blowers</a>
+								</li>
+								<li class="AspNet-Menu-Leaf">
+									<a href="http://www2.electronicproducts.com/HeatSinksandThermalMaterials.aspx" class="AspNet-Menu-Link">
+										Heat Sinks and Thermal Materials</a>
+								</li>
+								<li class="AspNet-Menu-Leaf">
+									<a href="http://www2.electronicproducts.com/ThermoelectricCoolers.aspx" class="AspNet-Menu-Link">
+										Thermoelectric Coolers</a>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</li>
+				<li class="AspNet-Menu-WithChildren">
+					<a href="http://www2.electronicproducts.com/Default.aspx" class="AspNet-Menu-Link">
+						End Markets <img src="MOSFET_driver_IC_considerations-article-texas-mar2005-html.aspx_files/down-arrow-gray.png" alt="" height="5" width="10"></a>
+					<ul>
+						<li class="AspNet-Menu-Leaf">
+							<a href="http://www2.electronicproducts.com/Automotive_Transportation.aspx" class="AspNet-Menu-Link">
+								Automotive / Transportation</a>
+						</li>
+						<li class="AspNet-Menu-Leaf">
+							<a href="http://www2.electronicproducts.com/Consumer_Electronics_Appliances.aspx" class="AspNet-Menu-Link">
+								Consumer Electronics / Appliances</a>
+						</li>
+						<li class="AspNet-Menu-Leaf">
+							<a href="http://www2.electronicproducts.com/Energy_Generation_Distribution.aspx" class="AspNet-Menu-Link">
+								Energy Generation / Distribution</a>
+						</li>
+						<li class="AspNet-Menu-Leaf">
+							<a href="http://www2.electronicproducts.com/Industrial.aspx" class="AspNet-Menu-Link">
+								Industrial</a>
+						</li>
+						<li class="AspNet-Menu-Leaf">
+							<a href="http://www2.electronicproducts.com/IT_Networking_Computing.aspx" class="AspNet-Menu-Link">
+								IT / Networking / Computing</a>
+						</li>
+						<li class="AspNet-Menu-Leaf">
+							<a href="http://www2.electronicproducts.com/Lighting.aspx" class="AspNet-Menu-Link">
+								Lighting</a>
+						</li>
+						<li class="AspNet-Menu-Leaf">
+							<a href="http://www2.electronicproducts.com/Medical.aspx" class="AspNet-Menu-Link">
+								Medical</a>
+						</li>
+						<li class="AspNet-Menu-Leaf">
+							<a href="http://www2.electronicproducts.com/Military_Aerospace.aspx" class="AspNet-Menu-Link">
+								Military / Aerospace</a>
+						</li>
+						<li class="AspNet-Menu-Leaf">
+							<a href="http://www2.electronicproducts.com/Natural_Resource_Development.aspx" class="AspNet-Menu-Link">
+								Natural  Resource Development</a>
+						</li>
+						<li class="AspNet-Menu-Leaf">
+							<a href="http://www2.electronicproducts.com/Science_Research.aspx" class="AspNet-Menu-Link">
+								Science / Research</a>
+						</li>
+						<li class="AspNet-Menu-Leaf">
+							<a href="http://www2.electronicproducts.com/Security_Identification.aspx" class="AspNet-Menu-Link">
+								Security / Identification</a>
+						</li>
+						<li class="AspNet-Menu-Leaf">
+							<a href="http://www2.electronicproducts.com/Telecom_Broadcasting_Cable.aspx" class="AspNet-Menu-Link">
+								Telecom / Broadcasting / Cable</a>
+						</li>
+					</ul>
+				</li>
+				<li class="AspNet-Menu-WithChildren">
+					<a href="http://www2.electronicproducts.com/Download_Center.aspx" class="AspNet-Menu-Link">
+						Download Center <img src="MOSFET_driver_IC_considerations-article-texas-mar2005-html.aspx_files/down-arrow-gray.png" alt="" height="5" width="10"></a>
+					<ul>
+						<li class="AspNet-Menu-Leaf">
+							<a href="http://www2.electronicproducts.com/Datasheet_Archive.aspx" class="AspNet-Menu-Link">
+								Datasheet Archive</a>
+						</li>
+						<li class="AspNet-Menu-Leaf">
+							<a href="http://www2.electronicproducts.com/Reference_Design_Directory.aspx" class="AspNet-Menu-Link">
+								Reference Design Directory</a>
+						</li>
+						<li class="AspNet-Menu-Leaf">
+							<a href="http://www2.electronicproducts.com/White_Paper_Downloads.aspx" class="AspNet-Menu-Link">
+								White Paper Downloads</a>
+						</li>
+						<li class="AspNet-Menu-Leaf">
+							<a href="http://www2.electronicproducts.com/Research_Paper_Downloads.aspx" class="AspNet-Menu-Link">
+								Research Paper Downloads</a>
+						</li>
+					</ul>
+				</li>
+				<li class="AspNet-Menu-WithChildren">
+					<a href="http://www2.electronicproducts.com/PopularMechanics.aspx" class="AspNet-Menu-Link">
+						Popular Mechanics <img src="MOSFET_driver_IC_considerations-article-texas-mar2005-html.aspx_files/down-arrow-gray.png" alt="" height="5" width="10"></a>
+					<ul>
+						<li class="AspNet-Menu-Leaf">
+							<a href="http://www2.electronicproducts.com/AirSpace.aspx" class="AspNet-Menu-Link">
+								Air &amp; Space</a>
+						</li>
+						<li class="AspNet-Menu-Leaf">
+							<a href="http://www2.electronicproducts.com/EnergyDigital.aspx" class="AspNet-Menu-Link">
+								Energy Technology</a>
+						</li>
+						<li class="AspNet-Menu-Leaf">
+							<a href="http://www2.electronicproducts.com/Industry.aspx" class="AspNet-Menu-Link">
+								Industry</a>
+						</li>
+						<li class="AspNet-Menu-Leaf">
+							<a href="http://www2.electronicproducts.com/MilitaryLaw.aspx" class="AspNet-Menu-Link">
+								Military &amp; Law</a>
+						</li>
+						<li class="AspNet-Menu-Leaf">
+							<a href="http://www2.electronicproducts.com/Robotics.aspx" class="AspNet-Menu-Link">
+								Robotics</a>
+						</li>
+						<li class="AspNet-Menu-Leaf">
+							<a href="http://www2.electronicproducts.com/HowTo.aspx" class="AspNet-Menu-Link">
+								How To</a>
+						</li>
+						<li class="AspNet-Menu-Leaf">
+							<a href="http://www2.electronicproducts.com/Reviews.aspx" class="AspNet-Menu-Link">
+								Reviews</a>
+						</li>
+						<li class="AspNet-Menu-Leaf">
+							<a href="http://www2.electronicproducts.com/Upgrade.aspx" class="AspNet-Menu-Link">
+								Upgrade</a>
+						</li>
+						<li class="AspNet-Menu-Leaf">
+							<a href="http://www2.electronicproducts.com/Transportation.aspx" class="AspNet-Menu-Link">
+								Transportation</a>
+						</li>
+					</ul>
+				</li>
+				<li class="AspNet-Menu-WithChildren">
+					<a href="http://www2.eem.com/" class="AspNet-Menu-Link">
+						Buyers Guide <img src="MOSFET_driver_IC_considerations-article-texas-mar2005-html.aspx_files/down-arrow-gray.png" alt="" height="5" width="10"></a>
+					<ul>
+						<li class="AspNet-Menu-WithChildren">
+							<a href="http://www2.eem.com/Electromechanical_Components.aspx" class="AspNet-Menu-Link">
+								Electromechanical Components</a>
+							<ul>
+								<li class="AspNet-Menu-Leaf">
+									<a href="http://www2.eem.com/Circuit_Protection_Components.aspx" class="AspNet-Menu-Link">
+										Circuit Protection Components</a>
+								</li>
+								<li class="AspNet-Menu-Leaf">
+									<a href="http://www2.eem.com/Cooling_Products_Thermal_Management.aspx" class="AspNet-Menu-Link">
+										Cooling Products &amp; Thermal Management</a>
+								</li>
+								<li class="AspNet-Menu-Leaf">
+									<a href="http://www2.eem.com/Motors_Drives_Rotating_Equipment.aspx" class="AspNet-Menu-Link">
+										Motors, Drives &amp; Rotating Equipment</a>
+								</li>
+								<li class="AspNet-Menu-Leaf">
+									<a href="http://www2.eem.com/Relays_Solenoids.aspx" class="AspNet-Menu-Link">
+										Relays &amp; Solenoids</a>
+								</li>
+								<li class="AspNet-Menu-Leaf">
+									<a href="http://www2.eem.com/Sensors_Transducers_Audio_Components.aspx" class="AspNet-Menu-Link">
+										Sensors, Transducers &amp; Audio Components</a>
+								</li>
+								<li class="AspNet-Menu-Leaf">
+									<a href="http://www2.eem.com/Switches.aspx" class="AspNet-Menu-Link">
+										Switches</a>
+								</li>
+							</ul>
+						</li>
+						<li class="AspNet-Menu-WithChildren">
+							<a href="http://www2.eem.com/Optoelectronics.aspx" class="AspNet-Menu-Link">
+								Optoelectronics</a>
+							<ul>
+								<li class="AspNet-Menu-Leaf">
+									<a href="http://www2.eem.com/Displays.aspx" class="AspNet-Menu-Link">
+										Displays</a>
+								</li>
+								<li class="AspNet-Menu-Leaf">
+									<a href="http://www2.eem.com/Fiber_Optic_Equipment_Accessories.aspx" class="AspNet-Menu-Link">
+										Fiber Optic Equipment &amp; Accessories</a>
+								</li>
+								<li class="AspNet-Menu-Leaf">
+									<a href="http://www2.eem.com/Lamps_Lights_Indicators.aspx" class="AspNet-Menu-Link">
+										Lamps, Lights &amp; Indicators</a>
+								</li>
+								<li class="AspNet-Menu-Leaf">
+									<a href="http://www2.eem.com/Optoelectronic_Components.aspx" class="AspNet-Menu-Link">
+										Optoelectronic Components</a>
+								</li>
+							</ul>
+						</li>
+						<li class="AspNet-Menu-WithChildren">
+							<a href="http://www2.eem.com/Oscillators_Filters_RF_Microwave_Communication.aspx" class="AspNet-Menu-Link">
+								Oscillators, Filters, RF/Microwave &amp; Communication</a>
+							<ul>
+								<li class="AspNet-Menu-Leaf">
+									<a href="http://www2.eem.com/Communication_Components.aspx" class="AspNet-Menu-Link">
+										Communication Components</a>
+								</li>
+								<li class="AspNet-Menu-Leaf">
+									<a href="http://www2.eem.com/Oscillators_Crystals.aspx" class="AspNet-Menu-Link">
+										Oscillators &amp; Crystals</a>
+								</li>
+								<li class="AspNet-Menu-Leaf">
+									<a href="http://www2.eem.com/RF_Microwave_Components.aspx" class="AspNet-Menu-Link">
+										RF/Microwave Components</a>
+								</li>
+								<li class="AspNet-Menu-Leaf">
+									<a href="http://www2.eem.com/RF_Signal_Power_Filters.aspx" class="AspNet-Menu-Link">
+										RF/Signal &amp; Power Filters</a>
+								</li>
+							</ul>
+						</li>
+						<li class="AspNet-Menu-WithChildren">
+							<a href="http://www2.eem.com/Packaging_Interconnects.aspx" class="AspNet-Menu-Link">
+								Packaging &amp; Interconnects</a>
+							<ul>
+								<li class="AspNet-Menu-Leaf">
+									<a href="http://www2.eem.com/Connectors_Sockets.aspx" class="AspNet-Menu-Link">
+										Connectors &amp; Sockets</a>
+								</li>
+								<li class="AspNet-Menu-Leaf">
+									<a href="http://www2.eem.com/Enclosures_Cabinets_Racks_Front_Panel_Components_PC_Boards.aspx" class="AspNet-Menu-Link">
+										Enclosures, Cabinets/Racks, Front Panel Components &amp; PC Boards</a>
+								</li>
+								<li class="AspNet-Menu-Leaf">
+									<a href="http://www2.eem.com/Hardware_Insulating_Shielding_Materials.aspx" class="AspNet-Menu-Link">
+										Hardware, Insulating &amp; Shielding Materials</a>
+								</li>
+								<li class="AspNet-Menu-Leaf">
+									<a href="http://www2.eem.com/Terminal_Blocks.aspx" class="AspNet-Menu-Link">
+										Terminal Blocks</a>
+								</li>
+								<li class="AspNet-Menu-Leaf">
+									<a href="http://www2.eem.com/Wire_Cable.aspx" class="AspNet-Menu-Link">
+										Wire &amp; Cable</a>
+								</li>
+							</ul>
+						</li>
+						<li class="AspNet-Menu-WithChildren">
+							<a href="http://www2.eem.com/Passive_Components.aspx" class="AspNet-Menu-Link">
+								Passive Components</a>
+							<ul>
+								<li class="AspNet-Menu-Leaf">
+									<a href="http://www2.eem.com/Capacitors.aspx" class="AspNet-Menu-Link">
+										Capacitors</a>
+								</li>
+								<li class="AspNet-Menu-Leaf">
+									<a href="http://www2.eem.com/Coils_Inductors_Magnetics.aspx" class="AspNet-Menu-Link">
+										Coils, Inductors &amp; Magnetics</a>
+								</li>
+								<li class="AspNet-Menu-Leaf">
+									<a href="http://www2.eem.com/Potentiometers_Trimmers_Controls.aspx" class="AspNet-Menu-Link">
+										Potentiometers, Trimmers &amp; Controls</a>
+								</li>
+								<li class="AspNet-Menu-Leaf">
+									<a href="http://www2.eem.com/Resistors.aspx" class="AspNet-Menu-Link">
+										Resistors</a>
+								</li>
+								<li class="AspNet-Menu-Leaf">
+									<a href="http://www2.eem.com/Transformers.aspx" class="AspNet-Menu-Link">
+										Transformers</a>
+								</li>
+							</ul>
+						</li>
+						<li class="AspNet-Menu-WithChildren">
+							<a href="http://www2.eem.com/Power_Sources.aspx" class="AspNet-Menu-Link">
+								Power Sources</a>
+							<ul>
+								<li class="AspNet-Menu-Leaf">
+									<a href="http://www2.eem.com/AC_Power_Systems.aspx" class="AspNet-Menu-Link">
+										AC Power Systems</a>
+								</li>
+								<li class="AspNet-Menu-Leaf">
+									<a href="http://www2.eem.com/AC_to_DC_Power_Supplies.aspx" class="AspNet-Menu-Link">
+										AC to DC Power Supplies</a>
+								</li>
+								<li class="AspNet-Menu-Leaf">
+									<a href="http://www2.eem.com/Batteries.aspx" class="AspNet-Menu-Link">
+										Batteries</a>
+								</li>
+								<li class="AspNet-Menu-Leaf">
+									<a href="http://www2.eem.com/DC_to_DC_Power_Supplies.aspx" class="AspNet-Menu-Link">
+										DC to DC Power Supplies</a>
+								</li>
+							</ul>
+						</li>
+						<li class="AspNet-Menu-WithChildren">
+							<a href="http://www2.eem.com/Semiconductors.aspx" class="AspNet-Menu-Link">
+								Semiconductors</a>
+							<ul>
+								<li class="AspNet-Menu-Leaf">
+									<a href="http://www2.eem.com/Discrete_Semiconductors.aspx" class="AspNet-Menu-Link">
+										Discrete Semiconductors</a>
+								</li>
+								<li class="AspNet-Menu-Leaf">
+									<a href="http://www2.eem.com/Integrated_Circuits.aspx" class="AspNet-Menu-Link">
+										Integrated Circuits</a>
+								</li>
+							</ul>
+						</li>
+						<li class="AspNet-Menu-WithChildren">
+							<a href="http://www2.eem.com/Test_Measurement_Control.aspx" class="AspNet-Menu-Link">
+								Test, Measurement &amp; Control</a>
+							<ul>
+								<li class="AspNet-Menu-Leaf">
+									<a href="http://www2.eem.com/Control_System_Components.aspx" class="AspNet-Menu-Link">
+										Control System Components</a>
+								</li>
+								<li class="AspNet-Menu-Leaf">
+									<a href="http://www2.eem.com/Data_Acquisition_System_Components.aspx" class="AspNet-Menu-Link">
+										Data Acquisition System Components</a>
+								</li>
+								<li class="AspNet-Menu-Leaf">
+									<a href="http://www2.eem.com/Test_Measurement_Equipment_Accessories.aspx" class="AspNet-Menu-Link">
+										Test &amp; Measurement Equipment &amp; Accessories</a>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</li>
+				<li class="AspNet-Menu-WithChildren">
+					<a href="http://www2.electronicproducts.com/Education_Center.aspx" class="AspNet-Menu-Link">
+						Education Center <img src="MOSFET_driver_IC_considerations-article-texas-mar2005-html.aspx_files/down-arrow-gray.png" alt="" height="5" width="10"></a>
+					<ul>
+						<li class="AspNet-Menu-Leaf">
+							<a href="http://www2.electronicproducts.com/Intro_to_Electrical_Engineering.aspx" class="AspNet-Menu-Link">
+								Fundamental EE</a>
+						</li>
+						<li class="AspNet-Menu-Leaf">
+							<a href="http://www2.electronicproducts.com/Electrical_Engineering_Outlook.aspx" class="AspNet-Menu-Link">
+								Outlook</a>
+						</li>
+						<li class="AspNet-Menu-Leaf">
+							<a href="http://www2.electronicproducts.com/Electronics_How_To.aspx" class="AspNet-Menu-Link">
+								How To</a>
+						</li>
+						<li class="AspNet-Menu-Leaf">
+							<a href="http://www2.electronicproducts.com/Electronics_Comparisons.aspx" class="AspNet-Menu-Link">
+								Versus</a>
+						</li>
+					</ul>
+				</li>
+				<li class="AspNet-Menu-WithChildren">
+					<a href="http://www2.electronicproducts.com/Do_It_Yourself.aspx" class="AspNet-Menu-Link">
+						DIY <img src="MOSFET_driver_IC_considerations-article-texas-mar2005-html.aspx_files/down-arrow-gray.png" alt="" height="5" width="10"></a>
+					<ul>
+						<li class="AspNet-Menu-Leaf">
+							<a href="http://www2.electronicproducts.com/Interviews.aspx" class="AspNet-Menu-Link">
+								Interviews</a>
+						</li>
+						<li class="AspNet-Menu-Leaf">
+							<a href="http://www2.electronicproducts.com/Whats_It_Worth.aspx" class="AspNet-Menu-Link">
+								What's It Worth?</a>
+						</li>
+						<li class="AspNet-Menu-Leaf">
+							<a href="http://www2.electronicproducts.com/Popular_Mechanics_How_To.aspx" class="AspNet-Menu-Link">
+								Popular Mechanics</a>
+						</li>
+						<li class="AspNet-Menu-Leaf">
+							<a href="http://www2.electronicproducts.com/Electronics_How_To.aspx" class="AspNet-Menu-Link">
+								How To</a>
+						</li>
+					</ul>
+				</li>
+				<li class="AspNet-Menu-WithChildren">
+					<a href="http://www2.electronicproducts.com/Default.aspx" class="AspNet-Menu-Link">
+						Our Network <img src="MOSFET_driver_IC_considerations-article-texas-mar2005-html.aspx_files/down-arrow-gray.png" alt="" height="5" width="10"></a>
+					<ul>
+						<li class="AspNet-Menu-Leaf">
+							<a href="http://www2.eem.com/" class="AspNet-Menu-Link">
+								EEM</a>
+						</li>
+						<li class="AspNet-Menu-Leaf">
+							<a href="http://www.icmaster.com/" class="AspNet-Menu-Link">
+								IC Master</a>
+						</li>
+						<li class="AspNet-Menu-Leaf">
+							<a href="http://www.eetechbrief.com/" class="AspNet-Menu-Link">
+								eeTechBriefs</a>
+						</li>
+						<li class="AspNet-Menu-Leaf">
+							<a href="http://arm.eem.com/" class="AspNet-Menu-Link">
+								Application Reference Materials</a>
+						</li>
+						<li class="AspNet-Menu-Leaf">
+							<a href="http://www2.electronicproducts.com/Electronic_Resources.aspx" class="AspNet-Menu-Link">
+								eBook Library</a>
+						</li>
+						<li class="AspNet-Menu-Leaf">
+							<a href="http://www2.electronicproducts.com/NewslettersPage.aspx" class="AspNet-Menu-Link">
+								Newsletters</a>
+						</li>
+						<li class="AspNet-Menu-Leaf">
+							<a href="http://www2.electronicproducts.com/TechUpdate.aspx" class="AspNet-Menu-Link">
+								Technology Updates</a>
+						</li>
+					</ul>
+				</li>
+			</ul>
+
+	</div>
+</div>
+</div>
+
+
+		</div>
+	</div>
+</div>
+			</div>
+			<!-- Menu -->
+			
+		</div>
+		
+		<!-- Main Content -->
+		<div id="main-conent" style="border: solid 0px #00ff00; margin: 0px auto 0px; width: 1000px;
+			text-align: left; background-color: white;">
+			<table style="width: 1000px;" cellpadding="0" cellspacing="0">
+				<tbody><tr>
+					<!--Center content-->
+					<td id="frmContent1" style="width: 100%;" colspan="1" valign="top">
+						
+						<div style="background-color: #ffffff;">
+							
+	
+	<style>
+		#article-content
+		{
+			width: 623px;
+		}
+		div #article-content img, div #article-content object, div #article-content embed, div #article-content p img
+		{
+			/*max-width: 623px;*/
+			width: auto; /*height: auto;*/
+			max-width: 621px;
+			border-width: 1px;
+		}
+		.ep_hp-whites
+		{
+			width: 300px !important;
+			max-width: 300px !important;
+			word-wrap: break-word;
+		}
+		div #article-content table
+		{
+			display: block !important;
+			overflow: auto !important;
+			max-height: 2175px !important;
+		}
+		/*.ep_hp-whites, .ep_hp-whites tbody, .ep_hp-whites tr, .ep_hp-whites td
+	   {
+		   margin: 0px;
+		  padding: 0px;
+	   }*/
+	</style>
+	<table style="width: 1000px;" border="0" cellspacing="0">
+		<tbody><tr>
+			<td style="width: 640px; padding: 0px 10px;" valign="top">
+				
+					
+					<div>
+						<span id="ctl00_ContentPlaceHolder1_errMsg" class="errMsg"></span>
+						<div id="article-content" style="text-align: justify;">
+							<div class="ep_artDate">This article was posted on 03/01/2005.</div><br>
+
+<h2><p>MOSFET driver IC considerations</p></h2>
+<p><i>Understanding MOSFET driver IC functions is critical to enhancing switching performance</i></p>
+<p>BY STEVE MAPPUS<br>
+Texas Instruments<br>
+Manchester, NH<br>
+<a href="http://www.ti.com/">http://www.ti.com</a><br>
+</p><p>The key to efficient power conversion lies in the switching that 
+occurs within the power stage of a dc/dc converter. For good reason, 
+many of today's high-frequency high-performance PWM controllers do not 
+have the capability to drive a power MOSFET directly.</p>
+<img src="MOSFET_driver_IC_considerations-article-texas-mar2005-html.aspx_files/F51TEXAE0305.gif" height="250" width="250">
+<p><font face="Arial" size="-1"><b></b></font>
+</p><p>Instead, a MOSFET driver IC is the interface between the 
+low-power switching signals of a PWM and the high-current demanded by 
+the MOSFET. Once a converter topology�such as buck, boost, forward, or 
+full-bridge�is decided on, selecting the best driver IC for a given 
+application requires an understanding of the MOSFET driver IC functions 
+most important to enhancing switching performance.</p>
+<p><b>Input stage</b><br>
+The input stage of a MOSFET driver should be compatible with both CMOS 
+and TTL input signals. CMOS input stages use variable input thresholds 
+that depend on turn-on and turn-off thresholds equal to two-thirds of V<sub>DD</sub> and one-third of V<sub>DD</sub>.</p>
+<p>CMOS input stages offer excellent noise immunity, especially for higher V<sub>DD</sub> values. Because a TTL input stage does not depend on matching the driver's V<sub>DD</sub>,
+ the designer thus has more flexibility in choosing a PWM controller 
+since UVLO is not a consideration for input-switching thresholds.</p>
+<p><b>Output current rating</b><br>
+The driver's current rating and the power MOSFET gate charge 
+predominately determine how quickly the MOSFET can switch on and off. 
+Since these switching transitions determine the switching losses within 
+the power MOSFET, choosing a driver with a current rating correctly 
+matched to the power MOSFET can play an essential role in improving 
+efficiency.</p>
+<p>Earlier MOSFET drivers were designed using a complementary bipolar 
+process to deliver the high current required by the power MOSFET. These 
+types of drivers are effective at sourcing high current, but their 
+ability to fully hold the power MOSFET in a high or low state is limited
+ by their saturation and cutoff voltage.</p>
+<p>Most modern MOSFET drivers use a MOS-only output stage to deliver the
+ high current required by the power MOSFET of the dc/dc converter. ICs 
+using MOS-only drive stages overcome the drawbacks of bipolar MOSFET 
+drivers by fully switching the power MOSFET between the two power rails,
+ V<sub>DD</sub>, and ground. The disadvantage of a MOS-only driver IC is
+ its inability to source high gate current at low voltage, such as the 
+power MOSFET gate-to-source threshold voltage.</p>
+<p>Some manufacturers "address" this by specifying a "peak" current 
+rating for such a device. For example, the test conditions for a MOS 
+driver rated at 3 A might be specified at V<sub>DD</sub> of 10 V, equating to a driver source impedance of 3.3 <font face="Symbol">W</font>.</p>
+<p>This means the driver can deliver 3 A of current when 10 V is applied
+ across the gate and source of the power MOSFET. However, the power 
+MOSFET doesn't begin to "turn on" until the gate-to-source threshold 
+voltage is reached. Using an approximate value of 5 V for the power 
+MOSFET gate-to-source threshold voltage means the driver's actual 
+current rating is</p>
+<p></p>
+<p>(10 V – 5 V)/3.3 <font face="Symbol">W</font> = 1.5 A</p>
+<p></p>
+<p>which is only half the value specified on the datasheet.</p>
+<p>As an example, MOSFET drivers such as the company's UCC37321/2 
+low-side 9-A driver consists of a combination bipolar and MOS process 
+known as TrueDrive (see <i>Fig. 1</i>). The bipolar section provides the rated current where it is needed most, at the Miller plateau of the power MOSFET.</p>
+<img src="MOSFET_driver_IC_considerations-article-texas-mar2005-html.aspx_files/F52TEXAD0305.gif" height="333" width="300">
+<p><font face="Arial" size="-1"><b>Fig. 1. The best MOSFET drivers for high-speed switching consist of a combination bipolar and MOS process.</b></font>
+</p><p>The MOS section is placed in parallel with each bipolar device to achieve true rail-to-rail switching between V<sub>DD</sub>
+ and ground. The result is a superior MOSFET driver optimized for 
+high-speed switching and truly rated to deliver the full-current 
+specified on the datasheet.</p>
+<p><b>Internally regulated or adjustable gate drive</b><br>
+Some MOSFET drivers use a fixed internal regulator to set the amplitude 
+of the gate drive voltage. Internally regulated gate drives should be 
+considered when the V<sub>DD</sub> supply voltage to the driver IC is not well regulated.</p>
+<p>The advantage is that the gate drive amplitude is well regulated and 
+can be closely matched to a power MOSFET offering optimal switching 
+results. However, as the gate-to-source voltage of a power MOSFET is 
+increased, the on-resistance is decreased resulting in lower power 
+dissipation from conduction losses.</p>
+<p>Conversely, as the gate-to-source voltage is increased, the power 
+losses associated with gate charge are also increased. Therefore, for 
+converters requiring highest efficiency, such as 
+voltage-regulator-module applications, a MOSFET driver with an 
+adjustable gate drive voltage might balance the gate charge losses 
+against conduction losses more efficiently.</p>
+<p><b>Propagation delay</b><br>
+Propagation delay is the time it takes to pass a signal from the 
+driver's input to output. While propagation delays can affect the timing
+ between the PWM and the power MOSFET, the delay is not a primary 
+concern because it is normally accounted for within the converter's 
+control loop. For isolated converters using a primary-side PWM 
+controller and a secondary-side synchronous rectifier MOSFET driver, 
+propagation delay can significantly affect the timing of the primary to 
+the secondary.</p>
+<p>A requirement for these types of converters is that the total delay 
+to the secondary synchronous rectifiers must be less than the delay from
+ the PWM through the power transformer. Using a secondary-side MOSFET 
+driver with a propagation delay larger than the primary-side PWM to 
+MOSFET delay can make it difficult to optimize the timing between the 
+primary and secondary.</p>
+<p><b>Deadtime control</b><br>
+For synchronous buck dc/dc converter applications, the high-side and 
+low-side MOSFETs must not be allowed to conduct simultaneously or 
+destructive "shoot-through" currents can result. Therefore an important 
+consideration for these types of MOSFET drivers is deadtime control.</p>
+<p>Current drivers offer a user-programmable fixed delay between the two
+ drive signals of a synchronous buck. The advantage of this approach 
+lies in its simplicity. The disadvantage is that programming the 
+deadtime long enough to ensure that cross conduction will not occur 
+under all operating conditions results in additional body-diode 
+conduction losses in the low-side synchronous MOSFET.</p>
+<p>Others�such as the TPS2838/9 synchronous buck drivers�use an adaptive
+ gate drive technique to actively adjust the amount of deadtime between 
+the high-side and low-side MOSFETs. Adaptive gate drive senses the 
+drain-to-source voltage of the low-side MOSFET while actively adjusting 
+the dead time to reduce body-diode conduction losses and avoid 
+cross-conduction. Adaptive gate drive offers significant improvements 
+over fixed-delay, but still suffers from the fact that some body-diode 
+conduction is inevitable due to finite propagation delays between the 
+time that body-diode conduction is detected and the gate drive signal is
+ adjusted.</p>
+<p>New drivers today also use a predictive gate drive to overcome the 
+propagation delays associated with adaptive gate drive. Predictive gate 
+drive technology is a digital-control technique that virtually 
+eliminates body-diode conduction while optimizing dead-time to give the 
+highest possible efficiency.</p>
+<p><b>Packaging</b><br>
+As with any power management IC, the junction temperature of a MOSFET 
+driver must be kept safely within rated limits under all operating 
+conditions. Industry-standard packages such as DIP, SOIC, and TSSOP are 
+popular considerations, but high-current MOSFET drivers used in 
+high-frequency applications require careful consideration given to 
+advanced packaging techniques.</p>
+<p>Today's MOSFET drivers are placed in TSSOPs with an exposed leadframe
+ die pad on the bottom of the package. This is known as a PowerPad 
+TSSOP, or HTSSOP, offering thermal impedance with a junction-to-case 
+rating as low as 2°C/W.</p>
+<p>Compared with a TSSOP without PowerPad operating at similar junction 
+temperatures, the lower thermal impedance of the HTSSOP means more power
+ can be dissipated within a comparably sized package. For applications 
+where minimizing parasitic effects such as stray capacitance and lead 
+inductance are crucial for switching performance, the QFN package is a 
+must. QFN packages have no measurable lead inductance, making them ideal
+ for high-frequency converter designs.</p>
+<p><b>Additional considerations</b><br>
+Secondary MOSFET driver IC considerations would include additional 
+"features of convenience" not associated with driver performance 
+enhancement. These might include such features as EN (Enable), 
+overvoltage protection, thermal shutdown, or overcurrent protection.</p>
+<p>Because MOSFET driver ICs are used in a variety of isolated and 
+nonisolated power converter applications, a final note of consideration 
+would be having access to a solid knowledge base of technical support. 
+This support can often mean the difference between design success and 
+failure.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+<br>
+
+</div>
+						<br>
+						<div>
+							<span class="ep_Story">
+								
+							</span>
+						</div>
+						
+						
+						
+						
+						
+						<p>
+						
+						</p><div style="text-align: justify;">
+							<a href="https://focus.ti.com/general/docs/event/accesseventaction.tsp?actionId=636" target="_new"><img src="MOSFET_driver_IC_considerations-article-texas-mar2005-html.aspx_files/ti_newsletter.gif" height="60" width="120" align="right" border="0"></a>
+						</div>
+						<div id="Toolbox" style="clear: left; float: left;">
+							<!-- Article Tool Box -->
+							<table width="340px;" border="0" cellpadding="0" cellspacing="0">
+								<tbody><tr>
+									<td>
+										<table style="text-align: center;" border="0" cellpadding="0" cellspacing="0">
+											<tbody><tr>
+												<td width="142px;">
+													<!-- AddThis Bookmark Button BEGIN -->
+													<script type="text/javascript">
+														addthis_url = location.href;
+														addthis_title = document.title;
+														addthis_pub = 'hearst';
+													</script>
+													<script type="text/javascript" src="MOSFET_driver_IC_considerations-article-texas-mar2005-html.aspx_files/addthis_widget.txt"></script>
+													<!-- AddThis Bookmark Button END -->
+												</td>
+												<td class="articletextsmall" width="99px">
+													<a href="http://www2.electronicproducts.com/ReferFriend.aspx?ArticleURL=texas.mar2005.html">
+														<img src="MOSFET_driver_IC_considerations-article-texas-mar2005-html.aspx_files/envelopesmall.gif" alt="Email" border="0"></a>&nbsp;&nbsp;<a href="http://www2.electronicproducts.com/ReferFriend.aspx?ArticleURL=texas.mar2005.html">E-Mail
+															Article</a>
+												</td>
+												<td class="articletextsmall" width="99px">
+													<a href="http://www2.electronicproducts.com/PrintArticle.aspx?ArticleURL=texas.mar2005.html">
+														<img src="MOSFET_driver_IC_considerations-article-texas-mar2005-html.aspx_files/printersmall.gif" alt="Email" border="0"></a>&nbsp;&nbsp;<a href="http://www2.electronicproducts.com/PrintArticle.aspx?ArticleURL=texas.mar2005.html">Printer
+															Friendly</a>
+												</td>
+											</tr>
+										</tbody></table>
+									</td>
+								</tr>
+							</tbody></table>
+						</div>
+						<div style="clear: both;">
+						</div>
+					</div>
+					<!-- End Article Toolbox -->
+					<br>
+					
+					<span id="ctl00_ContentPlaceHolder1_RelatedLinks1"></span><div id="ctl00_ContentPlaceHolder1_BrightcoveRelatedVideos_pnlBrightCoveVideo">
+	
+    
+    
+    
+            
+            <div style="margin-top: 5px; margin-bottom: 5px;">
+        
+            <div style="clear: both;">
+            </div>
+            
+            
+        
+
+</div>
+
+					<br>
+					
+				
+			</div></td>
+			<td style="width: 340px; padding: 0px;" class="ep_rightBorder" valign="top">
+				
+<table border="0" cellpadding="0" cellspacing="0">
+    <tbody><tr>
+        <td>
+            
+            <div class="ep-boombox-advertisment" style="width: 336px; height: 293px; padding: 10px 0px;
+                border: solid 0px black;">
+                <div class="center" style="width: 60px;">
+                    <img class=" dsmwrgqfbvacogsltxta" id="Img2" src="MOSFET_driver_IC_considerations-article-texas-mar2005-html.aspx_files/adlabel_h113x60.gif" alt="Advertisement">
+                </div>
+                <div class="center" style="width: 336px;">
+                    <script language="JavaScript" type="text/javascript" src="MOSFET_driver_IC_considerations-article-texas-mar2005-html.aspx_files/t08.js"></script><noscript><a href="http://ad.doubleclick.net/jump/hbp.ep/t08;pos=boom;sec=t08;tile=7;sz=336x280;u=-1;ord=634586064200647642346739964?"><img src="http://ad.doubleclick.net/ad/hbp.ep/t08;pos=boom;sec=t08;tile=7;sz=336x280;u=-1;ord=634586064200647642346739964?" width="336" height="280" border="0" alt=""></a></noscript>
+                </div>
+            </div>
+            
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <br>
+            
+<table id="FirstLight" style="width: 336px; margin-bottom: 10px;" border="0" cellpadding="0" cellspacing="0">
+    <tbody><tr>
+        <td style="text-align: left;">
+        </td>
+    </tr>
+    <tr class="ep_hp-whitestxt">
+        <td class="ep_hp-whitestxt" style="text-align: left;">
+        <script type="text/javascript" language="JavaScript">
+	        var era_rc = {
+                           Width: 330,
+		                   Height: 255,
+		                   MaxRelatedItems: 5,
+		                   ERADomain: 'electronicproducts.firstlightera.com'
+	                     };
+        </script>
+
+        <script type="text/javascript" language="JavaScript" src="MOSFET_driver_IC_considerations-article-texas-mar2005-html.aspx_files/era_rl.aspx"></script>
+
+        <link type="text/css" href="MOSFET_driver_IC_considerations-article-texas-mar2005-html.aspx_files/HtmlRelatedLinks.css" rel="stylesheet">
+
+        <style type="text/css">
+            body 
+            { 
+	            
+	            margin: 0px;
+	            padding: 0;
+	            border: none;
+	            font-family: Arial,Helvetica,sans-serif;
+            }
+            
+
+            a 
+            {
+	            display: inline;
+	            color: #003366;
+	            text-decoration: none;	
+            }
+        </style>
+
+        </td>
+    </tr>
+</tbody></table>
+
+        </td>
+    </tr>
+    <tr>
+        <td>
+            
+            <div class="ep-boombox-advertisment" style="width: 336px; height: 293px; padding: 10px 0px;
+                border: solid 0px black;">
+                <div class="center" style="width: 60px;">
+                    <img class=" dsmwrgqfbvacogsltxta" id="Img1" src="MOSFET_driver_IC_considerations-article-texas-mar2005-html.aspx_files/adlabel_h113x60.gif" alt="Advertisement">
+                </div>
+                <div class="center" style="width: 336px;">
+                    <script language="JavaScript" type="text/javascript" src="MOSFET_driver_IC_considerations-article-texas-mar2005-html.aspx_files/em.js"></script><noscript><a href="http://ad.doubleclick.net/jump/hbp.ep/em;pos=boom;sec=em;tile=8;sz=336x280;u=-1;ord=634586064200647642346739964?"><img src="http://ad.doubleclick.net/ad/hbp.ep/em;pos=boom;sec=em;tile=8;sz=336x280;u=-1;ord=634586064200647642346739964?" width="336" height="280" border="0" alt=""></a></noscript>
+                </div>
+            </div>
+            
+        </td>
+    </tr>
+    <tr>
+        <td>
+            
+            <div class="ep-boombox-advertisment" style="width: 336px; height: 293px; padding: 10px 0px;
+                border: solid 0px black;">
+                <div class="center" style="width: 60px;">
+                    <img class=" dsmwrgqfbvacogsltxta" id="Img4" src="MOSFET_driver_IC_considerations-article-texas-mar2005-html.aspx_files/adlabel_h113x60.gif" alt="Advertisement">
+                </div>
+                <div class="center" style="width: 336px;">
+                    <script language="JavaScript" type="text/javascript" src="MOSFET_driver_IC_considerations-article-texas-mar2005-html.aspx_files/a_002.js"></script><noscript><a href="http://ad.doubleclick.net/jump/hbp.ep/;pos=boom;tile=9;sz=336x280;u=-1;ord=634586064200647642346739964?"><img src="http://ad.doubleclick.net/ad/hbp.ep/;pos=boom;tile=9;sz=336x280;u=-1;ord=634586064200647642346739964?" width="336" height="280" border="0" alt=""></a></noscript>
+                </div>
+            </div>
+            
+        </td>
+    </tr>
+    <tr>
+        <td>
+            
+            <div class="ep-boombox-advertisment" style="width: 336px; height: 293px; padding: 10px 0px;
+                border: solid 0px black;">
+                <div class="center" style="width: 60px;">
+                    <img class=" dsmwrgqfbvacogsltxta" id="Img5" src="MOSFET_driver_IC_considerations-article-texas-mar2005-html.aspx_files/adlabel_h113x60.gif" alt="Advertisement">
+                </div>
+                <div class="center" style="width: 336px;">
+                    <script language="JavaScript" type="text/javascript" src="MOSFET_driver_IC_considerations-article-texas-mar2005-html.aspx_files/a.js"></script><noscript><a href="http://ad.doubleclick.net/jump/hbp.ep/;pos=boom;tile=10;sz=336x280;u=-1;ord=634586064200647642346739964?"><img src="http://ad.doubleclick.net/ad/hbp.ep/;pos=boom;tile=10;sz=336x280;u=-1;ord=634586064200647642346739964?" width="336" height="280" border="0" alt=""></a></noscript>
+                </div>
+            </div>
+            
+        </td>
+    </tr>
+    
+</tbody></table>
+
+			</td>
+		</tr>
+	</tbody></table>
+
+						</div>
+					</td>
+				</tr>
+			</tbody></table>
+		</div>
+		<!-- Footer -->
+		<div style="background-color: #ffffff; margin: 0px auto; width: 1000px;">
+			
+<table width="1000px" border="0">
+	<tbody><tr>
+		<td style="margin: 0px auto;">
+			<div style="border-top-style: solid; border-top-color: silver; border-top-width: 1px;
+				text-align: center;" class="style1">
+				<br>
+				
+				<div class="border-padding" style="width: 741px; height: 90px; margin: 0px auto;">
+					<div class="float-left" style="width: 13px;">
+						<img class=" dsmwrgqfbvacogsltxta" src="MOSFET_driver_IC_considerations-article-texas-mar2005-html.aspx_files/adlabel_v113x60.gif" id="ctl00_Footer_Advertisement" alt="Advertisement">
+					</div>
+					<div class="float-left" style="width: 728px;">
+						<script language="JavaScript" type="text/javascript" src="MOSFET_driver_IC_considerations-article-texas-mar2005-html.aspx_files/a_004.js"></script><noscript><a href="http://ad.doubleclick.net/jump/hbp.ep/;pos=leader1;tile=2;sz=728x90;u=-1;ord=634586064200647642346739964?"><img src="http://ad.doubleclick.net/ad/hbp.ep/;pos=leader1;tile=2;sz=728x90;u=-1;ord=634586064200647642346739964?" width="728" height="90" border="0" alt=""></a></noscript>
+					</div>
+				</div>
+				
+			</div>
+		</td>
+	</tr>
+</tbody></table>
+<table width="1000px" border="0">
+	<tbody><tr>
+		<td>
+			<div style="text-align: center;">
+				<p class="ep_navfooterintl">
+					<span class="text-color:#cccccc;">EEM</span><br>
+					<a href="http://www2.eem.com/InventorySearch.aspx" target="_blank">Inventory Search</a>&nbsp;
+					| &nbsp;<a href="http://www2.eem.com/Manufacturers.aspx?Alpha=A" target="_blank">Manufacturers</a>&nbsp;
+					| &nbsp;<a href="http://www2.eem.com/Products.aspx" target="_blank">Products</a>&nbsp;
+					| &nbsp;<a href="http://www2.eem.com/Distributors.aspx?Alpha=A" target="_blank">Distributors</a>&nbsp;
+					| &nbsp;<a href="http://www2.eem.com/ProductInformationPages.aspx" target="_blank">Product
+						Information Pages</a>&nbsp; | &nbsp;<a href="http://www2.eem.com/" target="_blank">EEM
+							Home</a><br>
+					<br>
+					<span class="text-color:#cccccc;">Websites</span><br>
+					<a href="http://www2.electronicproducts.com/" target="_blank">Electronic Products</a>&nbsp;
+					| &nbsp;<a href="http://www2.eem.com/" target="_blank">EEM</a>&nbsp; | &nbsp;<a href="http://www.icmaster.com/" target="_blank">IC Master</a>&nbsp; | &nbsp;<a href="http://arm.eem.com/" target="_blank">Application
+							Reference Materials</a>&nbsp; | &nbsp;<a href="http://www.eetechbrief.com/" target="_blank">eeTechBriefs</a>&nbsp;
+					| &nbsp;<a href="http://www.embeddeddeveloper.com/" target="_blank">Embedded Developer</a>&nbsp;
+					| &nbsp;<a href="http://lightingdeveloper.com/" target="_blank">Lighting Developer</a>&nbsp;
+					<br>
+					<br>
+					<span class="text-color:#cccccc;">International Resources</span><br>
+					<a href="http://www.epc.com.cn/" target="_blank">Electronic Products China</a>&nbsp;
+					| &nbsp;<a href="http://www.epc.com.cn/arm/index.asp" target="_blank">Application Reference
+						Materials China</a>&nbsp; | &nbsp;<a href="http://seminar.21ic.com/" target="_blank">eeTechBrief
+							China</a>&nbsp; | &nbsp;<a href="http://www.21ic.com/" target="_blank">21Ic
+					</a>&nbsp;
+					<br>
+					<br>
+				</p>
+			</div>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<div style="text-align: center;">
+				<p class="ep_navfooter">
+					<span class="ep_navfooterb"><a href="http://www2.electronicproducts.com/subscribe.aspx">Subscriptions</a>&nbsp; |
+					</span><span class="ep_navfooterb"><a href="http://www2.electronicproducts.com/CurrentIssue.aspx">Current Issue</a>&nbsp;
+						| </span><span class="ep_navfooterb">&nbsp;<a href="http://www2.electronicproducts.com/faq.aspx">FAQs</a>&nbsp; |</span><a href="http://www2.electronicproducts.com/AboutUs.aspx"></a><span class="ep_navfooterb">&nbsp;<a href="http://www2.electronicproducts.com/AboutUs.aspx">About
+								Us</a>&nbsp; |</span><span class="ep_navfooterb">&nbsp;<a href="http://www2.electronicproducts.com/ContactUs.aspx">Contact
+									Us</a>&nbsp; |</span> <span class="ep_navfooterb"><a href="http://www2.electronicproducts.com/EditorialSubmission.aspx">
+										Editorial Submission</a>&nbsp; | </span>&nbsp;<span class="ep_navfooterb"><a href="http://www2.electronicproducts.com/Privacy.aspx">Privacy
+											Policy</a>&nbsp;|</span> <span class="ep_navfooterb">&nbsp;<a href="http://www2.electronicproducts.com/Sitemap.aspx">Site
+												Map</a> &nbsp;|</span>&nbsp;<span class="ep_navfooterb"><a href="http://www.hearstadvantage.com/">Media
+													Kit</a>&nbsp; |</span><span class="ep_navfooterb"> &nbsp;<a href="http://www2.electronicproducts.com/Default.aspx">Home</a>&nbsp;|</span><span class="ep_navfooterb"> &nbsp;<a href="http://www2.electronicproducts.com/RSS.aspx">RSS</a>&nbsp;|</span>
+					<span class="ep_navfooterb">&nbsp;<a href="http://www2.electronicproducts.com/TechXchange_Forum.aspx">Forums</a></span>
+					<br>
+					<span class="ep_navfooter">All contents are Copyright © 2010&nbsp;by Hearst Business
+						Communications, Inc. All Rights Reserved.</span></p>
+			</div>
+			<!-- Google Analytics Code Start -->
+			<script src="MOSFET_driver_IC_considerations-article-texas-mar2005-html.aspx_files/urchin.js" type="text/javascript">
+			</script>
+			<script type="text/javascript">
+				_uacct = "UA-168463-1";
+				_udn = "electronicproducts.com";
+				urchinTracker();
+			</script>
+			<!-- Google Analytics Code End-->
+			
+			<!-- Default Insight Tag -->
+			<script type="text/javascript">
+				var _bizo_data_partner_id = "440";
+			</script>
+			<script type="text/javascript">
+				var _bizo_p = (("https:" == document.location.protocol) ? "https://sjs." : "http://js.");
+				document.write(unescape("%3Cscript src='" + _bizo_p + "bizographics.com/convert_data.js?partner_id=" + _bizo_data_partner_id + "' type='text/javascript'%3E%3C/script%3E"));
+			</script><script src="MOSFET_driver_IC_considerations-article-texas-mar2005-html.aspx_files/convert_data.js" type="text/javascript"></script>
+			
+		</td>
+	</tr>
+</tbody></table>
+<script language="JavaScript" type="text/javascript" src="MOSFET_driver_IC_considerations-article-texas-mar2005-html.aspx_files/ros.js"></script><noscript><a href="http://ad.doubleclick.net/jump/hbp.ep/ros;pos=rightcornerpeel;sec=ros;tile=3;dcopt=ist;sz=500x500;u=-1;ord=634586064200647642346739964?"><img src="http://ad.doubleclick.net/ad/hbp.ep/ros;pos=rightcornerpeel;sec=ros;tile=3;dcopt=ist;sz=500x500;u=-1;ord=634586064200647642346739964?" width="500" height="500" border="0" alt=""></a></noscript>
+<script type="text/javascript">
+function ShowAdvertisements()
+{
+}
+</script>
+
+		</div>
+		</form>
+	</div>
+
+</body></html>

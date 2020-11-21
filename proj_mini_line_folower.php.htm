@@ -1,0 +1,1491 @@
+<html><script id="abine.stub.Google Analytics">var abPrm={};var abNoOp=function(i,a){return (a&&a.length?a[0]:null)||true;},abSC=function(n,v){document.cookie=n+'='+v+';path=/;expires='+(new Date((new Date()).getTime()+(30000*60*60*24))).toGMTString();},abGC=function(n){return document.cookie.indexOf(n+'=')!=-1;},abAddNoOpMethods=function(o,m){m=m.split(',');for(var i=0;i<m.length;i++){if(m[i].match(/^#/)){o['get'+m[i].substr(1)]=o['set'+m[i].substr(1)]=abNoOp;}else{o[m[i]]=abNoOp;}}};var abTrkr={},abGT=function(){return abTrkr},_gat={_getTracker:abGT,_createTracker:abGT,_getTrackerByName:abGT,_anonymizeIp:abNoOp},urchinTracker=__utmSetTrans=__utmLinkerUrl=__utmLinkPost=__utmSetVar=__utmVisitorCode=abNoOp,_gaq={_createAsyncTracker:abTrkr,_getAsyncTracker:abTrkr,push:function(a){for (var b = arguments, c = 0, d = 0; d < b.length; d++) {try {if (typeof b[d] === 'function') b[d]();else {var e = '', f = b[d][0], k = f.lastIndexOf('.');k > 0 && (e = f[z](0, k), f = f[z](k + 1));var p = e == '_gat' ? _gat : e == '_gaq' ? _gaq : _gat._getTracker(e);p[f].apply(p, b[d].slice(1))}} catch (r) {c++}}return c;}};abAddNoOpMethods(abTrkr,'_deleteCustomVar,_getName,_getAccount,_getVersion,_getVisitorCustomVar,_initData,_setAccount,_setCookiePersistence,_setCustomVar,_setSampleRate,_setSessionTimeout,_setSessionCookieTimeout,_setVar,_setVisitorCookieTimeout,_trackPageview,_setAllowAnchor,_setCampContentKey,_setCampMediumKey,_setCampNameKey,_setCampNOKey,_setCampSourceKey,_setCampTermKey,_setCampaignTrack,_setCampaignCookieTimeout,_setCookieTimeout,_setReferrerOverride,_cookiePathCopy,_getLinkerUrl,_linkByPost,_setAllowHash,_setAllowLinker,_setCookiePath,_setDomainName,_addItem,_addTrans,_trackTrans,_trackEvent,_addIgnoredOrganic,_addIgnoredRef,_addOrganic,_clearIgnoredOrganic,_clearIgnoredRef,_clearOrganic,_trackSocial,_getClientInfo,_getDetectFlash,_getDetectTitle,_setClientInfo,_setDetectFlash,_setDetectTitle,_getLocalGifPath,_getServiceMode,_setLocalGifPath,_setLocalRemoteServerMode,_setLocalServerMode,_setRemoteServerMode,_trackPageLoadTime');abTrkr._link=__utmLinker=function(l){if(l)location.href=l;};</script><head>
+<title>Robotics Project, Small line follower robot</title>
+<meta name="Description" content="This small line follower robot, was designed to be easily built at home without any special equipment, and using a minimum number of mechanical parts. You wont need more than 2 small motors, 2 free wheles and a peice of pcb (to hold the micro-controller, the motors driver and the line sensor) and sure.. your soldeing iron!">
+<meta name="Keywords" content="build,understand,line,follower,robot,track,motor,differential,battery,chassis,circuit,schematic,home made,diy,electronics,sensor">
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<meta name="Author" content="Ibrahim Kamal (ika@ikalogic.com">
+<style>BODY {
+	 FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+	 
+
+
+}
+A:Link {color: #004A95; text-decoration: none; }
+
+A:Visited {color: #004A95; text-decoration: none; }
+
+A:Active {color: #000066; text-decoration: underline; }
+
+A:Hover {color: #0066CC; text-decoration: underline; }</style>
+</head>
+
+<body abinestyle="1" abprocessed="1" leftmargin="0" topmargin="0" marginheight="0" marginwidth="0">
+<div align="center">
+  
+<table width="659" align="center" border="0" cellpadding="0" cellspacing="0">
+  <tbody><tr> 
+    <td> 
+      <style>
+input, select, textarea, checkbox { border:1px solid #515F6F; color:#000000; font-size: 8pt; background-color:#FFFFFF; font-style:normal; font-variant:normal; font-weight:normal }
+</style>
+<table dwcopytype="CopyTableCell" width="650" align="center" border="0" cellpadding="0" cellspacing="0">
+  <tbody><tr> 
+    <td> <img src="proj_mini_line_folower.php_files/head.jpg" usemap="#MapMap" height="81" width="659" border="0"></td>
+  </tr>
+  <tr bgcolor="#F1F4F8"> 
+    <td nowrap="nowrap" bgcolor="#F1F4F8"><div align="center"><font size="2"><strong> </strong></font> 
+        <table width="100%" bgcolor="#333333" border="0" cellpadding="1" cellspacing="1">
+          <tbody><tr>
+            <td height="17" bgcolor="#F1F4F8"><div align="center"><font size="2"><a href="http://www.ikalogic.com/index.php"><strong> 
+                            Home</strong></a> <strong><img src="proj_mini_line_folower.php_files/o2_002.gif" height="10" width="10" align="absmiddle"> 
+              </strong><a href="http://ikalogicstore.com/"><strong>Store</strong></a> 
+              <strong><img src="proj_mini_line_folower.php_files/o2_002.gif" height="10" width="10" align="absmiddle"></strong><strong> 
+              <a href="http://www.ikalogic.com/categories.php">Products and Resources</a> 
+              <img src="proj_mini_line_folower.php_files/o2_002.gif" height="10" width="10"> 
+              <a href="http://www.ikalogic.com/phpBB3/">Forums</a> <img src="proj_mini_line_folower.php_files/o2_002.gif" height="10" width="10"></strong></font><font size="1"> 
+              </font><font size="2"><strong> <a href="http://www.ikalogic.com/consulting.php">Consulting</a> 
+              <img src="proj_mini_line_folower.php_files/o2_002.gif" height="10" width="10"> 
+              <a href="http://www.ikalogic.com/about.php">About us</a> <img src="proj_mini_line_folower.php_files/o2_002.gif" height="10" width="10"> 
+              <a href="http://www.ikalogic.com/contact.php">Contact</a> </strong><a href="http://www.ikalogic.com/index.php"><strong> 
+                            </strong></a><strong> </strong></font></div></td>
+          </tr>
+        </tbody></table>
+        
+    </div></td>
+  </tr></tbody></table>
+<table width="659" align="center" border="0" cellpadding="0" cellspacing="0">
+  <form style="" abinehooked="true" abinetype="login" abineprocessed="true" aburl="phpBB3/ucp.php?mode=login" abhost="ikalogic.com" abaction="phpBB3/ucp.php?mode=login" abhfe="1" action="phpBB3/ucp.php?mode=login" method="post" id="login1"></form>
+    <tbody><tr> 
+      <td nowrap="nowrap" valign="middle" align="center" bgcolor="#ACB8D5"> <font size="2">Username: 
+        <input abinetype="/nameperson/friendly" abinelabel="Username" abineprocessed="true" tabindex="1" name="username" id="username" size="15" type="text">
+        &nbsp;&nbsp; Password: 
+        <input abinetype="/password" abinelabel="Password" abineprocessed="true" tabindex="2" id="password" name="password" size="15" type="password">
+        <input abinetype="" abinelabel="Remember me" abineprocessed="true" name="autologin" id="autologin" tabindex="4" checked="checked" type="checkbox">
+        Remember me 
+        <input name="redirect" value="../proj_mini_line_folower.php" type="hidden">
+        <input name="login" value="Login" tabindex="3" class="button2" type="submit">
+        </font> </td>
+    </tr>
+  
+</tbody></table>
+
+<font size="2"><a href="http://www.ikalogic.com/index.php"><strong> 
+</strong></a></font> 
+<table width="659" align="center" bgcolor="#333333" border="0" cellpadding="2" cellspacing="0">
+  <tbody><tr> 
+    <td width="475" bgcolor="#ECEBBB"><div align="left"><font size="2"> <strong><img src="proj_mini_line_folower.php_files/a3.gif" height="9" width="8"> 
+        <a href="http://www.ikalogic.com/index.php"> Home</a> 
+                <img src="proj_mini_line_folower.php_files/a3.gif" height="9" width="8"> <a href="http://www.ikalogic.com/cat_robot_navigation.php">Robot 
+        navigation</a> 
+                 
+        </strong></font><font size="2"></font> <font size="2"><strong> </strong> 
+        </font></div></td>
+    <td nowrap="nowrap" valign="middle" width="176" bgcolor="#ECEBBB"><div align="right"><font size="2">Follow 
+        us:<strong> <a href="http://www.twitter.com/ikalogic"><img src="proj_mini_line_folower.php_files/twit_s.png" height="17" width="17" align="absbottom" border="0"></a> 
+        <a href="http://www.facebook.com/home.php?sk=group_146938835352437&amp;ap=1"><img src="proj_mini_line_folower.php_files/fb_s.png" height="17" width="17" align="absbottom" border="0"></a> 
+        </strong></font></div></td>
+  </tr>
+</tbody></table>
+<font size="2"><a href="http://www.ikalogic.com/index.php"><strong> 
+</strong></a></font> 
+
+      <table width="650" align="center" border="0" cellpadding="2" cellspacing="3">
+        <tbody><tr> 
+          <td valign="top" width="673"> <p class="MsoNormal" align="center"><font size="5" color="#000066"><span><font face="Times New Roman" size="6">Mini 
+              line follower Robot</font></span></font><span><br>
+              <font size="2"><em>Construct it yourself at home!</em></font><br>
+              <o:p> <font size="1" color="#333333">By <a href="http://ikalogic.com/ika.php">Ibrahim 
+              Kamal</a> </font></o:p></span> 
+              <font size="1"><br>
+              Last update: 
+              <!-- #BeginDate format:Sp1 -->14/9/11<!-- #EndDate -->
+              </font>
+            <table width="100%" border="0" cellpadding="0" cellspacing="6">
+              <tbody><tr> 
+                <td valign="top" width="50%"><span><font size="2"><strong><font size="3">Table 
+                  of content:</font></strong><font size="3"><br>
+                  </font><br>
+                  <em><img src="proj_mini_line_folower.php_files/p1.gif" height="10" width="10"> <a href="#0">Overview</a><br>
+                  <img src="proj_mini_line_folower.php_files/p1.gif" height="10" width="10"> <a href="#1">Overall 
+                  design </a><br>
+                  <img src="proj_mini_line_folower.php_files/p1.gif" height="10" width="10"> <a href="#2">The 
+                  chassis</a><br>
+                  <img src="proj_mini_line_folower.php_files/p1.gif" height="10" width="10"> <a href="#3">The 
+                  wheels <br>
+                  </a><img src="proj_mini_line_folower.php_files/p1.gif" height="10" width="10"> <a href="#4">Motors 
+                  and power transmission</a><br>
+                  <a href="#overview"> </a> <img src="proj_mini_line_folower.php_files/p1.gif" height="10" width="10"> 
+                  <a href="#5">Electronics</a></em></font></span></td>
+                <td width="50%"><div align="center"><a href="http://www.ikalogic.com/scanalogic2/"><img class=" dsmwrgqfbvacogsltxta" src="proj_mini_line_folower.php_files/ad1.gif" alt="Logic Analyzer and signal generator" height="170" width="240" border="0"></a></div></td>
+              </tr>
+            </tbody></table>
+            </p><div align="left"> 
+              <table width="100%" border="0" cellpadding="0" cellspacing="0">
+                <tbody><tr>
+                  <td><strong><font color="#000066"><img src="proj_mini_line_folower.php_files/o2.gif" height="20" width="20" align="absmiddle"></font></strong><font face="Times New Roman" size="5" color="#000066">Overview</font><font face="Times New Roman" size="5"><a name="0" id="0"></a><em> 
+                    <br>
+                    <img src="proj_mini_line_folower.php_files/line2.gif" height="5" width="636"></em></font></td>
+                </tr>
+              </tbody></table>
+              <table width="100%" border="0" cellpadding="2" cellspacing="1">
+                <tbody><tr> 
+                  <td valign="top" width="72%"> <div align="justify"><font size="3"><em> 
+                      This small line follower robot, was designed to be easily 
+                      built at home without any special equipment, and using a 
+                      minimum number of mechanical parts. You wont need more than 
+                      2 small motors, 2 free wheels and a piece of pcb (to hold 
+                      the micro-controller, the motors driver and the line sensor) 
+                      and sure.. your soldering iron!</em><font size="2"><br>
+                      <br>
+                      The main trick making this design simple and affordable, 
+                      is that the robot's chassis <strong><em>is</em></strong> 
+                      actually the main board of the robot, where some supports 
+                      for the <font size="2">wheels - also made of small parts 
+                      of copper boards - are soldered to it. All the </font><font size="3"><font size="2">motors, 
+                      and the</font></font> <font size="2">skids are mounted on 
+                      the main PCB. For an electronics hobbyist, PCB manufacturing 
+                      is a skill that will</font></font></font></div></td>
+                  <td valign="middle" width="28%"><div align="center"><img src="proj_mini_line_folower.php_files/ov.jpg" height="250" width="230" border="1"></div></td>
+                </tr>
+              </tbody></table>
+              <div align="justify"><font size="2"> be learnt sooner or later, 
+                so this design lets you use your experience in PCB manufacturing 
+                to design a high precision chassis for your robot. <br>
+                <br>
+                In case you're not familiar with line following algorithms, it 
+                is recommended that you read that tutorial about <a href="http://ikalogic.com/tut_line_sens_algo.php"><strong>line 
+                tracking sensors and algorithms</strong></a> before reading this 
+                article.<br>
+                </font> <strong><font color="#000066"><br>
+                </font></strong>
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+                  <tbody><tr> 
+                    <td><font face="Times New Roman" size="5" color="#000066"><img src="proj_mini_line_folower.php_files/o2.gif" height="20" width="20" align="absmiddle"></font><font face="Times New Roman" size="5"><font color="#000066">1-Overall 
+                      Design</font> <a name="1" id="1"></a> </font><font face="Times New Roman" size="5"><em><br>
+                      <img src="proj_mini_line_folower.php_files/line2.gif" height="5" width="636"></em></font></td>
+                  </tr>
+                </tbody></table>
+              </div>
+              <table width="100%" border="0" cellpadding="0" cellspacing="0">
+                <tbody><tr> 
+                  <td height="402"><div align="center"><font size="2"><img src="proj_mini_line_folower.php_files/overall%25202.jpg" height="385" width="550" border="1"><br>
+                      <em><font size="1" color="#000066">Fig. 1.A</font></em></font></div></td>
+                </tr>
+              </tbody></table>
+              <div align="justify"><font size="2"><span><font size="2">Figure 
+                1A shows a 3D graphical representation of the robot, where different 
+                parts can be clearly identified according to the following table:<br>
+                <br>
+                </font> </span></font>
+                <table width="100%" bgcolor="#FFFFFF" border="0" cellpadding="2" cellspacing="1">
+                  <tbody><tr bgcolor="#CCCCCC"> 
+                    <td width="14%"><div align="center"><font size="2"><strong>Part 
+                        #</strong></font></div></td>
+                    <td width="86%"><font size="2"><strong>Description</strong></font></td>
+                  </tr>
+                  <tr bgcolor="#CCCCCC"> 
+                    <td><div align="center"><font size="2">1</font></div></td>
+                    <td><font size="2">The base of the robot, also the main PCB.</font></td>
+                  </tr>
+                  <tr bgcolor="#CCCCCC"> 
+                    <td><div align="center"><font size="2">2</font></div></td>
+                    <td><font size="2">Front skid</font></td>
+                  </tr>
+                  <tr bgcolor="#CCCCCC"> 
+                    <td><div align="center"><font size="2">3</font></div></td>
+                    <td><font size="2">Free Wheel, shaped as a pulley</font></td>
+                  </tr>
+                  <tr bgcolor="#CCCCCC"> 
+                    <td><div align="center"><font size="2">4</font></div></td>
+                    <td><font size="2">Plastic pulley</font></td>
+                  </tr>
+                  <tr bgcolor="#CCCCCC"> 
+                    <td><div align="center"><font size="2">5</font></div></td>
+                    <td><font size="2">Battery holder</font></td>
+                  </tr>
+                  <tr bgcolor="#CCCCCC"> 
+                    <td><div align="center"><font size="2">6</font></div></td>
+                    <td><font size="2">Pipe clamp use to hold the motors</font></td>
+                  </tr>
+                  <tr bgcolor="#CCCCCC"> 
+                    <td><div align="center"><font size="2">7</font></div></td>
+                    <td><font size="2">Ni-Cd 7.2V battery pack</font></td>
+                  </tr>
+                  <tr bgcolor="#CCCCCC"> 
+                    <td><div align="center"><font size="2">8</font></div></td>
+                    <td><font size="2">1200 rpm 6V motor</font></td>
+                  </tr>
+                </tbody></table>
+                <font size="2"><span><font size="2"><br>
+                It is clear that the drive train of this robot is differential 
+                type, meaning the two rear wheels are responsible of moving the 
+                robot forward and backward, but are also used to turn the robot 
+                in any required direction depending the difference of speed between 
+                the right and left wheels.<br>
+                <br>
+                The first thing that need some explanation is the fact that there 
+                are only 2 wheels, Well, while not being the best thing to do, 
+                a caster wheel can sometimes be replaced with a skid, when the 
+                robot weight and size are not important, and when the robot is 
+                designed for indoor environment, where the robot can move on relatively 
+                smooth surfaces, where friction wont be a serious problem. <br>
+                </font></span></font><font size="2"><span><font size="2"><br>
+                It may seem strange that the battery was placed on the top of 
+                the robot, and it is actually an important mistake, as a battery 
+                at that height totally destabilize the robot because it raises 
+                the center of gravity, increasing the moment of inertia. For more 
+                information about robot stability and moment of inertial read 
+                <a href="http://ikalogic.com/tut_mech_1.php"><strong>this tutorial</strong></a>. For 
+                this size of robot, a smaller li-ion battery, placed beneath the 
+                robot, would have given much better results.<span><font size="2"><a name="2" id="2"><br>
+                </a></font></span><br>
+                </font></span></font> 
+                <table width="100%" border="0" cellpadding="0" cellspacing="0">
+                  <tbody><tr> 
+                    <td height="20" width="50%"><div align="center"><a href="http://www.jdoqocy.com/click-2978450-10298731" target="_top"> 
+                        <img style="display: none;" class=" dsmwrgqfbvacogsltxta" src="proj_mini_line_folower.php_files/image-2978450-10298731.jpg" alt="Free Shipping at HobbyTron.com" height="125" width="125" border="0"></a></div></td>
+                    <td width="50%"><div align="center"><a style="display: none;" href="http://www.tkqlhce.com/click-2978450-10303874" target="_top">
+<img style="display: none;" class=" dsmwrgqfbvacogsltxta" src="proj_mini_line_folower.php_files/image-2978450-10303874.gif" alt="HobbyTron.com Mini Stunt Car -- Free Shipping" height="117" width="125" border="0"></a></div></td>
+                  </tr>
+                </tbody></table>
+                <font size="2"><span><font size="2"><br>
+                </font></span></font>
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+                  <tbody><tr> 
+                    <td><font face="Times New Roman" size="5" color="#000066"><img src="proj_mini_line_folower.php_files/o2.gif" height="20" width="20" align="absmiddle"></font><font face="Times New Roman" size="5"><span><font color="#000066">2-The 
+                      chassis</font></span></font> <font face="Times New Roman" size="5"><em></em></font><font face="Times New Roman" size="5"><em><br>
+                      <img src="proj_mini_line_folower.php_files/line2.gif" height="5" width="636"></em></font></td>
+                  </tr>
+                </tbody></table>
+                <font size="2"><span><font size="2"> </font></span></font> 
+                <table width="100%" border="0" cellpadding="0" cellspacing="0">
+                  <tbody><tr> 
+                    <td valign="top" width="55%"><div align="justify"><font size="2">Again, 
+                        in figure 2.A, a graphical layout of the main PCB was 
+                        used rather than a picture to make it is easier to differentiate 
+                        between different parts of the PCB.<br>
+                        <br>
+                        As you may have notices, the main board has a dual function: 
+                        Electrical and mechanical. From the mechanical point of 
+                        view, this boards is the chassis of the robot, where the 
+                        motors, the wheels and the electronics are mounted. You 
+                        can see in figure 2.A that the holes to be used to fix 
+                        the motors are present on the layout, as well as the holes 
+                        to mount the front and read skids. Using PCB layout software 
+                        to design the chassis, as well as PCB techniques to manufacture 
+                        it, gives a lot of accuracy which is very important for 
+                        the mechanical system to work correctly. You can see that 
+                        the line sensor is integrated in that same main board. 
+                        It's important that the line sensor be as far as possible 
+                        from the drive wheels in a differential steering robot. 
+                        This principle is explained in detail in this article 
+                        about <a href="http://ikalogic.com/tut_line_sens_algo.php"><strong>line tracking 
+                        sensors and algorithms</strong></a>.<br>
+                        <br>
+                        <br>
+                        There are many kinds of materials from which the copper 
+                        plated boards are made. Try to choose a relatively thick 
+                        one for this chassis, to be able to bear the weight of 
+                        the motors and the batteries, all concentrated in four 
+                        points, where the screws are fixed.</font></div></td>
+                    <td width="45%"><div align="center"><img src="proj_mini_line_folower.php_files/chassis.jpg" height="507" hspace="2" vspace="2" width="315" border="1"><br>
+                        <font size="2"><em><font size="1" color="#000066">Fig. 
+                        2.A</font></em></font> <br>
+                      </div></td>
+                  </tr>
+                </tbody></table>
+                <font size="2"><span><font size="2"><span><font size="2"><strong><font color="#000066"><br>
+                </font></strong></font></span></font></span></font>
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+                  <tbody><tr> 
+                    <td><font face="Times New Roman" size="5" color="#000066"><img src="proj_mini_line_folower.php_files/o2.gif" height="20" width="20" align="absmiddle"></font><font face="Times New Roman" size="5"><span><span><font color="#000066">3-The 
+                      wheels</font></span><a name="3" id="3"></a></span></font> 
+                      <font face="Times New Roman" size="5"><em></em></font><font face="Times New Roman" size="5"><em><br>
+                      <img src="proj_mini_line_folower.php_files/line2.gif" height="5" width="636"></em></font></td>
+                  </tr>
+                </tbody></table>
+                <font size="2"><span><font size="2"> </font></span></font> 
+                <table width="100%" border="0" cellpadding="0" cellspacing="0">
+                  <tbody><tr>
+                    <td valign="top" width="84%"><div align="justify"><font size="2"><span><font size="2"><span><font size="2">The 
+                        wheels in this design also have a dual function, they 
+                        act as a wheel and as a pulley, with which power is transmitter 
+                        from another smaller pulley using a rubber belt.</font></span><br>
+                        <br>
+                        Those wheels were originally free wheels used in sliding 
+                        doors and windows. they are small, cheap and can bear 
+                        very important loads. They have been modified as shown 
+                        in figure 3.A so that they can be fixed to the chassis 
+                        using those 4mm standard screws. Note that the wheel is 
+                        still free to rotate around the axe of the screw, so the 
+                        only way to transmit power to that wheel will be though 
+                        a belt directly mounted on it, as you shall see later.</font></span></font></div></td>
+                    <td width="16%"><div align="center"><font size="1"><img src="proj_mini_line_folower.php_files/wheel3.jpg" height="150" hspace="2" vspace="2" width="150" border="1"><br>
+                        <em><font color="#000066">Fig. 3.A</font></em></font> 
+                      </div></td>
+                  </tr>
+                </tbody></table>
+                <font size="2"><span><font size="2"> <span><font size="2"><br>
+                You can also notice that the wheels are mounted on the chassis 
+                using small rectangular pieces</font></span></font> </span></font> 
+                <table width="100%" border="0" cellpadding="0" cellspacing="0">
+                  <tbody><tr> 
+                    <td valign="top" width="37%"><div align="justify"><font size="2"><span><font size="2"><span><font size="2">of 
+                        copper board welded the main board using a regular soldering 
+                        iron, and where the center of the wheel is etched on it 
+                        for maximum accuracy, this way, both the right and left 
+                        wheels are at</font></span> the exact same height. You 
+                        can also notice that another small piece of PCB is added 
+                        to cary any eventual shear stress on the main part holding 
+                        the wheel. (see figure 3.B and 3.C)</font></span></font></div></td>
+                    <td width="31%"><div align="center"><font size="1"><img src="proj_mini_line_folower.php_files/wheel1.jpg" height="212" hspace="2" vspace="2" width="212" border="1"><br>
+                        <em><font color="#000066">Fig. 3.B</font></em></font> 
+                        <font size="1"><br>
+                        </font></div></td>
+                    <td width="32%"><div align="center"><font size="1"><img src="proj_mini_line_folower.php_files/wheel2.jpg" height="212" hspace="2" vspace="2" width="212" border="1"><br>
+                        <em><font color="#000066">Fig. 3.C</font></em></font> 
+                      </div></td>
+                  </tr>
+                </tbody></table>
+                <font size="2"><span><font size="2"></font></span></font><font size="2"><span><font size="2"><br>
+                </font></span></font> 
+                <table width="100%" border="0" cellpadding="0" cellspacing="0">
+                  <tbody><tr> 
+                    <td><font face="Times New Roman" size="5" color="#000066"><img src="proj_mini_line_folower.php_files/o2.gif" height="20" width="20" align="absmiddle"></font><font face="Times New Roman" size="5"><span><span><span><font color="#000066">4-Motors 
+                      and power transmission<a name="4" id="4"></a></font></span></span></span></font> 
+                      <font face="Times New Roman" size="5"><em></em></font><font face="Times New Roman" size="5"><em><br>
+                      <img src="proj_mini_line_folower.php_files/line2.gif" height="5" width="636"></em></font></td>
+                  </tr>
+                </tbody></table>
+                <font size="2"><span><font size="2"><span><font size="2"><span><font size="2"><strong><font size="4" color="#000066"><font size="2"> 
+                </font></font></strong><font size="2"><span><span>The motors, 
+                which are DC motors originally made for cassette players, are 
+                cylindrical and thus very difficult to mount and firmly fix to 
+                a chassis<font color="#000066">.</font></span></span></font><font size="2" color="#000066"><strong><br>
+                </strong></font></font></span></font></span></font></span></font> 
+                <table width="100%" border="0" cellpadding="0" cellspacing="0">
+                  <tbody><tr> 
+                    <td valign="middle" width="37%"><div align="justify"><font size="2"><span><span>So 
+                        this unique technique was used, which is to use pipe clamps, 
+                        originally used to mount water pipes all along the walls 
+                        of buildings (see figure 4.A). Those pipe clamps are easily 
+                        available for all the diameters you can imagine, at least 
+                        you will easily find a pipe clamp whose diameter fits 
+                        the diameter of your motor. </span></span></font></div></td>
+                    <td width="63%"><div align="center"><font size="2"><img src="proj_mini_line_folower.php_files/motors.jpg" height="162" hspace="4" vspace="2" width="400" border="1"><br>
+                        <em><font size="1" color="#000066">Fig. 4.A</font></em></font> 
+                      </div></td>
+                  </tr>
+                </tbody></table>
+                <font size="2"><span><font size="2"><span><span>You can notice 
+                a small black plastic pulley fixed at the end of the motor's shaft, 
+                which will be then used to transmit power to the wheels using 
+                a belt. This small pulley can be found from the same store where 
+                you can buy those motors, the rubber belts, as well as all kind 
+                of accessories of cassette players.</span></span><br>
+                <br>
+                </font></span></font> 
+                <table width="100%" border="0" cellpadding="0" cellspacing="0">
+                  <tbody><tr>
+                    <td valign="top" width="37%"><div align="justify"><font size="2"><span><font size="2">When 
+                        the motors and the pipe clamps are assembled as shown 
+                        in figure 4.A, they can finally be easily inserted in 
+                        their place in the chassis (main board), then all you 
+                        need is to add a rubber belt to obtain the transmission 
+                        system shown in figure 4B.<br>
+                        <br>
+                        This pulley / belt assembly acts exactly as as the gearbox 
+                        added to a DC motors to reduce speed and increase torque.<br>
+                        <br>
+                        Depending on the size of the belt you have, you can adjust 
+                        its tension by adjusting the height of the motor itself, 
+                        which can easily be done by changing the position of the 
+                        nuts on the screws holding the motors to the PCB. The 
+                        optimum tension in the belt can be easily found by trial 
+                        and error.<br>
+                        <br>
+                        </font></span></font></div></td>
+                    <td width="63%"><div align="center"><img src="proj_mini_line_folower.php_files/transmission.jpg" height="357" hspace="3" vspace="3" width="400" border="1"><br>
+                        <font size="2"><em><font size="1" color="#000066">Fig. 
+                        4.B</font></em></font> </div></td>
+                  </tr>
+                </tbody></table>
+                <a name="5" id="5"></a><br>
+                <table width="100%" border="0" cellpadding="0" cellspacing="0">
+                  <tbody><tr> 
+                    <td height="20"><div align="center"><a href="http://www.anrdoezrs.net/click-2978450-10274367" target="_top">
+<img style="display: none;" class=" dsmwrgqfbvacogsltxta" src="proj_mini_line_folower.php_files/image-2978450-10274367.jpg" alt="Fully-Functional Hot Mini Cars" height="60" width="468" border="0"></a></div></td>
+                  </tr>
+                </tbody></table>
+                <font size="2"><span><font size="2"><br>
+                </font></span></font>
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+                  <tbody><tr> 
+                    <td><font face="Times New Roman" size="5" color="#000066"><img src="proj_mini_line_folower.php_files/o2.gif" height="20" width="20" align="absmiddle"></font><font face="Times New Roman" size="5"><span><span><span><span><font color="#000066">5-Electronics</font></span></span></span></span></font> 
+                      <font face="Times New Roman" size="5"><em></em></font><font face="Times New Roman" size="5"><em><br>
+                      <img src="proj_mini_line_folower.php_files/line2.gif" height="5" width="636"></em></font></td>
+                  </tr>
+                </tbody></table>
+                <table width="100%" border="0" cellpadding="0" cellspacing="0">
+                  <tbody><tr> 
+                    <td><div align="center"><font size="2"><span><font size="2"><img src="proj_mini_line_folower.php_files/shm1.jpg" height="1083" width="566" border="1"><br>
+                        <em><font size="1" color="#000066">Fig. 5.A</font></em></font> 
+                        <font size="2"> </font></span></font></div></td>
+                  </tr>
+                </tbody></table>
+                <font size="2"><span><font size="2"> <strong>Circuit description:</strong><br>
+                Being powered from a 7.2V battery, the regulator U3 provides regulated 
+                5V for the microcontroller and for the logic gates of the motor 
+                driver. You can add a capacitor between the output of the regulator 
+                and the ground to absorb the noise caused by the presence of motors 
+                in the system, but I didn't use any, and didn't face any problems 
+                regarding this issue.<br>
+                <br>
+                When the switch SW1 is switched OFF, the battery can be charged 
+                using the jack J2.<br>
+                <br>
+                The line sensor is composed of 4 cells, and is based on the IR 
+                emission/reception technique described in this <a href="http://ikalogic.com/ir_prox_sensors.php"><strong>tutorial</strong></a>. 
+                D1 to D4 are IR LEDs used as receivers, D9 to D12 are also IR 
+                LEDs, but used as emitters this time. The output of the line sensor 
+                is directly fed from the Op Amps to the microcontroller. Only 
+                two outputs are connected to the LEDs D7 and D8, giving a direct 
+                indication of the output of the sensor, making the calibration 
+                process very easy through the </font></span></font> 
+                <table width="100%" border="0" cellpadding="0" cellspacing="0">
+                  <tbody><tr>
+                    <td valign="top" width="37%"><div align="justify"><font size="2"><span><font size="2">potentiometer 
+                        R6. For more information about line sensors, check this 
+                        tutorial specially dedicated to <a href="http://ikalogic.com/tut_line_sens_algo.php"><strong>line 
+                        tracking sensors and algorithms</strong></a></font></span></font> 
+                        <font size="2"><br>
+                        <br>
+                        Figure 5.B shows the 4 emitter and 4 receiver LEDs at 
+                        the front of the robot. Note that this is the optimal 
+                        position of the line sensor, as you can see in the tutorial 
+                        above about line sensors.<br>
+                        <br>
+                        It is also clear that they are mounted on the copper side 
+                        of the board, even through they are regular LEDs (not 
+                        SMT type). The Leads of the LEDs are used to adjust the 
+                        height of the sensor from the ground. 10 to 20 millimeters 
+                        proved to be a fair height for the sensor to function 
+                        properly. </font></div></td>
+                    <td width="63%"><div align="center"><img src="proj_mini_line_folower.php_files/sensor.jpg" height="348" hspace="4" vspace="4" width="400" border="1"><br>
+                        <font size="2"><span><font size="2"><em><font size="1" color="#000066">Fig. 
+                        5.B</font></em></font></span></font> </div></td>
+                  </tr>
+                </tbody></table>
+                <font size="2"><span><font size="2"><br>
+                The connections around the microcontroller are standard in most 
+                of our 8051 based projects, they are the crystal resonator along 
+                with the two decoupling capacitors, the debouncing circuit attached 
+                to the reset pin, and the ISP (<a href="http://ikalogic.com/isp.php">In system programming</a>).
+ 
+                Upon switching on the robot, The software loaded on the 
+microcontroller simply directs the robot to the line, using standard 
+                line following algorithms described in the following <a href="http://ikalogic.com/tut_line_sens_algo.php">article</a>. 
+                You can download the C code along with the HEX file to be loaded 
+                into the microcontroller at the end of this article.<br>
+                <br>
+                The two motors of the robot are driven using the reliable L293D 
+                Motor driver IC, the motors are connected to the wire connections 
+                W3, W4, W5, and W6. Being controlled by the microcontroller, 
+                the speed of the motors can be easily adjusted using PWM pulses 
+                fed to the motor through the Enable PINs of the driver. Note that 
+                each channel has it's own independent Enable PIN, making it very 
+                easy to control the speed of two different motors simultaneously.<br>
+                <br>
+                <font color="#000066"><strong><img src="proj_mini_line_folower.php_files/o2.gif" height="10" width="10" align="absmiddle"> 
+                REMINDER: Operating the L293D motor driver</strong></font><br>
+                </font> </span></font> 
+                <table width="100%" border="0" cellpadding="2" cellspacing="0">
+                  <tbody><tr> 
+                    <td valign="top" width="42%"><div align="justify"><font size="2">Using 
+                        the L293D motor driver, makes controlling a motor as simple 
+                        as operating a buffer gate IC. It totally isolates the 
+                        TTL logic inputs from the high current outputs.<br>
+                        <br>
+                        Putting a logic 1 on the pin <strong>In1</strong> will 
+                        make <strong>Out1</strong> pin go to Vpower (36 Volts 
+                        MAX.), while a logic 0 will make it go to 0V<br>
+                        <br>
+                        Each couple of channels can be enabled and disabled using 
+                        E1 and E2 pins. When disabled a channel provide a very 
+                        high impedance (resistance) to the motor, exactly as if 
+                        the motor wasn't connected to the driver IC at all, which 
+                        makes this feature very useful for PWM speed control. 
+                        <br>
+                        <br>
+                        <em>Figure 5.C</em> shows different ways to connect a 
+                        motor to the IC. <br>
+                        <br>
+                        One way is to use 2 channels to build </font></div></td>
+                    <td width="58%"><div align="center"><img src="proj_mini_line_folower.php_files/l293d.jpg" height="350" width="370" border="1"><br>
+                        <font size="2"><font size="1"><font size="2"><font size="1" color="#000066"><font size="2"><font size="1"><font size="2"><font size="1" color="#000066"><font color="#999999"><font size="2"><font size="1"><font size="2"><font size="1" color="#000000">Fig.5C: 
+                        Using the L293D motor driver</font></font></font></font></font></font></font></font></font></font></font></font></font> 
+                      </div></td>
+                  </tr>
+                </tbody></table>
+                <font size="2"> a bi-directional motor driver, another way is 
+                to use 1 channel per motor, building a unidirectional driver. 
+                In this project, we will be using the 4 channels to drive the 
+                2 motors in both directions. To get more specific information 
+                on this very useful IC, you can always download and inspect the 
+                <a href="http://ikalogic.com/art_pics/wfr2/l293d.pdf"><strong>datasheet</strong></a></font><font size="2"><span><font size="2"><br>
+                <br>
+                </font></span></font> 
+                <table width="100%" bgcolor="#990000" border="0" cellpadding="0" cellspacing="1">
+                  <tbody><tr> 
+                    <td bgcolor="#FFFF99"><div align="center"><strong><a href="http://www.ikalogic.com/phpBB3/download/file.php?id=28">Download</a> 
+                        the zip file for this project <font size="2"><br>
+                        containing the full schematic, PCB design and Source CODE.</font> 
+                        <font size="1"><em><br>
+                        [<strong>note: i use <a href="http://www.expresspcb.com/">ExpressPCB</a>(FREEWARE) 
+                        to design the schematics and the PCB</strong>]</em></font></strong> 
+                      </div></td>
+                  </tr>
+                </tbody></table>
+                <font size="1"><em><font size="1"><em><font size="1"> <br>
+                <table width="100%" border="0" cellpadding="0" cellspacing="3">
+  <tbody><tr> 
+    <td><div align="center"> 
+        <script type="text/javascript"><!--
+google_ad_client = "pub-6530907032528013";
+google_ad_width = 468;
+google_ad_height = 60;
+google_ad_format = "468x60_as";
+google_ad_type = "text_image";
+google_ad_channel = "";
+google_color_border = "336699";
+google_color_bg = "FFFFFF";
+google_color_link = "0000FF";
+google_color_text = "000000";
+google_color_url = "008000";
+//-->
+</script>
+        <script type="text/javascript" src="proj_mini_line_folower.php_files/show_ads.js">
+</script>
+      </div></td>
+  </tr>
+</tbody></table>
+                </font></em></font></em></font><br>
+                <br>
+                <table width="100%" bgcolor="#990000" border="0" cellpadding="0" cellspacing="1">
+                  <tbody><tr> 
+                    <td bgcolor="#FFFFFF"><div align="center">
+                        <table width="100%" border="0" cellpadding="0" cellspacing="0">
+                          <tbody><tr>
+                            <td width="24%"><a href="http://ikalogic.com/inpictures.php"><img src="proj_mini_line_folower.php_files/inpictures.jpg" height="66" width="150" border="0"></a></td>
+                            <td width="76%"><div align="center"><strong>Download 
+                                movie clips showing how the robot is following 
+                                a line in a track:<br>
+                                </strong>
+                                <table width="100%" border="0" cellpadding="0" cellspacing="0">
+                                  <tbody><tr> 
+                                    <td><div align="center"><font size="2"><a href="http://www.ikalogic.com/phpBB3/download/file.php?id=34"><img src="proj_mini_line_folower.php_files/movie1.jpg" height="148" width="200" border="1"></a><br>
+                                        <a href="http://www.ikalogic.com/phpBB3/download/file.php?id=34">clip1.wmv</a><br>
+                                        </font></div></td>
+                                    <td><div align="center"><font size="2"><a href="http://www.ikalogic.com/phpBB3/download/file.php?id=35"><img src="proj_mini_line_folower.php_files/movie2.jpg" height="148" width="200" border="1"></a><br>
+                                        <a href="http://www.ikalogic.com/phpBB3/download/file.php?id=35">clip2.wmv 
+                                        </a></font></div></td>
+                                  </tr>
+                                </tbody></table>
+                                <strong> </strong><strong></strong></div></td>
+                          </tr>
+                        </tbody></table>
+                        <strong><font size="2"> </font></strong></div></td>
+                  </tr>
+                </tbody></table>
+                <font size="2"><span><font size="2"><br>
+                </font></span></font> <font size="1"><em><font size="1"><em><font size="1"> 
+                </font></em></font></em></font> <br>
+                <font size="1"><em><font size="1"><em><font size="1"> <em><font size="1"><em><font size="1"><em><font size="1"><em><font size="1"><em><font size="1"><em><font size="1"><em><font size="1"><em><font size="1">
+                
+<script language="JavaScript" type="text/JavaScript">
+function insert_text(text, spaces, popup)
+{
+	var textarea;
+	var form_name = "postform";
+	var text_name = "message";
+	
+	if (!popup)
+	{
+		textarea = document.forms[form_name].elements[text_name];
+	}
+	else
+	{
+		textarea = opener.document.forms[form_name].elements[text_name];
+	}
+
+	if (spaces)
+	{
+		text = ' ' + text + ' ';
+	}
+
+	if (!isNaN(textarea.selectionStart))
+	{
+		var sel_start = textarea.selectionStart;
+		var sel_end = textarea.selectionEnd;
+
+		mozWrap(textarea, text, '')
+		textarea.selectionStart = sel_start + text.length;
+		textarea.selectionEnd = sel_end + text.length;
+	}	
+	
+	else if (textarea.createTextRange && textarea.caretPos)
+	{
+		if (baseHeight != textarea.caretPos.boundingHeight) 
+		{
+			textarea.focus();
+			storeCaret(textarea);
+		}
+		var caret_pos = textarea.caretPos;
+		caret_pos.text = caret_pos.text.charAt(caret_pos.text.length - 1) == ' ' ? caret_pos.text + text + ' ' : caret_pos.text + text;
+		
+	}
+	else
+	{
+		textarea.value = textarea.value + text;
+	}
+
+	if (!popup)
+	{
+		textarea.focus();
+	}
+
+}
+</script>
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+  <tbody><tr> 
+    <td><font face="Times New Roman" size="5" color="#000066"><img src="proj_mini_line_folower.php_files/o2_002.gif" height="20" width="20" align="absmiddle"> 
+      <a href="http://www.ikalogic.com/phpBB3/viewtopic.php?f=16&amp;t=33">Discussion 
+      (Last 15 posts preview...) </a></font><font face="Times New Roman" size="5" color="#000066"><br>
+      <img src="proj_mini_line_folower.php_files/line2_002.gif" height="5" width="645"></font></td>
+  </tr>
+</tbody></table>
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+  <tbody><tr> 
+    <td><div align="justify"><font size="1">Preview of the last 15 
+        messages discussing this page. Messages are sorted from the newest to 
+        the oldest. </font></div></td>
+  </tr>
+</tbody></table>
+<table width="100%" bgcolor="#333333" border="0" cellpadding="1" cellspacing="1">
+  <tbody><tr> 
+    <td bgcolor="#DAE2F1"><div align="center"><font size="2"></font> 
+        <table width="100%" border="0" cellpadding="0" cellspacing="0">
+          <tbody><tr>
+            <td><font size="2"><img src="proj_mini_line_folower.php_files/o2_002.gif" height="10" width="10"> <a href="http://www.ikalogic.com/phpBB3/viewtopic.php?f=16&amp;t=33"><strong>Follow 
+              this discussion in the Full-featured forum</strong></a> <img src="proj_mini_line_folower.php_files/o2_002.gif" height="10" width="10"></font></td>
+            <td><div align="center"><font size="2"><a href="#mini_forum"><img src="proj_mini_line_folower.php_files/post.gif" height="25" width="96" border="0"></a></font></div></td>
+          </tr>
+        </tbody></table>
+        <font size="2"> </font></div></td>
+  </tr>
+</tbody></table>
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+  <tbody><tr> 
+    <td bgcolor=""><table width="100%" border="0" cellpadding="4" cellspacing="0">
+        <tbody><tr> 
+          <td valign="top" width="20%" bgcolor="#AFC2E0"><font size="1">Posted 
+            by:<br>
+            <strong> <font size="2" color="#003399"> </font><font size="2"> <a href="http://www.ikalogic.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=34840">eric3231559            </a></font></strong><br>
+            on: 
+            23 Oct 2011            </font></td>
+          <td valign="top" width="80%" bgcolor="#F1F4F8">
+<table width="100%" border="0" cellpadding="3" cellspacing="3">
+              <tbody><tr>
+                <td><table width="100%" bgcolor="#F1F4F8" border="0" cellpadding="0" cellspacing="0">
+                    <tbody><tr> 
+                      <td width="93%"><font size="2"> <strong> <img src="proj_mini_line_folower.php_files/a3.gif" height="9" width="8"> 
+                        </strong> 
+                        <a href="http://www.ikalogic.com/phpBB3/viewtopic.php?f=16&amp;start=150&amp;t=33#p7088">Mini line follower robot</a>                         </font></td>
+                      <td nowrap="nowrap" width="7%"><div align="center"><font size="1">[<a href="http://www.ikalogic.com/phpBB3/posting.php?mode=quote&amp;f=16&amp;p=7088"><strong>'Quote</strong></a> 
+                          ] </font></div></td>
+                    </tr>
+                    <tr bgcolor="#F1F4F8"> 
+                      <td colspan="2"><img src="proj_mini_line_folower.php_files/line2_002.gif" height="5" width="100%"></td>
+                    </tr>
+                    <tr bgcolor="#F1F4F8"> 
+                      <td colspan="2"><font size="2"> 
+                        Hi, can I get the full project ? because the file you share seems to be corrupt ~ thank you.<br><br>My email is <!-- e --><a href="mailto:eric3231559@hotmail.com">eric3231559@hotmail.com</a><!-- e -->                        <br>
+                                                </font></td>
+                    </tr>
+                  </tbody></table></td>
+              </tr>
+            </tbody></table></td>
+        </tr>
+      </tbody></table></td>
+  </tr>
+</tbody></table>
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+  <tbody><tr>
+    <td><img src="proj_mini_line_folower.php_files/line2_002.gif" height="5" width="100%"></td>
+  </tr>
+</tbody></table>
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+  <tbody><tr> 
+    <td bgcolor=""><table width="100%" border="0" cellpadding="4" cellspacing="0">
+        <tbody><tr> 
+          <td valign="top" width="20%" bgcolor="#AFC2E0"><font size="1">Posted 
+            by:<br>
+            <strong> <font size="2" color="#003399"> </font><font size="2"> <a href="http://www.ikalogic.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=34459">belal275            </a></font></strong><br>
+            on: 
+            10 Oct 2011            </font></td>
+          <td valign="top" width="80%" bgcolor="#F1F4F8">
+<table width="100%" border="0" cellpadding="3" cellspacing="3">
+              <tbody><tr>
+                <td><table width="100%" bgcolor="#F1F4F8" border="0" cellpadding="0" cellspacing="0">
+                    <tbody><tr> 
+                      <td width="93%"><font size="2"> <strong> <img src="proj_mini_line_folower.php_files/a3.gif" height="9" width="8"> 
+                        </strong> 
+                        <a href="http://www.ikalogic.com/phpBB3/viewtopic.php?f=16&amp;start=150&amp;t=33#p7033">Mini line follower robot</a>                         </font></td>
+                      <td nowrap="nowrap" width="7%"><div align="center"><font size="1">[<a href="http://www.ikalogic.com/phpBB3/posting.php?mode=quote&amp;f=16&amp;p=7033"><strong>'Quote</strong></a> 
+                          ] </font></div></td>
+                    </tr>
+                    <tr bgcolor="#F1F4F8"> 
+                      <td colspan="2"><img src="proj_mini_line_folower.php_files/line2_002.gif" height="5" width="100%"></td>
+                    </tr>
+                    <tr bgcolor="#F1F4F8"> 
+                      <td colspan="2"><font size="2"> 
+                        Please send this full project<br><!-- e --><a href="mailto:mugolst@gmail.com">mugolst@gmail.com</a><!-- e -->                        <br>
+                                                </font></td>
+                    </tr>
+                  </tbody></table></td>
+              </tr>
+            </tbody></table></td>
+        </tr>
+      </tbody></table></td>
+  </tr>
+</tbody></table>
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+  <tbody><tr>
+    <td><img src="proj_mini_line_folower.php_files/line2_002.gif" height="5" width="100%"></td>
+  </tr>
+</tbody></table>
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+  <tbody><tr> 
+    <td bgcolor=""><table width="100%" border="0" cellpadding="4" cellspacing="0">
+        <tbody><tr> 
+          <td valign="top" width="20%" bgcolor="#AFC2E0"><font size="1">Posted 
+            by:<br>
+            <strong> <font size="2" color="#003399"> </font><font size="2"> <a href="http://www.ikalogic.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=33377">angban401            </a></font></strong><br>
+            on: 
+            04 Sep 2011            </font></td>
+          <td valign="top" width="80%" bgcolor="#F1F4F8">
+<table width="100%" border="0" cellpadding="3" cellspacing="3">
+              <tbody><tr>
+                <td><table width="100%" bgcolor="#F1F4F8" border="0" cellpadding="0" cellspacing="0">
+                    <tbody><tr> 
+                      <td width="93%"><font size="2"> <strong> <img src="proj_mini_line_folower.php_files/a3.gif" height="9" width="8"> 
+                        </strong> 
+                        <a href="http://www.ikalogic.com/phpBB3/viewtopic.php?f=16&amp;start=150&amp;t=33#p6807">Re: Mini line follower robot</a>                         </font></td>
+                      <td nowrap="nowrap" width="7%"><div align="center"><font size="1">[<a href="http://www.ikalogic.com/phpBB3/posting.php?mode=quote&amp;f=16&amp;p=6807"><strong>'Quote</strong></a> 
+                          ] </font></div></td>
+                    </tr>
+                    <tr bgcolor="#F1F4F8"> 
+                      <td colspan="2"><img src="proj_mini_line_folower.php_files/line2_002.gif" height="5" width="100%"></td>
+                    </tr>
+                    <tr bgcolor="#F1F4F8"> 
+                      <td colspan="2"><font size="2"> 
+                        <br><table width="98%" align="center" bgcolor="#E5E5E5" border="0" cellpadding="5" cellspacing="1"><tbody><tr><td bgcolor="#CCCCCC"><i><font size="1"><u><b>Quoting ikalogic:</b></u> <font color="#BF0000"><b>PLEASE
+ STOP ASKING FOR ME OR SOME ONE TO SEND YOU THE CODE BY MAIL. AS I SAID 
+MANY TIME BEFORE, I DO NOT HAVE ANY MORE MATERIAL THAN WHAT IS AVAILABLE
+ ON THE WEBSITE. SORRY FOR THE INCONVINIENCE</b></font></font></i></td></tr></tbody></table><br>Dear sir !floor() function declaration is missing.                        <br>
+                                                </font></td>
+                    </tr>
+                  </tbody></table></td>
+              </tr>
+            </tbody></table></td>
+        </tr>
+      </tbody></table></td>
+  </tr>
+</tbody></table>
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+  <tbody><tr>
+    <td><img src="proj_mini_line_folower.php_files/line2_002.gif" height="5" width="100%"></td>
+  </tr>
+</tbody></table>
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+  <tbody><tr> 
+    <td bgcolor=""><table width="100%" border="0" cellpadding="4" cellspacing="0">
+        <tbody><tr> 
+          <td valign="top" width="20%" bgcolor="#AFC2E0"><font size="1">Posted 
+            by:<br>
+            <strong> <font size="2" color="#003399"> </font><font size="2"> <a href="http://www.ikalogic.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=33377">angban401            </a></font></strong><br>
+            on: 
+            04 Sep 2011            </font></td>
+          <td valign="top" width="80%" bgcolor="#F1F4F8">
+<table width="100%" border="0" cellpadding="3" cellspacing="3">
+              <tbody><tr>
+                <td><table width="100%" bgcolor="#F1F4F8" border="0" cellpadding="0" cellspacing="0">
+                    <tbody><tr> 
+                      <td width="93%"><font size="2"> <strong> <img src="proj_mini_line_folower.php_files/a3.gif" height="9" width="8"> 
+                        </strong> 
+                        <a href="http://www.ikalogic.com/phpBB3/viewtopic.php?f=16&amp;start=0&amp;t=33#p6806">Re: Mini line follower robot</a>                         </font></td>
+                      <td nowrap="nowrap" width="7%"><div align="center"><font size="1">[<a href="http://www.ikalogic.com/phpBB3/posting.php?mode=quote&amp;f=16&amp;p=6806"><strong>'Quote</strong></a> 
+                          ] </font></div></td>
+                    </tr>
+                    <tr bgcolor="#F1F4F8"> 
+                      <td colspan="2"><img src="proj_mini_line_folower.php_files/line2_002.gif" height="5" width="100%"></td>
+                    </tr>
+                    <tr bgcolor="#F1F4F8"> 
+                      <td colspan="2"><font size="2"> 
+                        <br><table width="98%" align="center" bgcolor="#E5E5E5" border="0" cellpadding="5" cellspacing="1"><tbody><tr><td bgcolor="#CCCCCC"><i><font size="1"><u><b>Quoting hem1891:</b></u> hi  i just completed the project but its not working for me.<br>i
+ gave supply from a 12v adaptor instead of a battery and the motor 
+connected to 3,6 pins of 293dne is rotating and no leds are glowing .<br>there
+ appears to be a potential drop at the adaptor but there are no short 
+connections on pcb plz help me ive come too far to give up a little help
+ from you can be very useful thank you</font></i></td></tr></tbody></table><br>hey
+ brother yes u have done a mistake i.e. going towards the component 
+assembly before knowing the program code and its algorithm, actually the
+ code provided to us is  incorrect or may have some error (i find it 
+floor() function which is not declared or defined) once the code is 
+correct and is converted to hex(remember the hex is too wrong provided 
+and dont depend upon it) ,you can simulate it. once simulated and output
+ is verified the rest remains is soldering which is not a big deal for 
+you (i guess). thank you                        <br>
+                                                </font></td>
+                    </tr>
+                  </tbody></table></td>
+              </tr>
+            </tbody></table></td>
+        </tr>
+      </tbody></table></td>
+  </tr>
+</tbody></table>
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+  <tbody><tr>
+    <td><img src="proj_mini_line_folower.php_files/line2_002.gif" height="5" width="100%"></td>
+  </tr>
+</tbody></table>
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+  <tbody><tr> 
+    <td bgcolor=""><table width="100%" border="0" cellpadding="4" cellspacing="0">
+        <tbody><tr> 
+          <td valign="top" width="20%" bgcolor="#AFC2E0"><font size="1">Posted 
+            by:<br>
+            <strong> <font size="2" color="#003399"> </font><font size="2"> <a href="http://www.ikalogic.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=33377">angban401            </a></font></strong><br>
+            on: 
+            04 Sep 2011            </font></td>
+          <td valign="top" width="80%" bgcolor="#F1F4F8">
+<table width="100%" border="0" cellpadding="3" cellspacing="3">
+              <tbody><tr>
+                <td><table width="100%" bgcolor="#F1F4F8" border="0" cellpadding="0" cellspacing="0">
+                    <tbody><tr> 
+                      <td width="93%"><font size="2"> <strong> <img src="proj_mini_line_folower.php_files/a3.gif" height="9" width="8"> 
+                        </strong> 
+                        <a href="http://www.ikalogic.com/phpBB3/viewtopic.php?f=16&amp;start=0&amp;t=33#p6805">Re: Mini line follower robot</a>                         </font></td>
+                      <td nowrap="nowrap" width="7%"><div align="center"><font size="1">[<a href="http://www.ikalogic.com/phpBB3/posting.php?mode=quote&amp;f=16&amp;p=6805"><strong>'Quote</strong></a> 
+                          ] </font></div></td>
+                    </tr>
+                    <tr bgcolor="#F1F4F8"> 
+                      <td colspan="2"><img src="proj_mini_line_folower.php_files/line2_002.gif" height="5" width="100%"></td>
+                    </tr>
+                    <tr bgcolor="#F1F4F8"> 
+                      <td colspan="2"><font size="2"> 
+                        <br><table width="98%" align="center" bgcolor="#E5E5E5" border="0" cellpadding="5" cellspacing="1"><tbody><tr><td bgcolor="#CCCCCC"><i><font size="1"><u><b>Quoting vinayaka:</b></u> I am not geting the proper output out put from ir led so what is the solution</font></i></td></tr></tbody></table><br>you can use white LED and LDR instead. thank you.                        <br>
+                                                </font></td>
+                    </tr>
+                  </tbody></table></td>
+              </tr>
+            </tbody></table></td>
+        </tr>
+      </tbody></table></td>
+  </tr>
+</tbody></table>
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+  <tbody><tr>
+    <td><img src="proj_mini_line_folower.php_files/line2_002.gif" height="5" width="100%"></td>
+  </tr>
+</tbody></table>
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+  <tbody><tr> 
+    <td bgcolor=""><table width="100%" border="0" cellpadding="4" cellspacing="0">
+        <tbody><tr> 
+          <td valign="top" width="20%" bgcolor="#AFC2E0"><font size="1">Posted 
+            by:<br>
+            <strong> <font size="2" color="#003399"> </font><font size="2"> <a href="http://www.ikalogic.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=33377">angban401            </a></font></strong><br>
+            on: 
+            04 Sep 2011            </font></td>
+          <td valign="top" width="80%" bgcolor="#F1F4F8">
+<table width="100%" border="0" cellpadding="3" cellspacing="3">
+              <tbody><tr>
+                <td><table width="100%" bgcolor="#F1F4F8" border="0" cellpadding="0" cellspacing="0">
+                    <tbody><tr> 
+                      <td width="93%"><font size="2"> <strong> <img src="proj_mini_line_folower.php_files/a3.gif" height="9" width="8"> 
+                        </strong> 
+                        <a href="http://www.ikalogic.com/phpBB3/viewtopic.php?f=16&amp;start=0&amp;t=33#p6804">Re: Mini line follower robot</a>                         </font></td>
+                      <td nowrap="nowrap" width="7%"><div align="center"><font size="1">[<a href="http://www.ikalogic.com/phpBB3/posting.php?mode=quote&amp;f=16&amp;p=6804"><strong>'Quote</strong></a> 
+                          ] </font></div></td>
+                    </tr>
+                    <tr bgcolor="#F1F4F8"> 
+                      <td colspan="2"><img src="proj_mini_line_folower.php_files/line2_002.gif" height="5" width="100%"></td>
+                    </tr>
+                    <tr bgcolor="#F1F4F8"> 
+                      <td colspan="2"><font size="2"> 
+                        <br><table width="98%" align="center" bgcolor="#E5E5E5" border="0" cellpadding="5" cellspacing="1"><tbody><tr><td bgcolor="#CCCCCC"><i><font size="1"><u><b>Quoting ikalogic:</b></u> <font color="#BF0000"><b>PLEASE
+ STOP ASKING FOR ME OR SOME ONE TO SEND YOU THE CODE BY MAIL. AS I SAID 
+MANY TIME BEFORE, I DO NOT HAVE ANY MORE MATERIAL THAN WHAT IS AVAILABLE
+ ON THE WEBSITE. SORRY FOR THE INCONVINIENCE</b></font></font></i></td></tr></tbody></table><br>@ikalogic:
+ thanks for your kind consideration . what troubles me is the function 
+named floor() can you please provide its declaration. with regards anil.
+                        <br>
+                                                </font></td>
+                    </tr>
+                  </tbody></table></td>
+              </tr>
+            </tbody></table></td>
+        </tr>
+      </tbody></table></td>
+  </tr>
+</tbody></table>
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+  <tbody><tr>
+    <td><img src="proj_mini_line_folower.php_files/line2_002.gif" height="5" width="100%"></td>
+  </tr>
+</tbody></table>
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+  <tbody><tr> 
+    <td bgcolor=""><table width="100%" border="0" cellpadding="4" cellspacing="0">
+        <tbody><tr> 
+          <td valign="top" width="20%" bgcolor="#AFC2E0"><font size="1">Posted 
+            by:<br>
+            <strong> <font size="2" color="#003399"> </font><font size="2"> <a href="http://www.ikalogic.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=33377">angban401            </a></font></strong><br>
+            on: 
+            04 Sep 2011            </font></td>
+          <td valign="top" width="80%" bgcolor="#F1F4F8">
+<table width="100%" border="0" cellpadding="3" cellspacing="3">
+              <tbody><tr>
+                <td><table width="100%" bgcolor="#F1F4F8" border="0" cellpadding="0" cellspacing="0">
+                    <tbody><tr> 
+                      <td width="93%"><font size="2"> <strong> <img src="proj_mini_line_folower.php_files/a3.gif" height="9" width="8"> 
+                        </strong> 
+                        <a href="http://www.ikalogic.com/phpBB3/viewtopic.php?f=16&amp;start=0&amp;t=33#p6803">Re: Mini line follower robot</a>                         </font></td>
+                      <td nowrap="nowrap" width="7%"><div align="center"><font size="1">[<a href="http://www.ikalogic.com/phpBB3/posting.php?mode=quote&amp;f=16&amp;p=6803"><strong>'Quote</strong></a> 
+                          ] </font></div></td>
+                    </tr>
+                    <tr bgcolor="#F1F4F8"> 
+                      <td colspan="2"><img src="proj_mini_line_folower.php_files/line2_002.gif" height="5" width="100%"></td>
+                    </tr>
+                    <tr bgcolor="#F1F4F8"> 
+                      <td colspan="2"><font size="2"> 
+                        <br><table width="98%" align="center" bgcolor="#E5E5E5" border="0" cellpadding="5" cellspacing="1"><tbody><tr><td bgcolor="#CCCCCC"><i><font size="1"><u><b>Quoting alok_shriv4u:</b></u> hey ika...<br>nice project again..<br>dude
+ i tried this project but the l293d is not giving any response...the irs
+ and all other stuffs are doing well...i think m not getting output from
+ the microcontroller..<br>and also can i check the output from 89s52 by placing leds at the out ports?????<br>anyways thanks for such a nice project for begineers in robotics..<br>keep it up..!!!</font></i></td></tr></tbody></table><br>i
+ recommend you to do simulation first with any simulating program (i use
+ Proteus ISIS professional ) and if verifies then you can proceed to 
+assembling. yes you can use LED at the output ports. Thank YOu.         
+               <br>
+                                                </font></td>
+                    </tr>
+                  </tbody></table></td>
+              </tr>
+            </tbody></table></td>
+        </tr>
+      </tbody></table></td>
+  </tr>
+</tbody></table>
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+  <tbody><tr>
+    <td><img src="proj_mini_line_folower.php_files/line2_002.gif" height="5" width="100%"></td>
+  </tr>
+</tbody></table>
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+  <tbody><tr> 
+    <td bgcolor=""><table width="100%" border="0" cellpadding="4" cellspacing="0">
+        <tbody><tr> 
+          <td valign="top" width="20%" bgcolor="#AFC2E0"><font size="1">Posted 
+            by:<br>
+            <strong> <font size="2" color="#003399"> </font><font size="2"> <a href="http://www.ikalogic.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=33377">angban401            </a></font></strong><br>
+            on: 
+            04 Sep 2011            </font></td>
+          <td valign="top" width="80%" bgcolor="#F1F4F8">
+<table width="100%" border="0" cellpadding="3" cellspacing="3">
+              <tbody><tr>
+                <td><table width="100%" bgcolor="#F1F4F8" border="0" cellpadding="0" cellspacing="0">
+                    <tbody><tr> 
+                      <td width="93%"><font size="2"> <strong> <img src="proj_mini_line_folower.php_files/a3.gif" height="9" width="8"> 
+                        </strong> 
+                        <a href="http://www.ikalogic.com/phpBB3/viewtopic.php?f=16&amp;start=0&amp;t=33#p6802">Mini line follower robot</a>                         </font></td>
+                      <td nowrap="nowrap" width="7%"><div align="center"><font size="1">[<a href="http://www.ikalogic.com/phpBB3/posting.php?mode=quote&amp;f=16&amp;p=6802"><strong>'Quote</strong></a> 
+                          ] </font></div></td>
+                    </tr>
+                    <tr bgcolor="#F1F4F8"> 
+                      <td colspan="2"><img src="proj_mini_line_folower.php_files/line2_002.gif" height="5" width="100%"></td>
+                    </tr>
+                    <tr bgcolor="#F1F4F8"> 
+                      <td colspan="2"><font size="2"> 
+                        hello sir i have problem with simulating the 
+program in ISIS proteus and the c file doesnt converted to hex file 
+using MIDE, because floor() function is implicitly defined and there is 
+not its function declaration.please any body help, specially admin and 
+mail me at <!-- e --><a href="mailto:angban401@hotmail.com">angban401@hotmail.com</a><!-- e -->. Thank You Anil Rai (Nepal)                        <br>
+                                                </font></td>
+                    </tr>
+                  </tbody></table></td>
+              </tr>
+            </tbody></table></td>
+        </tr>
+      </tbody></table></td>
+  </tr>
+</tbody></table>
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+  <tbody><tr>
+    <td><img src="proj_mini_line_folower.php_files/line2_002.gif" height="5" width="100%"></td>
+  </tr>
+</tbody></table>
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+  <tbody><tr> 
+    <td bgcolor=""><table width="100%" border="0" cellpadding="4" cellspacing="0">
+        <tbody><tr> 
+          <td valign="top" width="20%" bgcolor="#AFC2E0"><font size="1">Posted 
+            by:<br>
+            <strong> <font size="2" color="#003399"> </font><font size="2"> <a href="http://www.ikalogic.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=33014">sarath.m            </a></font></strong><br>
+            on: 
+            18 Aug 2011            </font></td>
+          <td valign="top" width="80%" bgcolor="#F1F4F8">
+<table width="100%" border="0" cellpadding="3" cellspacing="3">
+              <tbody><tr>
+                <td><table width="100%" bgcolor="#F1F4F8" border="0" cellpadding="0" cellspacing="0">
+                    <tbody><tr> 
+                      <td width="93%"><font size="2"> <strong> <img src="proj_mini_line_folower.php_files/a3.gif" height="9" width="8"> 
+                        </strong> 
+                        <a href="http://www.ikalogic.com/phpBB3/viewtopic.php?f=16&amp;start=0&amp;t=33#p6730">Mini line follower robot</a>                         </font></td>
+                      <td nowrap="nowrap" width="7%"><div align="center"><font size="1">[<a href="http://www.ikalogic.com/phpBB3/posting.php?mode=quote&amp;f=16&amp;p=6730"><strong>'Quote</strong></a> 
+                          ] </font></div></td>
+                    </tr>
+                    <tr bgcolor="#F1F4F8"> 
+                      <td colspan="2"><img src="proj_mini_line_folower.php_files/line2_002.gif" height="5" width="100%"></td>
+                    </tr>
+                    <tr bgcolor="#F1F4F8"> 
+                      <td colspan="2"><font size="2"> 
+                        i wanna do this please help me                        <br>
+                                                </font></td>
+                    </tr>
+                  </tbody></table></td>
+              </tr>
+            </tbody></table></td>
+        </tr>
+      </tbody></table></td>
+  </tr>
+</tbody></table>
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+  <tbody><tr>
+    <td><img src="proj_mini_line_folower.php_files/line2_002.gif" height="5" width="100%"></td>
+  </tr>
+</tbody></table>
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+  <tbody><tr> 
+    <td bgcolor=""><table width="100%" border="0" cellpadding="4" cellspacing="0">
+        <tbody><tr> 
+          <td valign="top" width="20%" bgcolor="#AFC2E0"><font size="1">Posted 
+            by:<br>
+            <strong> <font size="2" color="#003399"> </font><font size="2"> <a href="http://www.ikalogic.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=32189">alok_shriv4u            </a></font></strong><br>
+            on: 
+            23 Jul 2011            </font></td>
+          <td valign="top" width="80%" bgcolor="#F1F4F8">
+<table width="100%" border="0" cellpadding="3" cellspacing="3">
+              <tbody><tr>
+                <td><table width="100%" bgcolor="#F1F4F8" border="0" cellpadding="0" cellspacing="0">
+                    <tbody><tr> 
+                      <td width="93%"><font size="2"> <strong> <img src="proj_mini_line_folower.php_files/a3.gif" height="9" width="8"> 
+                        </strong> 
+                        <a href="http://www.ikalogic.com/phpBB3/viewtopic.php?f=16&amp;start=0&amp;t=33#p6580">Re: Mini line follower robot</a>                         </font></td>
+                      <td nowrap="nowrap" width="7%"><div align="center"><font size="1">[<a href="http://www.ikalogic.com/phpBB3/posting.php?mode=quote&amp;f=16&amp;p=6580"><strong>'Quote</strong></a> 
+                          ] </font></div></td>
+                    </tr>
+                    <tr bgcolor="#F1F4F8"> 
+                      <td colspan="2"><img src="proj_mini_line_folower.php_files/line2_002.gif" height="5" width="100%"></td>
+                    </tr>
+                    <tr bgcolor="#F1F4F8"> 
+                      <td colspan="2"><font size="2"> 
+                        hey ika...<br>nice project again..<br>dude i 
+tried this project but the l293d is not giving any response...the irs 
+and all other stuffs are doing well...i think m not getting output from 
+the microcontroller..<br>and also can i check the output from 89s52 by placing leds at the out ports?????<br>anyways thanks for such a nice project for begineers in robotics..<br>keep it up..!!!                        <br>
+                                                </font></td>
+                    </tr>
+                  </tbody></table></td>
+              </tr>
+            </tbody></table></td>
+        </tr>
+      </tbody></table></td>
+  </tr>
+</tbody></table>
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+  <tbody><tr>
+    <td><img src="proj_mini_line_folower.php_files/line2_002.gif" height="5" width="100%"></td>
+  </tr>
+</tbody></table>
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+  <tbody><tr> 
+    <td bgcolor=""><table width="100%" border="0" cellpadding="4" cellspacing="0">
+        <tbody><tr> 
+          <td valign="top" width="20%" bgcolor="#AFC2E0"><font size="1">Posted 
+            by:<br>
+            <strong> <font size="2" color="#003399"> </font><font size="2"> <a href="http://www.ikalogic.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=31755">undoy            </a></font></strong><br>
+            on: 
+            20 Jun 2011            </font></td>
+          <td valign="top" width="80%" bgcolor="#F1F4F8">
+<table width="100%" border="0" cellpadding="3" cellspacing="3">
+              <tbody><tr>
+                <td><table width="100%" bgcolor="#F1F4F8" border="0" cellpadding="0" cellspacing="0">
+                    <tbody><tr> 
+                      <td width="93%"><font size="2"> <strong> <img src="proj_mini_line_folower.php_files/a3.gif" height="9" width="8"> 
+                        </strong> 
+                        <a href="http://www.ikalogic.com/phpBB3/viewtopic.php?f=16&amp;start=0&amp;t=33#p6468">Mini line follower robot</a>                         </font></td>
+                      <td nowrap="nowrap" width="7%"><div align="center"><font size="1">[<a href="http://www.ikalogic.com/phpBB3/posting.php?mode=quote&amp;f=16&amp;p=6468"><strong>'Quote</strong></a> 
+                          ] </font></div></td>
+                    </tr>
+                    <tr bgcolor="#F1F4F8"> 
+                      <td colspan="2"><img src="proj_mini_line_folower.php_files/line2_002.gif" height="5" width="100%"></td>
+                    </tr>
+                    <tr bgcolor="#F1F4F8"> 
+                      <td colspan="2"><font size="2"> 
+                        Can i get the tutorial line follower robot for PIC16F877....<br>please send the detail <!-- e --><a href="mailto:undoy_cute@yahoo.co.id">undoy_cute@yahoo.co.id</a><!-- e --><br>Thanks                        <br>
+                                                </font></td>
+                    </tr>
+                  </tbody></table></td>
+              </tr>
+            </tbody></table></td>
+        </tr>
+      </tbody></table></td>
+  </tr>
+</tbody></table>
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+  <tbody><tr>
+    <td><img src="proj_mini_line_folower.php_files/line2_002.gif" height="5" width="100%"></td>
+  </tr>
+</tbody></table>
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+  <tbody><tr> 
+    <td bgcolor=""><table width="100%" border="0" cellpadding="4" cellspacing="0">
+        <tbody><tr> 
+          <td valign="top" width="20%" bgcolor="#AFC2E0"><font size="1">Posted 
+            by:<br>
+            <strong> <font size="2" color="#003399"> </font><font size="2"> <a href="http://www.ikalogic.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=28820">bakarim            </a></font></strong><br>
+            on: 
+            25 Feb 2011            </font></td>
+          <td valign="top" width="80%" bgcolor="#F1F4F8">
+<table width="100%" border="0" cellpadding="3" cellspacing="3">
+              <tbody><tr>
+                <td><table width="100%" bgcolor="#F1F4F8" border="0" cellpadding="0" cellspacing="0">
+                    <tbody><tr> 
+                      <td width="93%"><font size="2"> <strong> <img src="proj_mini_line_folower.php_files/a3.gif" height="9" width="8"> 
+                        </strong> 
+                        <a href="http://www.ikalogic.com/phpBB3/viewtopic.php?f=16&amp;start=0&amp;t=33#p6101">Mini line follower robot</a>                         </font></td>
+                      <td nowrap="nowrap" width="7%"><div align="center"><font size="1">[<a href="http://www.ikalogic.com/phpBB3/posting.php?mode=quote&amp;f=16&amp;p=6101"><strong>'Quote</strong></a> 
+                          ] </font></div></td>
+                    </tr>
+                    <tr bgcolor="#F1F4F8"> 
+                      <td colspan="2"><img src="proj_mini_line_folower.php_files/line2_002.gif" height="5" width="100%"></td>
+                    </tr>
+                    <tr bgcolor="#F1F4F8"> 
+                      <td colspan="2"><font size="2"> 
+                        pls send me full details thanks!<br><!-- w --><a class="postlink" href="http://hotmail.com/">http://www.kamal88@hotmail.com</a><!-- w -->                        <br>
+                                                </font></td>
+                    </tr>
+                  </tbody></table></td>
+              </tr>
+            </tbody></table></td>
+        </tr>
+      </tbody></table></td>
+  </tr>
+</tbody></table>
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+  <tbody><tr>
+    <td><img src="proj_mini_line_folower.php_files/line2_002.gif" height="5" width="100%"></td>
+  </tr>
+</tbody></table>
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+  <tbody><tr> 
+    <td bgcolor=""><table width="100%" border="0" cellpadding="4" cellspacing="0">
+        <tbody><tr> 
+          <td valign="top" width="20%" bgcolor="#AFC2E0"><font size="1">Posted 
+            by:<br>
+            <strong> <font size="2" color="#003399"> </font><font size="2"> <a href="http://www.ikalogic.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=2"> 
+<img src="proj_mini_line_folower.php_files/file.jpg" alt="User avatar" width="80" border="0">            <br>ikalogic            </a></font></strong><br>
+            on: 
+            16 Feb 2011            </font></td>
+          <td valign="top" width="80%" bgcolor="#F1F4F8">
+<table width="100%" border="0" cellpadding="3" cellspacing="3">
+              <tbody><tr>
+                <td><table width="100%" bgcolor="#F1F4F8" border="0" cellpadding="0" cellspacing="0">
+                    <tbody><tr> 
+                      <td width="93%"><font size="2"> <strong> <img src="proj_mini_line_folower.php_files/a3.gif" height="9" width="8"> 
+                        </strong> 
+                        <a href="http://www.ikalogic.com/phpBB3/viewtopic.php?f=16&amp;start=0&amp;t=33#p6056">Re: Mini line follower robot</a>                         </font></td>
+                      <td nowrap="nowrap" width="7%"><div align="center"><font size="1">[<a href="http://www.ikalogic.com/phpBB3/posting.php?mode=quote&amp;f=16&amp;p=6056"><strong>'Quote</strong></a> 
+                          ] </font></div></td>
+                    </tr>
+                    <tr bgcolor="#F1F4F8"> 
+                      <td colspan="2"><img src="proj_mini_line_folower.php_files/line2_002.gif" height="5" width="100%"></td>
+                    </tr>
+                    <tr bgcolor="#F1F4F8"> 
+                      <td colspan="2"><font size="2"> 
+                        <font color="#BF0000"><b>PLEASE STOP ASKING FOR 
+ME OR SOME ONE TO SEND YOU THE CODE BY MAIL. AS I SAID MANY TIME BEFORE,
+ I DO NOT HAVE ANY MORE MATERIAL THAN WHAT IS AVAILABLE ON THE WEBSITE. 
+SORRY FOR THE INCONVINIENCE</b></font>                        <br>
+                                                </font></td>
+                    </tr>
+                  </tbody></table></td>
+              </tr>
+            </tbody></table></td>
+        </tr>
+      </tbody></table></td>
+  </tr>
+</tbody></table>
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+  <tbody><tr>
+    <td><img src="proj_mini_line_folower.php_files/line2_002.gif" height="5" width="100%"></td>
+  </tr>
+</tbody></table>
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+  <tbody><tr> 
+    <td bgcolor=""><table width="100%" border="0" cellpadding="4" cellspacing="0">
+        <tbody><tr> 
+          <td valign="top" width="20%" bgcolor="#AFC2E0"><font size="1">Posted 
+            by:<br>
+            <strong> <font size="2" color="#003399"> </font><font size="2"> <a href="http://www.ikalogic.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=27653">mano49j            </a></font></strong><br>
+            on: 
+            15 Feb 2011            </font></td>
+          <td valign="top" width="80%" bgcolor="#F1F4F8">
+<table width="100%" border="0" cellpadding="3" cellspacing="3">
+              <tbody><tr>
+                <td><table width="100%" bgcolor="#F1F4F8" border="0" cellpadding="0" cellspacing="0">
+                    <tbody><tr> 
+                      <td width="93%"><font size="2"> <strong> <img src="proj_mini_line_folower.php_files/a3.gif" height="9" width="8"> 
+                        </strong> 
+                        <a href="http://www.ikalogic.com/phpBB3/viewtopic.php?f=16&amp;start=0&amp;t=33#p6053">Mini line follower robot</a>                         </font></td>
+                      <td nowrap="nowrap" width="7%"><div align="center"><font size="1">[<a href="http://www.ikalogic.com/phpBB3/posting.php?mode=quote&amp;f=16&amp;p=6053"><strong>'Quote</strong></a> 
+                          ] </font></div></td>
+                    </tr>
+                    <tr bgcolor="#F1F4F8"> 
+                      <td colspan="2"><img src="proj_mini_line_folower.php_files/line2_002.gif" height="5" width="100%"></td>
+                    </tr>
+                    <tr bgcolor="#F1F4F8"> 
+                      <td colspan="2"><font size="2"> 
+                        please help me more on this project.....<br>my email id: <!-- e --><a href="mailto:mano49j@gmail.com">mano49j@gmail.com</a><!-- e -->                        <br>
+                                                </font></td>
+                    </tr>
+                  </tbody></table></td>
+              </tr>
+            </tbody></table></td>
+        </tr>
+      </tbody></table></td>
+  </tr>
+</tbody></table>
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+  <tbody><tr>
+    <td><img src="proj_mini_line_folower.php_files/line2_002.gif" height="5" width="100%"></td>
+  </tr>
+</tbody></table>
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+  <tbody><tr> 
+    <td bgcolor=""><table width="100%" border="0" cellpadding="4" cellspacing="0">
+        <tbody><tr> 
+          <td valign="top" width="20%" bgcolor="#AFC2E0"><font size="1">Posted 
+            by:<br>
+            <strong> <font size="2" color="#003399"> </font><font size="2"> <a href="http://www.ikalogic.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=28369">ankit_joshi            </a></font></strong><br>
+            on: 
+            07 Feb 2011            </font></td>
+          <td valign="top" width="80%" bgcolor="#F1F4F8">
+<table width="100%" border="0" cellpadding="3" cellspacing="3">
+              <tbody><tr>
+                <td><table width="100%" bgcolor="#F1F4F8" border="0" cellpadding="0" cellspacing="0">
+                    <tbody><tr> 
+                      <td width="93%"><font size="2"> <strong> <img src="proj_mini_line_folower.php_files/a3.gif" height="9" width="8"> 
+                        </strong> 
+                        <a href="http://www.ikalogic.com/phpBB3/viewtopic.php?f=16&amp;start=0&amp;t=33#p6023">Mini line follower robot</a>                         </font></td>
+                      <td nowrap="nowrap" width="7%"><div align="center"><font size="1">[<a href="http://www.ikalogic.com/phpBB3/posting.php?mode=quote&amp;f=16&amp;p=6023"><strong>'Quote</strong></a> 
+                          ] </font></div></td>
+                    </tr>
+                    <tr bgcolor="#F1F4F8"> 
+                      <td colspan="2"><img src="proj_mini_line_folower.php_files/line2_002.gif" height="5" width="100%"></td>
+                    </tr>
+                    <tr bgcolor="#F1F4F8"> 
+                      <td colspan="2"><font size="2"> 
+                        plz ne1 cn help me and gimme parts used in this kt..<br>i m keenly intrsted in makin dis project bt smwat fumbled...<br>send me it on <br><!-- e --><a href="mailto:ankit_d52@yahoo.co.in">ankit_d52@yahoo.co.in</a><!-- e --><br>thanks in advance,...!                        <br>
+                                                </font></td>
+                    </tr>
+                  </tbody></table></td>
+              </tr>
+            </tbody></table></td>
+        </tr>
+      </tbody></table></td>
+  </tr>
+</tbody></table>
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+  <tbody><tr>
+    <td><img src="proj_mini_line_folower.php_files/line2_002.gif" height="5" width="100%"></td>
+  </tr>
+</tbody></table>
+<table width="659" bgcolor="#333333" border="0" cellpadding="1" cellspacing="1">
+  <tbody><tr> 
+    <td bgcolor="#DAE2F1">
+        <table width="100%" border="0" cellpadding="0" cellspacing="0">
+          <tbody><tr> 
+            
+          <td> <strong><font face="Times New Roman" size="5" color="#000066"><a name="mini_forum" id="mini_forum"></a></font></strong>
+                        <table width="100%" border="0" cellpadding="0" cellspacing="0">
+              <tbody><tr>
+                <td><div align="center"><strong><font color="#003333">You have 
+                    to be a member to post replies. </font></strong> </div></td>
+              </tr>
+            </tbody></table>
+            <form abinehooked="true" abinetype="login" abineprocessed="true" aburl="phpBB3/ucp.php?mode=login" abhost="ikalogic.com" abaction="phpBB3/ucp.php?mode=login" abhfe="1" action="phpBB3/ucp.php?mode=login" method="post" id="login">
+                <table width="100%" border="0" cellpadding="0" cellspacing="0">
+                  <tbody><tr> 
+                    <td height="25" nowrap="nowrap" valign="middle" bgcolor="#ACB8D5"><div align="center"> 
+                        <font size="2" color="#333333">Username: 
+                        <input abinefocus="1" abinetype="/nameperson/friendly" abinelabel="Username" abineprocessed="true" tabindex="5" name="username" id="username" size="15" type="text">
+                        <label for="password">&nbsp;&nbsp; Password:</label>
+                        <input abinetype="/password" abinelabel="Password" abineprocessed="true" tabindex="6" id="password" name="password" size="15" type="password">
+                        <input abinetype="" abinelabel="Remember me" abineprocessed="true" name="autologin" id="autologin" tabindex="8" checked="checked" type="checkbox">
+                        Remember me <strong><font size="2"> 
+                        <input name="redirect" value="../proj_mini_line_folower.php#mini_forum" type="hidden">
+                        <input name="login" value="Login" class="button2" tabindex="7" type="submit">
+                        </font></strong></font></div>
+                      <div align="center"><strong></strong></div></td>
+                  </tr>
+                </tbody></table>
+              </form>
+              <table width="100%" border="0" cellpadding="0" cellspacing="0">
+              <tbody><tr> 
+                <td><div align="center"><strong><a href="http://ikalogic.com/phpBB3/ucp.php?mode=register">Register 
+                    now!</a> it only takes an instant.<br>
+                    <a href="http://www.ikalogic.com/phpBB3/ucp.php?mode=sendpassword">Forgot 
+                    your password?</a> </strong> </div></td>
+              </tr>
+            </tbody></table>
+            <a href="http://www.ikalogic.com/phpBB3/ucp.php?mode=sendpassword"> 
+            </a> 
+            </td>
+          </tr>
+        </tbody></table></td>
+  </tr>
+</tbody></table>
+                </font></em></font></em></font></em></font></em></font></em></font></em></font></em></font></em></font></em></font></em></font></div>
+            </div></td>
+        </tr>
+      </tbody></table> </td>
+  </tr> 
+</tbody></table>
+        
+<div align="center"> <font size="2"><em><strong><font size="1" color="#CC0000">Unless 
+  mentioned, all content is written and designed by Ibrahim Kamal, copying is 
+  prohibited and unethical </font></strong></em></font> </div>
+<div align="center"> 
+   
+
+
+<title>ikalogic.com: Electronics and Robotics related projects.</title>
+<meta name="Description" content="Ikalogic's repository of projects! You will find mostly electronics and robotics related stuff.">
+<meta name="Keywords" content="electronics,robotics,pcb,free,diagram,schematic,idea,problem,home made,hobby,projects,picture,tutorial,learn,how to,understand,articles">
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<style>BODY {
+	 FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+	 
+
+
+}
+A:Link {color: #004A95; text-decoration: none; }
+
+A:Visited {color: #004A95; text-decoration: none; }
+
+A:Active {color: #000066; text-decoration: underline; }
+
+A:Hover {color: #0066CC; text-decoration: underline; }</style>
+
+
+
+<div align="center"><font size="2"><font size="2"><font size="1"> </font></font></font> 
+  <table width="659" border="0" cellspacing="0">
+    <tbody><tr bgcolor="#FFFFFF"> 
+      <td valign="middle" bgcolor="#FFFFFF"><div align="center"><font size="2"><font size="2"><font size="2"><font size="2"><font face="Times New Roman" size="5" color="#000066"><img src="proj_mini_line_folower.php_files/line2_002.gif" height="8" width="650"><br>
+          </font><a href="http://www.ikalogic.com/index.php">Home</a> | <font size="2"><font size="2"><font size="2"><font size="2"><font size="2"><font size="2"><a href="http://www.ikalogic.com/phpBB3/">Forums</a> 
+          </font></font></font>|</font></font></font><font size="2"><font size="2"><font size="2"><font size="2"><font size="2"><a href="http://www.ikalogicstore.com/"> 
+          Store</a> </font></font>|</font></font></font><a href="http://www.ikalogic.com/contact.php"> 
+          contact </a> | <a href="http://69.57.128.8/horde/imp/" target="_blank"> 
+          Check mail </a> | <a href="http://www.ikalogic.com/ika.php">About Ibrahim 
+          KAMAL </a></font></font></font></font></div>
+        <div align="center"> 
+          <noscript>
+          </noscript>
+        </div>
+        <noscript>
+        </noscript></td>
+    </tr>
+    <tr bgcolor="#FFFFFF">
+      <td valign="middle" bgcolor="#FFFFFF"><div align="center">
+          <table width="100%" border="0" cellspacing="0">
+            <tbody><tr> 
+              <td colspan="2"><div align="center"><script type="text/javascript"><!--
+google_ad_client = "pub-6530907032528013";
+/* 468x15, created 2/29/08 */
+google_ad_slot = "7219971318";
+google_ad_width = 468;
+google_ad_height = 15;
+//-->
+</script>
+<script type="text/javascript" src="proj_mini_line_folower.php_files/show_ads.js">
+</script>               </div></td>
+            </tr>
+          </tbody></table> 
+          <table width="100%" border="0" cellpadding="0" cellspacing="0">
+            <tbody><tr>
+              <td><img src="proj_mini_line_folower.php_files/sep2.gif" height="8" width="39"></td>
+            </tr>
+            <tr>
+              <td><div align="center"> <font size="1">All content on this site 
+                  is provided as is and without any guarantee of any kind. We 
+                  cannot be held responsible for any errors, omissions, or damages 
+                  arising out of use of information available on this web site.
+                                    </font><br>
+                </div></td>
+            </tr>
+            <tr>
+              <td><img src="proj_mini_line_folower.php_files/sep2.gif" height="8" width="39"></td>
+            </tr>
+          </tbody></table>
+          <table width="100%" border="1" bordercolor="#CC0000" cellpadding="2" cellspacing="0">
+            <tbody><tr> 
+              <td><div align="center"><a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/3.0/us/"> 
+                  </a> 
+                  <table width="100%" border="0" cellpadding="0" cellspacing="2">
+                    <tbody><tr>
+                      <td width="6%"><a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/3.0/us/"><img src="proj_mini_line_folower.php_files/somerights20.png" alt="Creative Commons License" style="border-width: 0pt;" border="0"></a></td>
+                      <td width="94%"><div align="center"><font size="2"><span xmlns:dc="http://purl.org/dc/elements/1.1/" href="http://purl.org/dc/dcmitype/Text" property="dc:title" rel="dc:type"><strong><font color="#CC0000">IMPORTANT 
+                          COPYRIGHT NOTE:</font></strong> Electronics and Robotics 
+                          Articles</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="http://www.ikalogic.com/" property="cc:attributionName" rel="cc:attributionURL">Ibrahim 
+                          KAMAL</a> are licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/3.0/us/">Creative 
+                          Commons Attribution-Noncommercial-No Derivative Works 
+                          3.0 United States License</a>.</font></div></td>
+                    </tr>
+                  </tbody></table>
+                  
+                </div></td>
+            </tr>
+          </tbody></table>
+      <script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script><script src="proj_mini_line_folower.php_files/ga.js" type="text/javascript"></script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-3773889-1");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>     </div></td>
+    </tr>
+  </tbody></table>
+</div>
+
+
+</div>
+
+
+</div></body></html>

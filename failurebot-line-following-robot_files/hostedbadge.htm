@@ -1,0 +1,71 @@
+function writeSuBadge () {
+var b1 = "<iframe src=\"http:\/\/www.stumbleupon.com\/badge\/embed\/5\/?url=";
+var b2 = "\" scrolling=\"no\" frameborder=\"0\" style=\"border:none; overflow:hidden; width:50px; height: 60px;\" allowTransparency=\"true\"><\/iframe>";
+var temp = [], bu="";temp = window.location.href.split("#");bu = temp[0];;
+document.write(b1+bu+b2);
+}
+writeSuBadge();try {
+    function getData()
+    {
+        var data = "{ \"type\": \"SU_BADGEMESSAGE\"";
+        data += ", \"params\": { ";
+        
+        var account = window._gat._getTrackerByName()._getAccount();
+        if (account.indexOf("UA-XXXX") == 0)
+                account = window.pageTracker._getAccount();
+        
+        var params = [];
+        params['utmn'] = (new Date()).getTime();  // Cache-buster
+        params['utmhn'] = document.location.hostname;
+        params['utmt'] = 'event';
+        params['utmr'] = "http://www.stumbleupon.com/refer.php";
+        params['utmp'] = document.location.pathname;
+        params['utmac'] = account;
+        params['url'] = window.location.href;
+
+        var utmcc = "";
+        var ga_cookies = {'__utma': true, '__utmb': true, '__utmc': true, '__utmz': true };
+        var cookies = document.cookie.split(';');
+        for(var i=0; i < cookies.length; i++)
+        {
+            var pos = cookies[i].indexOf('=');
+            if (pos == -1) continue;
+            var cookie_name = cookies[i].substring(0, pos);
+            var cookie_value = cookies[i].substring(pos);
+            if(ga_cookies[cookie_name] === true)
+            {
+                utmcc += (utmcc ? ";" : "") + cookie_name + "=" + cookie_value;
+            }
+        }
+        params['utmcc'] = utmcc;
+
+        var i = 0;
+        for (var param in params)
+        {
+            if (i > 0) data += ", ";
+            data += "\"" + param + "\": \"" + String(params[param]).replace("\"", "\\\"") + "\"";
+            i++;
+        }
+
+        data += "} }";
+        return data;
+    }
+
+	var previousOnLoad = window.onload;
+	if (typeof(window._loadCalled) == 'undefined')
+		window._loadCalled = false;
+	window.onload = function() {
+		if (window._loadCalled == true)
+			return;
+
+		window._loadCalled = true;
+
+		try {
+			previousOnLoad();
+		} catch (err) {}
+		try {
+        	var data = getData();
+        	top.postMessage(data, 'http://www.stumbleupon.com/');
+        } catch (err) {}
+	}
+} catch (err) {}

@@ -1,0 +1,1 @@
+fb_sharepro_render([{"url":"http:\/\/www.micahcarrick.com\/failurebot-line-following-robot.html","normalized_url":"http:\/\/www.micahcarrick.com\/failurebot-line-following-robot.html","share_count":50,"like_count":3,"comment_count":7,"total_count":60,"click_count":0,"comments_fbid":10150152162277632,"commentsbox_count":0}]);

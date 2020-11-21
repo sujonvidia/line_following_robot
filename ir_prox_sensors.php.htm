@@ -1,0 +1,1667 @@
+<html><script id="abine.stub.Google Analytics">var abPrm={};var abNoOp=function(i,a){return (a&&a.length?a[0]:null)||true;},abSC=function(n,v){document.cookie=n+'='+v+';path=/;expires='+(new Date((new Date()).getTime()+(30000*60*60*24))).toGMTString();},abGC=function(n){return document.cookie.indexOf(n+'=')!=-1;},abAddNoOpMethods=function(o,m){m=m.split(',');for(var i=0;i<m.length;i++){if(m[i].match(/^#/)){o['get'+m[i].substr(1)]=o['set'+m[i].substr(1)]=abNoOp;}else{o[m[i]]=abNoOp;}}};var abTrkr={},abGT=function(){return abTrkr},_gat={_getTracker:abGT,_createTracker:abGT,_getTrackerByName:abGT,_anonymizeIp:abNoOp},urchinTracker=__utmSetTrans=__utmLinkerUrl=__utmLinkPost=__utmSetVar=__utmVisitorCode=abNoOp,_gaq={_createAsyncTracker:abTrkr,_getAsyncTracker:abTrkr,push:function(a){for (var b = arguments, c = 0, d = 0; d < b.length; d++) {try {if (typeof b[d] === 'function') b[d]();else {var e = '', f = b[d][0], k = f.lastIndexOf('.');k > 0 && (e = f[z](0, k), f = f[z](k + 1));var p = e == '_gat' ? _gat : e == '_gaq' ? _gaq : _gat._getTracker(e);p[f].apply(p, b[d].slice(1))}} catch (r) {c++}}return c;}};abAddNoOpMethods(abTrkr,'_deleteCustomVar,_getName,_getAccount,_getVersion,_getVisitorCustomVar,_initData,_setAccount,_setCookiePersistence,_setCustomVar,_setSampleRate,_setSessionTimeout,_setSessionCookieTimeout,_setVar,_setVisitorCookieTimeout,_trackPageview,_setAllowAnchor,_setCampContentKey,_setCampMediumKey,_setCampNameKey,_setCampNOKey,_setCampSourceKey,_setCampTermKey,_setCampaignTrack,_setCampaignCookieTimeout,_setCookieTimeout,_setReferrerOverride,_cookiePathCopy,_getLinkerUrl,_linkByPost,_setAllowHash,_setAllowLinker,_setCookiePath,_setDomainName,_addItem,_addTrans,_trackTrans,_trackEvent,_addIgnoredOrganic,_addIgnoredRef,_addOrganic,_clearIgnoredOrganic,_clearIgnoredRef,_clearOrganic,_trackSocial,_getClientInfo,_getDetectFlash,_getDetectTitle,_setClientInfo,_setDetectFlash,_setDetectTitle,_getLocalGifPath,_getServiceMode,_setLocalGifPath,_setLocalRemoteServerMode,_setLocalServerMode,_setRemoteServerMode,_trackPageLoadTime');abTrkr._link=__utmLinker=function(l){if(l)location.href=l;};</script><head>
+<title>Infra Red sensors applications and construction</title>
+<meta name="Description" content="This is a tutorial about infra Red (IR) proximity sensors, showing many applications and techniques to boost the performance of the proximity sensor, along with an example construction of a home made sensor.">
+<meta name="Keywords" content="IR,infra red,proximity,sensor,application,range,lm358,8051,89x52,tachometer,wheel encoder,electronics,pcb,build,diagram,schematic,idea,problem,home made,hobby,projects,picture,tutorial,learn,how to,understand,articles,test">
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<meta name="Author" content="Ibrahim Kamal (ika@ikalogic.com">
+<style>BODY {
+	 FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+	 
+
+
+}
+A:Link {color: #004A95; text-decoration: none; }
+
+A:Visited {color: #004A95; text-decoration: none; }
+
+A:Active {color: #000066; text-decoration: underline; }
+A:text {size: 2;}
+A:Hover {color: #0066CC; text-decoration: underline; }</style>
+</head>
+
+<body abprocessed="1" leftmargin="0" topmargin="0" marginheight="0" marginwidth="0">
+<div align="center">
+  
+<table width="650" align="center" border="0" cellpadding="0" cellspacing="0">
+  <tbody><tr> 
+    <td> 
+      <style>
+input, select, textarea, checkbox { border:1px solid #515F6F; color:#000000; font-size: 8pt; background-color:#FFFFFF; font-style:normal; font-variant:normal; font-weight:normal }
+</style>
+<table dwcopytype="CopyTableCell" width="650" align="center" border="0" cellpadding="0" cellspacing="0">
+  <tbody><tr> 
+    <td> <img src="ir_prox_sensors.php_files/head.jpg" usemap="#MapMap" height="81" width="659" border="0"></td>
+  </tr>
+  <tr bgcolor="#F1F4F8"> 
+    <td nowrap="nowrap" bgcolor="#F1F4F8"><div align="center"><font size="2"><strong> </strong></font> 
+        <table width="100%" bgcolor="#333333" border="0" cellpadding="1" cellspacing="1">
+          <tbody><tr>
+            <td height="17" bgcolor="#F1F4F8"><div align="center"><font size="2"><a href="http://www.ikalogic.com/index.php"><strong> 
+                            Home</strong></a> <strong><img src="ir_prox_sensors.php_files/o2_002.gif" height="10" width="10" align="absmiddle"> 
+              </strong><a href="http://ikalogicstore.com/"><strong>Store</strong></a> 
+              <strong><img src="ir_prox_sensors.php_files/o2_002.gif" height="10" width="10" align="absmiddle"></strong><strong> 
+              <a href="http://www.ikalogic.com/categories.php">Products and Resources</a> 
+              <img src="ir_prox_sensors.php_files/o2_002.gif" height="10" width="10"> 
+              <a href="http://www.ikalogic.com/phpBB3/">Forums</a> <img src="ir_prox_sensors.php_files/o2_002.gif" height="10" width="10"></strong></font><font size="1"> 
+              </font><font size="2"><strong> <a href="http://www.ikalogic.com/consulting.php">Consulting</a> 
+              <img src="ir_prox_sensors.php_files/o2_002.gif" height="10" width="10"> 
+              <a href="http://www.ikalogic.com/about.php">About us</a> <img src="ir_prox_sensors.php_files/o2_002.gif" height="10" width="10"> 
+              <a href="http://www.ikalogic.com/contact.php">Contact</a> </strong><a href="http://www.ikalogic.com/index.php"><strong> 
+                            </strong></a><strong> </strong></font></div></td>
+          </tr>
+        </tbody></table>
+        
+    </div></td>
+  </tr></tbody></table>
+      
+<font size="2"><a href="http://www.ikalogic.com/index.php"><strong> 
+</strong></a></font> 
+<table width="659" align="center" bgcolor="#333333" border="0" cellpadding="2" cellspacing="0">
+  <tbody><tr> 
+    <td width="475" bgcolor="#ECEBBB"><div align="left"><font size="2"> <strong><img src="ir_prox_sensors.php_files/a3_002.gif" height="9" width="8"> 
+        <a href="http://www.ikalogic.com/index.php"> Home</a> 
+                <img src="ir_prox_sensors.php_files/a3_002.gif" height="9" width="8"> <a href="http://www.ikalogic.com/cat_sensors_measurment.php">Sensors 
+        &amp; Measurement</a> 
+                 
+        </strong></font><font size="2"></font> <font size="2"><strong> </strong> 
+        </font></div></td>
+    <td nowrap="nowrap" valign="middle" width="176" bgcolor="#ECEBBB"><div align="right"><font size="2">Follow 
+        us:<strong> <a href="http://www.twitter.com/ikalogic"><img src="ir_prox_sensors.php_files/twit_s.png" height="17" width="17" align="absbottom" border="0"></a> 
+        <a href="http://www.facebook.com/home.php?sk=group_146938835352437&amp;ap=1"><img src="ir_prox_sensors.php_files/fb_s.png" height="17" width="17" align="absbottom" border="0"></a> 
+        </strong></font></div></td>
+  </tr>
+</tbody></table>
+<font size="2"><a href="http://www.ikalogic.com/index.php"><strong> 
+</strong></a></font> 
+
+      <div align="center"><br>
+        <a href="http://www.ikalogic.com/scanalogic2/index.php"><img class=" iydtogdtizguzsxnrskk" src="ir_prox_sensors.php_files/ad1.jpg" height="81" width="659" border="1"></a> 
+      </div>
+      <table width="650" align="center" border="0" cellpadding="2" cellspacing="3">
+        <tbody><tr> 
+          <td valign="top" width="673"> <p class="MsoNormal" align="center"><span><o:p><font face="Times New Roman" size="6" color="#000066">Infra-Red 
+              Proximity Sensor</font><font face="Times New Roman" size="5" color="#000066"> 
+              (I)<br>
+              </font></o:p></span><font face="Arial, Helvetica, sans-serif"><span><o:p><font size="3"><font size="2"><em>Using 
+              an IR LED as a sensors</em></font><strong><br>
+              </strong></font></o:p></span></font><span><font size="1" color="#333333">By 
+              Ibrahim Kamal </font></span> 
+              <font size="1"><br>
+              <font color="#666666"> Last update: 
+              <!-- #BeginDate format:Sp1 -->24/1/11<!-- #EndDate -->
+              </font></font><font size="2" color="#666666"> </font> 
+            </p><div align="left"> <br>
+              <table width="100%" border="0" cellpadding="0" cellspacing="0">
+                <tbody><tr> 
+                  <td><font face="Times New Roman" size="5" color="#000066"><img src="ir_prox_sensors.php_files/o2.gif" height="20" width="20" align="absmiddle"></font><font face="Times New Roman" size="5"><font color="#000066">Overview</font> 
+                    </font> <img src="ir_prox_sensors.php_files/line2.gif" height="5" width="643"></td>
+                </tr>
+              </tbody></table>
+              <table width="100%" border="0" cellpadding="0" cellspacing="2">
+                <tbody><tr> 
+                  <td valign="top" width="82%"> <div align="justify"> <em>Based 
+                      on a simple basic Idea, this proximity sensor, is easy to 
+                      build, easy to calibrate and still, it provides a detection 
+                      range of 35 cm (range can change depending on the ambient 
+                      light intensity).</em><br>
+                      <br>
+                      <font size="2"><strong><font color="#000066"><img src="ir_prox_sensors.php_files/p1.gif" height="10" width="10" align="absmiddle"></font></strong> 
+                      This sensor can be used for most indoor applications where 
+                      no important ambient light is present. For simplicity, this 
+                      sensor doesn't provide ambient light immunity, but a more 
+                      complicated, ambient light ignoring sensor should be discussed 
+                      in a coming article. However, this sensor can be used to 
+                      measure the speed of object moving at a very high speed, 
+                      like in industry or in tachometers. In such applications, 
+                      ambient light ignoring sensor, which rely on sending 40 
+                      Khz pulsed signals cannot be used because there are time 
+                      gaps between the pulses where the sensor is 'blind'...</font> 
+                      <br>
+                    </div></td>
+                  <td valign="middle" width="18%"><div align="left"><img src="ir_prox_sensors.php_files/view1.jpg" height="253" width="260" border="1"><strong><br>
+                      </strong></div></td>
+                </tr>
+              </tbody></table>
+              <div align="justify"><font size="2"><strong><font color="#000066"><img src="ir_prox_sensors.php_files/p1.gif" height="10" width="10" align="absmiddle"></font></strong> 
+                The solution proposed doesn't contain any special components, 
+                like photo-diodes, photo-transistors, or IR receiver ICs, only 
+                a couple if IR leds, an Op amp, a transistor and a couple of resistors. 
+                In need, as the title says, a standard IR led is used for the 
+                purpose of detection. Due to that fact, the circuit is extremely 
+                simple, and any novice electronics hobbyist can easily understand 
+                and build it.</font> <br>
+                <br>
+                <table width="100%" border="0" cellpadding="0" cellspacing="0">
+                  <tbody><tr>
+                    <td><font face="Times New Roman" size="5" color="#000066"><img src="ir_prox_sensors.php_files/o2.gif" height="20" width="20" align="absmiddle">Object 
+                      Detection using IR light <br>
+                      <img src="ir_prox_sensors.php_files/line2.gif" height="5" width="643"></font></td>
+                  </tr>
+                </tbody></table>
+                <strong><font size="4" color="#000066"> </font></strong><font size="4"><font size="2"><strong><font color="#000066"><img src="ir_prox_sensors.php_files/p1.gif" height="10" width="10" align="absmiddle"></font></strong></font></font> 
+                <font size="2">It is the same principle in ALL Infra-Red proximity 
+                sensors. The basic idea is to send infra red light through IR-LEDs, 
+                which is then reflected by any object in front of the sensor. 
+                </font> </div>
+              <table width="100%" border="0" cellpadding="0" cellspacing="4">
+                <tbody><tr>
+                  <td valign="top" width="72%"><div align="justify"><font size="2">Then 
+                      all you have to do is to pick-up the reflected IR light. 
+                      <strong>For detecting the reflected IR light, we are going 
+                      to use a very original technique: we are going to use another 
+                      IR-LED</strong>, to detect the IR light that was emitted 
+                      from another led of the exact same type!<br>
+                      This is an electrical property of Light Emitting Diodes 
+                      (LEDs) which is the fact that a led Produce a voltage difference 
+                      across its leads when it is subjected to light. As if it 
+                      was a photo-cell, but with much lower output current. In 
+                      other words, the voltage generated by the leds can't be 
+                      - in any way - used to generate electrical power from light, 
+                      It can barely be detected. that's why as you will notice 
+                      in the </font></div></td>
+                  <td width="28%"><img src="ir_prox_sensors.php_files/princ.gif" height="240" width="309" border="1"></td>
+                </tr>
+              </tbody></table>
+              <div align="justify"><font size="2"> schematic, we are going to 
+                use a Op-Amp (operational Amplifier) to accurately detect very 
+                small voltage changes.<br>
+                <br>
+                <strong></strong></font> 
+                <table width="100%" border="0" cellpadding="0" cellspacing="0">
+                  <tbody><tr> 
+                    <td><font face="Times New Roman" size="5" color="#000066"><img src="ir_prox_sensors.php_files/o2.gif" height="20" width="20" align="absmiddle"><font size="2"><font size="5">The 
+                      electronic Circuit</font></font></font> <font face="Times New Roman" size="5" color="#000066"><br>
+                      <img src="ir_prox_sensors.php_files/line2.gif" height="5" width="643"></font></td>
+                  </tr>
+                </tbody></table>
+                <font size="2"> <strong>Two different designs are proposed, each 
+                one of them is more suitable for different applications. The main 
+                difference between the 2 designs is the way infra-red (IR) light 
+                is sent on the object. The receiver part of the circuit is exactly 
+                the same in both designs.<br>
+                </strong><font color="#CC0000">Note: Both the sender and the receiver 
+                are constructed on the same board. They are separated in the schematics 
+                for simplification.</font><br>
+                <br>
+                </font> 
+                <table width="100%" bgcolor="#E8E8E8" border="0" cellpadding="0" cellspacing="0">
+                  <tbody><tr> 
+                    <td><div align="center"><font size="2"> <font size="3" color="#000066"><strong>Design 
+                        1: Low range, Always ON</strong></font></font> </div></td>
+                  </tr>
+                </tbody></table>
+                <font size="2"> As the name implies, the sensor is always ON, 
+                meaning that the IR led is constantly emitting light. this design 
+                of the circuit is suitable for <strong>counting objects</strong>, 
+                or <strong>counting revolutions</strong> of a rotating object, 
+                that may be of the order of 15,000 rpm or much more. However this 
+                design is more power consuming and is not optimized for high ranges. 
+                in this design, range can be from 1 to 10 cm, depending on the 
+                ambient light conditions. </font> </div>
+              <table width="100%" border="0" cellpadding="0" cellspacing="2">
+                <tbody><tr> 
+                  <td valign="middle" width="63%"><div align="left"><font size="2"><img src="ir_prox_sensors.php_files/prox_schm2.jpg" height="313" hspace="5" width="398" border="1"></font></div></td>
+                  <td valign="top" width="37%"><div align="justify"><font size="2">As 
+                      you can see the schematic is divided into 2 parts the <strong>sender</strong> 
+                      and the <strong>receiver</strong>. <br>
+                      <br>
+                      <strong><font size="3" color="#000066"><img src="ir_prox_sensors.php_files/p1.gif" height="10" width="10" align="absmiddle"></font> 
+                      The sender</strong> is composed of an IR LED (D2) in series 
+                      with a 470 Ohm resistor, yielding a forward current of <font color="#CC0000">7.5 
+                      mA</font>.<br>
+                      <br>
+                      <strong><font size="3" color="#000066"><img src="ir_prox_sensors.php_files/p1.gif" height="10" width="10" align="absmiddle"></font> 
+                      The receiver </strong> part is more complicated, the 2 resistors 
+                      R5 and R6 form a voltage divider which provides 2.5V at 
+                      the anode of the IR LED (here, this led will be used as 
+                      a sensor). When IR light falls on the LED (D1), the voltage 
+                      drop increases, the cathode's voltage of D1 may go as low 
+                      as 1.4V or more, depending on the light intensity. This 
+                      voltage drop can be </font></div></td>
+                </tr>
+              </tbody></table>
+              <div align="justify"><font size="2"> detected using an Op-Amp (operational 
+                Amplifier <strong>LM358</strong>). You will have to adjust the 
+                variable resistor (POT.) R8 so the the voltage at the positive 
+                input of the Op-Amp (pin No. 5) would be somewhere near 1.6 Volt. 
+                if you understand the functioning of Op-Amps, you will notice 
+                that the output will go High when the volt at the cathode of D1 
+                drops under 1.6. So the output will be High when IR light is detected, 
+                which is the purpose of the receiver.<br>
+                <br>
+                <strong><font size="3" color="#000066"><img src="ir_prox_sensors.php_files/p1.gif" height="10" width="10" align="absmiddle"></font></strong> 
+                <strong>In case you're not familiar with op-amps</strong>, here 
+                is shortly and in a very simplified manner, what you need to know 
+                to understand how this sensor functions: The op-amp has 2 input, 
+                the <strong><font color="#CC0000">+ve</font> </strong>input, and 
+                the<strong> <font color="#003366">-ve</font></strong> input. <strong>If 
+                the <font color="#CC0000">+ve</font> input's voltage is higher 
+                than the <font color="#003366">-ve</font> input's voltage, the 
+                output goes High (5v, given the supply voltage in the schematic), 
+                otherwise, if the <font color="#CC0000">+ve</font> input's voltage 
+                is lower than the <font color="#003366">-ve</font> input's voltage, 
+                then the output of the Op-Amp goes to Low (0V)</strong>. It doesn't 
+                matter how big is the difference between the <strong><font color="#CC0000">+ve</font></strong> 
+                and <strong><font color="#003366">-ve</font></strong> inputs, 
+                even a 0.0001 volts difference will be detected, and the the output 
+                will swing to 0v or 5v according to which input has a higher voltage.<br>
+                <br>
+                <strong><font size="3" color="#000066"><img src="ir_prox_sensors.php_files/p1.gif" height="10" width="10" align="absmiddle"></font><font color="#000066"> 
+                Some applications of the 'low range Always ON' Design:</font></strong></font> 
+                <br>
+                <font size="2">Notice how in both devices, the IR leds are encapsulated 
+                to protect them from ambient light. this kind of encapsulation 
+                was totally sufficient to overcome all noise due to ambient light 
+                for indoor applications.</font></div>
+              <table width="100%" border="0" cellpadding="8" cellspacing="2">
+                <tbody><tr> 
+                  <td valign="top" width="50%"><div align="justify"><font size="2"><strong><strong><font size="2" color="#000000"><img src="ir_prox_sensors.php_files/o2.gif" align="absmiddle"></font>Wheel 
+                      Encoder</strong></strong><br>
+                      This is a simple wheel encoder based on the idea that white 
+                      stripes will reflect IR light, while black ones will absorb 
+                      it. this will result in a series of electrical pulses as 
+                      the wheel is rotating, providing the microcontroller with 
+                      precious information that can be used to calculate displacement, 
+                      velocity or even acceleration. It is now clear that this 
+                      kind of sensor has to be Always ON, to detect every single 
+                      white stripe passing in front of it, to achieve accurate 
+                      results.</font></div></td>
+                  <td valign="top" width="50%"><div align="justify"><font size="2"><strong><strong><font size="2" color="#000000"><img src="ir_prox_sensors.php_files/o2.gif" align="absmiddle"></font><a href="http://ikalogic.com/d_tach.php">Contact-Less 
+                      tachometer</a></strong></strong><br>
+                      This is a tachometer, that counts the revolutions per minute 
+                      of a rotating object, given that the object has a reflective 
+                      stripe glued on it, that will pass in front of the IR sensor 
+                      for each and every revolution, giving a pulse per revolution. 
+                      Again a microcontroller will have to be used to 'understand' 
+                      the data provided by the sensor and display it. Many commercial 
+                      contact-less tachometers, that are sold <strong>for more 
+                      than $200</strong> rely on this simple idea!<br>
+                      <font size="1"><strong>[<a href="http://ikalogic.com/d_tach.php">Build your 
+                      own one for less than $20 in this article...</a>]</strong></font><br>
+                      </font></div></td>
+                </tr>
+                <tr> 
+                  <td><div align="center"><font size="2"><img src="ir_prox_sensors.php_files/enc2.jpg" height="244" width="244" border="1"></font></div></td>
+                  <td><div align="center"><font size="2"><a href="http://ikalogic.com/d_tach.php"><img src="ir_prox_sensors.php_files/tach.jpg" height="244" width="244" border="0"></a></font></div></td>
+                </tr>
+              </tbody></table>
+              <div align="justify"><br>
+                <font size="2"></font> 
+                <table width="100%" bgcolor="#E8E8E8" border="0" cellpadding="0" cellspacing="0">
+                  <tbody><tr> 
+                    <td><div align="center"><font size="2"><font size="3" color="#000066"><strong>Design 
+                        2: High range, Pulsed IR</strong></font><font size="3"> 
+                        </font></font></div></td>
+                  </tr>
+                </tbody></table>
+                <font size="2">In this design, which is oriented to obstacle detection 
+                in robots, our primary target is to reach high ranges, from 25 
+                to 35 cm, depending on ambient light conditions. The range of 
+                the sensor is extended by increasing the current flowing in the 
+                led. This is a delicate task, as we need to send pulses of IR 
+                instead of constant IR emission.The duty cycle of the pulses turning 
+                the LED ON and OFF have to be calculated with precision, so that 
+                the average current flowing into the LED never exceeds the LED's 
+                maximum DC current (or 10mA as a standard safe value).</font></div>
+              <table width="100%" border="0" cellspacing="0">
+                <tbody><tr> 
+                  <td rowspan="2" valign="top" width="37%"><div align="justify"><font size="2"> 
+                      The duty cycle is the ratio between the ON duration of the 
+                      pulse and the total period. A low duty cycle will enable 
+                      us to inject in the LED high instantaneous currents while 
+                      shutting it OFF for enough time to cool down from the previous 
+                      cycle.<br>
+                      <br>
+                      Those 2 graphs shows the meaning of the duty cycle, and 
+                      the mathematical relations between the ON time, the Total 
+                      period, and the average current. <br>
+                      <br>
+                      In the second graph, the average current in blue is exaggerated 
+                      to be visible, but real calculations would yield a much 
+                      smaller average current.</font></div></td>
+                  <td width="63%"><div align="center"><font size="2"><img src="ir_prox_sensors.php_files/duty1.jpg" height="150" hspace="5" vspace="2" width="400" border="1"></font></div></td>
+                </tr>
+                <tr> 
+                  <td><div align="center"><font size="2"><img src="ir_prox_sensors.php_files/duty2.jpg" height="150" hspace="5" width="400" border="1"><br>
+                      <strong><font size="1"><em>Pulsed IR, Duty cycle, Average 
+                      and Instantaneous current.</em></font></strong></font></div></td>
+                </tr>
+              </tbody></table>
+              <div align="justify"><br>
+                <font size="2"><strong><font color="#000066"><img src="ir_prox_sensors.php_files/p1.gif" height="10" width="10" align="absmiddle"></font></strong> 
+                Now, hands on the circuit that will put all this theory into practice. 
+                The CTRL input in the figure, stands for <strong>Control</strong>, 
+                and this pin should be connected to the source of the low duty 
+                cycle pulses discussed above, whether it is a microcontroller 
+                or an LM555 timer that generates the pulses. <br>
+                <br>
+                The calculations yielded that a 10 ohm resistor is series with 
+                the LED D2, would cause a current of approximately 250 mA to flow 
+                through the LED. A current this high, would destroy the LED if 
+                applied for a long period of time (some dozens of seconds), this 
+                is why we have to send low duty cycle pulses. <br>
+                <br>
+                <strong><font color="#000066"><img src="ir_prox_sensors.php_files/p1.gif" height="10" width="10" align="absmiddle"></font> 
+                </strong>The first Op-amp will provide voltage buffer, to enable 
+                any kind of device to control the</font> </div>
+              <table width="100%" border="0" cellspacing="2">
+                <tbody><tr> 
+                  <td valign="top" width="63%"><div align="left"><font size="2"><img src="ir_prox_sensors.php_files/prox_schm1.jpg" height="431" hspace="5" width="479" border="1"></font></div></td>
+                  <td valign="top" width="37%"><div align="justify"><font size="2"> 
+                      sensor, also, it will provide the 30mA base current required 
+                      to drive the base of the transistor. The calculation of 
+                      the the base resistor R3 depends on the type of transistor 
+                      you use, thus on how much current you need on the base to 
+                      drive the required collector current.<br>
+                      <br>
+                      <img src="ir_prox_sensors.php_files/p1.gif" height="10" width="10" align="absmiddle"> 
+                      The receiver part of this schematic functions in the exact 
+                      same way as in the first design, refer to the first, 'ALLWAYS 
+                      ON' design for a detailed description. </font></div></td>
+                </tr>
+              </tbody></table>
+              <div align="justify"><font size="2"><strong><font color="#000066"><br>
+                </font></strong></font>
+                <table width="100%" border="0" cellpadding="0" cellspacing="0">
+                  <tbody><tr> 
+                    <td height="20"><div align="center"><strong><font size="4" color="#000066"> 
+                        <script type="text/javascript"><!--
+google_ad_client = "pub-6530907032528013";
+google_ad_width = 468;
+google_ad_height = 60;
+google_ad_format = "468x60_as";
+google_ad_type = "image";
+//2007-08-13: electronics
+google_ad_channel = "7026482142";
+google_color_border = "336699";
+google_color_bg = "FFFFFF";
+google_color_link = "0000FF";
+google_color_text = "000000";
+google_color_url = "008000";
+google_ui_features = "rc:6";
+//-->
+</script>
+                        <script type="text/javascript" src="ir_prox_sensors.php_files/show_ads.js">
+</script>
+                        </font></strong></div></td>
+                  </tr>
+                </tbody></table>
+                <font size="2"><strong><font color="#000066"> <br>
+                </font></strong></font> 
+                <table width="100%" border="0" cellpadding="0" cellspacing="0">
+                  <tbody><tr> 
+                    <td><font face="Times New Roman" size="5" color="#000066"><img src="ir_prox_sensors.php_files/o2.gif" height="20" width="20" align="absmiddle"><font size="2"><font size="5">Software 
+                      based ambient light detection.</font></font></font> <font face="Times New Roman" size="5" color="#000066"><a name="soft_light_det"></a><br>
+                      <img src="ir_prox_sensors.php_files/line2.gif" height="5" width="643"></font></td>
+                  </tr>
+                </tbody></table>
+                <font size="2"> When the sensor is controlled by a microcontroller 
+                to generate the low duty cycle pulses, you can benefit from the 
+                High and Low pulses to be able to detect any <strong>false readings</strong> 
+                due to ambient light. This is done by recording 2 different outputs 
+                of the sensor, one of them during the ON pulse (the sensor is 
+                emitting infra red light) and the other during the OFF time. and 
+                compare the results. <br>
+                <br>
+                </font> 
+                <table width="100%" border="0" cellpadding="0" cellspacing="0">
+                  <tbody><tr> 
+                    <td height="172" valign="top" width="36%"><div align="justify"><font size="2">The 
+                        Idea is enlightened by this graph, where in the first 
+                        period, there is low ambient noise, so the microcontroller 
+                        records a "1" during the on cycle, meaning that 
+                        an object reflected the emitted IR Light, and then the 
+                        microcontroller records a "0" meaning that 
+                        during the OFF time, it didn't receive anything, which 
+                        is logic because the emitter LED was</font></div></td>
+                    <td width="64%"><div align="center"><font size="2"> <img src="ir_prox_sensors.php_files/soft_imm_noise2.jpg" height="150" hspace="5" vspace="2" width="400" border="1"></font></div></td>
+                  </tr>
+                </tbody></table>
+                <font size="2"> OFF. But study the second period of the graph, 
+                where the sensor is put in a high ambient light environment. As 
+                you can see, the the microcontroller records "1" in 
+                both conditions (OFF or ON). This means that we can't be sure 
+                whether the sensor reception was caused by an object that reflected 
+                the sent IR light, or it is simply receiving too much ambient 
+                light, and is giving "1" whether there is an obstacle 
+                or not.<br>
+                <br>
+                The following table show the possible outcomes of this method</font>. 
+                <table width="100%" border="1" cellpadding="0" cellspacing="0">
+                  <tbody><tr bgcolor="#AFBEDA"> 
+                    <td colspan="2"><div align="center"><strong><font size="2">Output 
+                        recorded during:</font></strong></div></td>
+                    <td rowspan="2" width="52%"><div align="center"></div>
+                      <div align="center"><strong><font size="2">Software based 
+                        deduction</font></strong></div></td>
+                  </tr>
+                  <tr bgcolor="#AFBEDA"> 
+                    <td width="24%"><div align="center"><strong><font size="2">On 
+                        pluse</font></strong></div></td>
+                    <td width="24%"><div align="center"><strong><font size="2">Off 
+                        time</font></strong></div></td>
+                  </tr>
+                  <tr> 
+                    <td><div align="center"><font size="2">1</font></div></td>
+                    <td><div align="center"><font size="2">0</font></div></td>
+                    <td><div align="center"><font size="2">There is definitely 
+                        an Obstacle in front of the sensor</font></div></td>
+                  </tr>
+                  <tr> 
+                    <td><div align="center"><font size="2">1</font></div></td>
+                    <td><div align="center"><font size="2">1</font></div></td>
+                    <td><div align="center"><font size="2">The sensor is saturated 
+                        by ambient light, thus we can't know if there is an obstacle</font></div></td>
+                  </tr>
+                  <tr> 
+                    <td><div align="center"><font size="2">0</font></div></td>
+                    <td><div align="center"><font size="2">0</font></div></td>
+                    <td><div align="center"><font size="2">There is definitely 
+                        Nothing in front of the sensor, the way is clear</font></div></td>
+                  </tr>
+                  <tr> 
+                    <td><div align="center"><font size="2">0</font></div></td>
+                    <td><div align="center"><font size="2">1</font></div></td>
+                    <td><div align="center"><font size="2">This reading is un 
+                        logical, there is something wrong with the sensor.</font></div></td>
+                  </tr>
+                </tbody></table>
+                <font size="2"><strong><font color="#000066"><br>
+                <img src="ir_prox_sensors.php_files/p1.gif" height="10" width="10" align="absmiddle"></font><font color="#000066"> 
+                Example C Code for 8051 microcontrollers</font></strong><br>
+                </font> 
+                <table width="100%" border="0" cellpadding="0" cellspacing="0">
+                  <tbody><tr> 
+                    <td bgcolor="#CCCCCC"><pre><p><font size="2">#include &lt;REGX51.h&gt; <br>#include &lt;math.h&gt;<br><br>unsigned char ir; <font color="#009900">     // to store the final result</font><br>bit ir1,ir2; <font color="#009900">          // the 2 recording point required for our algorithm</font></font></p><p><font size="2">delay(y){ <font color="#009900">             // simple delay function
+</font>  unsigned int i;<br>  for(i=0;i&lt;y;i++){;}<br>}</font></p><font size="2">void main(){<br><font color="#009900">//P2.0 IR control pin going to the sensor<br>//P2.1 IR output pin coming from the sensor</font></font>
+<font size="2"><br>while(1){
+  P2_0 = 1;              <font color="#009900">//send IR</font><br>  delay(20);<br>  ir1 = P2_1;<br>  P2_0 = 0;              <font color="#009900">//stop IR</font><br>  delay(98);<br>  ir2 = P2_1; <br><br>  if ((ir1 == 1)&amp;(ir2 == 0)){<br>    ir = 1;<font color="#009900">              // Obstacle detected</font>
+    P2_3 = 1;<font color="#009900">            // Pin 3 of PORT 2 will go HIGH turning ON a LED.</font><br>  if ((ir1 == 1)&amp;(ir2 == 1)){<br>    ir = 2;<font color="#009900">              // Sensor is saturated by ambient light</font><br>  }else{<br>    ir = 0;<font color="#009900">              // The way is clear in front of the sensor.</font><br>  }</font>
+<font size="2">}<br>}</font></pre>
+                      </td>
+                  </tr>
+                </tbody></table>
+                <font size="2"> </font><font size="2"> <br>
+                <strong></strong></font> 
+                <table width="100%" border="0" cellpadding="0" cellspacing="0">
+                  <tbody><tr> 
+                    <td><font face="Times New Roman" size="5" color="#000066"><img src="ir_prox_sensors.php_files/o2.gif" height="20" width="20" align="absmiddle"></font><font face="Times New Roman" size="5"><font color="#000066">Components 
+                      positioning:<a name="bjt_sw"></a></font></font> <font face="Times New Roman" size="5" color="#000066"><br>
+                      <img src="ir_prox_sensors.php_files/line2.gif" height="5" width="643"></font></td>
+                  </tr>
+                </tbody></table>
+                <font size="2"><strong><font size="4" color="#000066"> </font><font color="#000066"><img src="ir_prox_sensors.php_files/p1.gif" height="10" width="10" align="absmiddle"></font></strong> 
+                The correct positioning of the sender LED, the receiver LED with 
+                regard to each other and to the Op-Amp can also increase the performance 
+                of the sensor. First, we need to adjust the position of the sender 
+                LED with respect to the receiver LED, in such a way they are as 
+                near as possible to each others , while preventing any IR light 
+                to be picked up by the receiver LED <strong>before it hit and 
+                object</strong> and returns back. The easiest way to do that is 
+                to put the sender(s) LED(s) from one side of the PCB, and the 
+                receiver LED from the other side, as shown in the 3D model below.</font> 
+              </div>
+              <table width="100%" border="0" cellpadding="0" cellspacing="0">
+                <tbody><tr> 
+                  <td valign="top" width="51%"><div align="justify"><font size="2"><strong><font color="#000066"><img src="ir_prox_sensors.php_files/p1.gif" height="10" width="10" align="absmiddle"></font></strong> 
+                      This 3D model shows the position of the LEDs. <strong>The 
+                      green plate</strong> is the PCB holding the electronic components 
+                      of the sensor. you can notice that the receiver LED is positioned 
+                      under the PCB, this way, there wont be ambient light falling 
+                      directly on it, as ambient light usually comes from the 
+                      top. <br>
+                      <br>
+                      It is also clear that this way of positioning the LEDs prevent 
+                      the emitted IR light to be detected before hitting an eventual 
+                      obstacle.</font></div></td>
+                  <td width="49%"><font size="2"><img src="ir_prox_sensors.php_files/led_pos.jpg" height="170" hspace="7" width="303" border="1"></font></td>
+                </tr>
+              </tbody></table>
+              <div align="justify"><font size="2"><br>
+                Another important issue about components positioning, is the distance 
+                between the receiver LED and the Op-Amp. which should be as small 
+                as possible. Generally speaking, the length of wires or PCB tracks 
+                before an amplifier should be reduced, otherwise, the amplifier 
+                will amplify - along with the original signal - a lot of noise 
+                picked up form the electromagnetic waves traveling the surrounding.</font> 
+              </div>
+              <table width="100%" border="0" cellpadding="0" cellspacing="0">
+                <tbody><tr> 
+                  <td valign="top" width="72%"><div align="justify"><font size="2"><strong><font color="#000066"><img src="ir_prox_sensors.php_files/p1.gif" height="10" width="10" align="absmiddle"></font></strong>Here 
+                      is an example PCB where the distance between the LED and 
+                      the Op-Amp is shown. Sure this distance is not as critical 
+                      as you may think, it can be up to 35mm without causing serious 
+                      problems, but trying to reduce this distance will Always 
+                      give you better results.<br>
+                      <br>
+                      Actually, when I design the PCB, I start by placing the 
+                      receiver LED and the Op-Amp, as near to each others as possible, 
+                      then continue the rest of the design. </font></div></td>
+                  <td width="28%"><font size="2"><img src="ir_prox_sensors.php_files/rec_pos.jpg" height="199" hspace="7" width="200" border="1"></font></td>
+                </tr>
+              </tbody></table>
+              <font size="2"><br>
+              </font><br>
+              <strong></strong> 
+              <table width="100%" border="0" cellpadding="0" cellspacing="0">
+                <tbody><tr> 
+                  <td><font face="Times New Roman" size="5" color="#000066"><img src="ir_prox_sensors.php_files/o2.gif" height="20" width="20" align="absmiddle">An 
+                    example PCB construction</font><font face="Times New Roman" size="5" color="#000066"><br>
+                    <img src="ir_prox_sensors.php_files/line2.gif" height="5" width="643"></font></td>
+                </tr>
+              </tbody></table>
+              <font size="2">Here is an example construction of the PCB for the 
+              High Range, Pulsed IR proximity sensor. <br>
+              You can download <a href="http://ikalogic.com/art_pics/ir_prox/Proximity_sensor_1.zip"><strong>here</strong></a> the project 
+              folder containing the <strong>schematic</strong>, the <strong>PCB</strong> 
+              design, and an <strong>example code</strong> for 8051 microcontroller 
+              to send the low duty cycle pulses.</font> 
+              <table width="100%" border="0" cellpadding="0" cellspacing="0">
+                <tbody><tr>
+                  <td valign="top" width="54%"><div align="justify"><font size="2"> 
+                      <strong><font color="#000066"><img src="ir_prox_sensors.php_files/p1.gif" height="10" width="10" align="absmiddle"></font></strong> 
+                      In this design, the LM358 Op-Amp is mounded on the copper 
+                      side, to save some space. The POT is the potentiometer </font> 
+                      <font size="2">used to adjust sensitivity.<br>
+                      <br>
+                      As explained before, the sender and receiver LEDs are on 
+                      both sides of the PCB.<br>
+                      <br>
+                      </font></div></td>
+                  <td width="46%"><div align="center"><img src="ir_prox_sensors.php_files/constr.jpg" height="200" hspace="6" width="400" border="1"></div></td>
+                </tr>
+              </tbody></table>
+              <br>
+              <br>
+              <strong></strong> 
+              <table width="100%" border="0" cellpadding="0" cellspacing="0">
+                <tbody><tr> 
+                  <td><font face="Times New Roman" size="5" color="#000066"><img src="ir_prox_sensors.php_files/o2.gif" height="20" width="20" align="absmiddle">Testing 
+                    the High range Pulsed IR sensor</font><font face="Times New Roman" size="5" color="#000066"><br>
+                    <img src="ir_prox_sensors.php_files/line2.gif" height="5" width="643"></font></td>
+                </tr>
+              </tbody></table>
+              <div align="justify"><strong><font size="4" color="#000066"> </font></strong><font size="2">The 
+                last step, is to test the performance of the pulsed IR proximity 
+                sensor. To do this, I connected the sensor to a 89S52 microcontroller, 
+                loaded with a program to generate pulses with a duty cycle of 
+                approximately 1.6. at a frequency of 3Khz. LEDs are deigned to 
+                operate at very high frequencies, so you don't have to worry about 
+                the response time. To make sure your duty cycle calculations are 
+                correct, let the sensor running for a minute, and check with your 
+                fingers the temperature of the IR sender LED. If its not hot, 
+                then everything is alright. On the other hand, if the LED is getting 
+                hot, to an extent that you can feel it, there is probably something 
+                wrong, you should then try to decrease the duty cycle, or increase 
+                the series resistor, in order to decrease the average current 
+                flowing into the LED. <br>
+                <br>
+                Then, you can start testing the range of the sensor, and experiment 
+                it in different ambient light conditions, but the potentiometer 
+                may have to be adjusted carefully, to cope with ambient light.<br>
+                </font> </div>
+              <table width="100%" border="0" cellpadding="0" cellspacing="0">
+                <tbody><tr> 
+                  <td><div align="center"><img src="ir_prox_sensors.php_files/testing.jpg" height="450" width="600" border="1"></div></td>
+                </tr>
+              </tbody></table>
+              <div align="justify"><font size="2"><font color="#000066"><strong><br>
+                </strong></font> </font> <font size="2">In the example C code 
+                above, the final output of the sensor appears on the pin P2_3 
+                of the microcontroller, as explained before.</font><br>
+                <font color="#000066"><strong></strong></font> </div>
+              <table width="100%" border="0" cellpadding="0" cellspacing="0">
+                <tbody><tr> 
+                  <td><font face="Times New Roman" size="5" color="#000066"><img src="ir_prox_sensors.php_files/o2.gif" height="20" width="20" align="absmiddle"><font size="2"><font color="#000066"><font size="5">Related 
+                    Tutorials</font></font></font></font><font face="Times New Roman" size="5" color="#000066"><br>
+                    <img src="ir_prox_sensors.php_files/line2.gif" height="5" width="643"></font></td>
+                </tr>
+              </tbody></table>
+              <div align="justify"><strong><font size="4"> <a href="http://www.solarbotics.net/library/circuits/sensors_prox.html"><font color="#000066"> 
+                <img src="ir_prox_sensors.php_files/p1.gif" align="bottom" border="0"></font></a></font></strong><font size="4"><font size="2"> 
+                <a href="http://ikalogic.com/ir_prox_sensors_40khz.php"><strong>Ambient light ignoring 
+                infra-Red proximity sensor</strong></a>, using 40Khz IR receiver 
+                IC</font><strong><br>
+                <img src="ir_prox_sensors.php_files/p1.gif" align="absmiddle" border="0"><a href="http://www.solarbotics.net/library/circuits/sensors_prox.html"><font size="2"> 
+                Proximity sensors at <em>BEAM circuits</em>,</font></a></strong></font><font size="2">an 
+                overview about IR (InfraRed), Acoustic, Capacitive and Inductive 
+                procimity sensors.</font><font size="1"><em><br>
+                <br>
+                </em></font> <font size="1"><em><font size="1"><em><font size="1"> 
+                <table width="100%" border="0" cellpadding="0" cellspacing="3">
+  <tbody><tr> 
+    <td><div align="center"> 
+        <script type="text/javascript"><!--
+google_ad_client = "pub-6530907032528013";
+google_ad_width = 468;
+google_ad_height = 60;
+google_ad_format = "468x60_as";
+google_ad_type = "text_image";
+google_ad_channel = "";
+google_color_border = "336699";
+google_color_bg = "FFFFFF";
+google_color_link = "0000FF";
+google_color_text = "000000";
+google_color_url = "008000";
+//-->
+</script>
+        <script type="text/javascript" src="ir_prox_sensors.php_files/show_ads.js">
+</script>
+      </div></td>
+  </tr>
+</tbody></table>
+                </font></em></font></em></font><br>
+              </div>
+              <table width="100%" bgcolor="#990000" border="0" cellpadding="0" cellspacing="1">
+                <tbody><tr> 
+                  <td bgcolor="#FFFF99"><div align="center"><strong><a href="http://www.ikalogic.com/phpBB3/download/file.php?id=23" target="_blank">Download</a> 
+                      the zip file for the High range sensor.<br>
+                      <font size="2">containing the PCB, Schematic and Example 
+                      8051 C51 code.</font><br>
+                      <font size="1"><em>[<strong>note: i use <a href="http://www.expresspcb.com/">ExpressPCB</a>(FREEWARE) 
+                      to design the schematics and the PCB</strong>]</em></font> 
+                      </strong> </div></td>
+                </tr>
+              </tbody></table>
+              <br>
+              <table width="320" align="center" border="0" cellpadding="2" cellspacing="0">
+                <tbody><tr> 
+                  <td background="ir_prox_sensors.php_files/bar2.jpg" bgcolor="#B7CEE8"><font size="2"><strong><img src="ir_prox_sensors.php_files/a3.gif" height="9" width="8"> 
+                    <b>Join the Mailing List</b> </strong></font></td>
+                </tr>
+                <tr> 
+                  <td bgcolor="#F5F5F5"> <font size="2"><strong>Let us get in 
+                    touch with you when we upload new interesting content.</strong></font> 
+                    <script type="text/javascript">
+function validate_elist_89530780()
+{
+    e = document.getElementById('elist_err89530780');
+    e.innerHTML="";
+    if (!document.getElementById('elistaddress89530780').value.match(/^[-!#$%&'*+./0-9=?A-Z^_`a-z{|}]+@[-!#$%&'*+/0-9=?A-Z^_`a-z{|}~.]+?.+[a-zA-Z]{2,4}$/i)) 
+    {
+        e.innerHTML += 'Invalid email address';
+    }
+    if (e.innerHTML != "") return false;
+    return true;
+}
+</script> <form abinetype="unknown" abineprocessed="true" aburl="/elist/add.php" abhost="bravenet.com" abaction="http://pub26.bravenet.com/elist/add.php" id="ABID_60226360" abhfe="1" action="http://pub26.bravenet.com/elist/add.php" method="post" style="margin:0px;" onsubmit="return validate_elist_89530780()">
+                      <table width="100%" border="0" cellpadding="2" cellspacing="0">
+                        <tbody><tr> 
+                          <td><font size="2">Name: </font></td>
+                          <td><font size="2"> 
+                            <input abinetype="/nameperson/full" abinelabel="Name" abineprocessed="true" id="elistname" name="ename" size="25" maxlength="60" style="width: 170px;" type="text">
+                            </font></td>
+                        </tr>
+                        <tr> 
+                          <td><font size="2">Email: </font></td>
+                          <td><font size="2"> 
+                            <input abinetype="/contact/email" abinelabel="Email" abineprocessed="true" name="emailaddress" id="elistaddress89530780" size="25" maxlength="100" style="width: 170px;" type="text">
+                            </font></td>
+                        </tr>
+                      </tbody></table>
+                      <font size="2"> 
+                      <input abinetype="" abinelabel="Subscribe" abineprocessed="true" name="action" value="join" checked="checked" style="border: 0px none;" type="radio">
+                      Subscribe&nbsp; 
+                      <input abinetype="" abinelabel="Unsubscribe" abineprocessed="true" name="action" value="leave" style="border: 0px none;" type="radio">
+                      Unsubscribe&nbsp; 
+                      <input name="usernum" style="border: 0px solid black; height: 0px; width: 0px;" value="2181283854" type="hidden">
+                      <input name="cpv" style="border: 0px solid black; height: 0px; width: 0px;" value="1" type="hidden">
+                      </font> 
+                      <input name="submit" value="GO" type="submit">
+                      <div style="margin-bottom:10px;" align="center"><a title="Free Mailing Lists from Bravenet.com" href="http://www.bravenet.com/webtools/elist/" style="font: bold 11px tahoma,sans-serif; color: rgb(0, 72, 145);" target="_blank">Get 
+                        your Free Mailing List</a><br>
+                        <a title="Free Mailing Lists from Bravenet.com" href="http://www.bravenet.com/" style="font: 10px tahoma,sans-serif; color: rgb(0, 72, 145);" target="_blank">by 
+                        Bravenet.com</a></div>
+                    </form>
+                    <div align="center"> </div></td>
+                </tr>
+              </tbody></table>
+              <br>
+              <br>
+              <font size="1"><em><font size="1"><em><font size="1"> <em><font size="1"><em><font size="1"><em><font size="1"><em><font size="1"><em><font size="1"><em><font size="1">
+              
+<script language="JavaScript" type="text/JavaScript">
+function insert_text(text, spaces, popup)
+{
+	var textarea;
+	var form_name = "postform";
+	var text_name = "message";
+	
+	if (!popup)
+	{
+		textarea = document.forms[form_name].elements[text_name];
+	}
+	else
+	{
+		textarea = opener.document.forms[form_name].elements[text_name];
+	}
+
+	if (spaces)
+	{
+		text = ' ' + text + ' ';
+	}
+
+	if (!isNaN(textarea.selectionStart))
+	{
+		var sel_start = textarea.selectionStart;
+		var sel_end = textarea.selectionEnd;
+
+		mozWrap(textarea, text, '')
+		textarea.selectionStart = sel_start + text.length;
+		textarea.selectionEnd = sel_end + text.length;
+	}	
+	
+	else if (textarea.createTextRange && textarea.caretPos)
+	{
+		if (baseHeight != textarea.caretPos.boundingHeight) 
+		{
+			textarea.focus();
+			storeCaret(textarea);
+		}
+		var caret_pos = textarea.caretPos;
+		caret_pos.text = caret_pos.text.charAt(caret_pos.text.length - 1) == ' ' ? caret_pos.text + text + ' ' : caret_pos.text + text;
+		
+	}
+	else
+	{
+		textarea.value = textarea.value + text;
+	}
+
+	if (!popup)
+	{
+		textarea.focus();
+	}
+
+}
+</script>
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+  <tbody><tr> 
+    <td><font face="Times New Roman" size="5" color="#000066"><img src="ir_prox_sensors.php_files/o2_002.gif" height="20" width="20" align="absmiddle"> 
+      <a href="http://www.ikalogic.com/phpBB3/viewtopic.php?f=16&amp;t=12">Discussion 
+      (Last 15 posts preview...) </a></font><font face="Times New Roman" size="5" color="#000066"><br>
+      <img src="ir_prox_sensors.php_files/line2_002.gif" height="5" width="645"></font></td>
+  </tr>
+</tbody></table>
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+  <tbody><tr> 
+    <td><div align="justify"><font size="1">Preview of the last 15 
+        messages discussing this page. Messages are sorted from the newest to 
+        the oldest. </font></div></td>
+  </tr>
+</tbody></table>
+<table width="100%" bgcolor="#333333" border="0" cellpadding="1" cellspacing="1">
+  <tbody><tr> 
+    <td bgcolor="#DAE2F1"><div align="center"><font size="2"></font> 
+        <table width="100%" border="0" cellpadding="0" cellspacing="0">
+          <tbody><tr>
+            <td><font size="2"><img src="ir_prox_sensors.php_files/o2_002.gif" height="10" width="10"> <a href="http://www.ikalogic.com/phpBB3/viewtopic.php?f=16&amp;t=12"><strong>Follow 
+              this discussion in the Full-featured forum</strong></a> <img src="ir_prox_sensors.php_files/o2_002.gif" height="10" width="10"></font></td>
+            <td><div align="center"><font size="2"><a href="#mini_forum"><img src="ir_prox_sensors.php_files/post.gif" height="25" width="96" border="0"></a></font></div></td>
+          </tr>
+        </tbody></table>
+        <font size="2"> </font></div></td>
+  </tr>
+</tbody></table>
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+  <tbody><tr> 
+    <td bgcolor=""><table width="100%" border="0" cellpadding="4" cellspacing="0">
+        <tbody><tr> 
+          <td valign="top" width="20%" bgcolor="#AFC2E0"><font size="1">Posted 
+            by:<br>
+            <strong> <font size="2" color="#003399"> </font><font size="2"> <a href="http://www.ikalogic.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=36378">vitruvius            </a></font></strong><br>
+            on: 
+            16 Dec 2011            </font></td>
+          <td valign="top" width="80%" bgcolor="#F1F4F8">
+<table width="100%" border="0" cellpadding="3" cellspacing="3">
+              <tbody><tr>
+                <td><table width="100%" bgcolor="#F1F4F8" border="0" cellpadding="0" cellspacing="0">
+                    <tbody><tr> 
+                      <td width="93%"><font size="2"> <strong> <img src="ir_prox_sensors.php_files/a3_002.gif" height="9" width="8"> 
+                        </strong> 
+                        <a href="http://www.ikalogic.com/phpBB3/viewtopic.php?f=16&amp;start=105&amp;t=12#p7323">Infra-Red proximity sensors PART 1</a>                         </font></td>
+                      <td nowrap="nowrap" width="7%"><div align="center"><font size="1">[<a href="http://www.ikalogic.com/phpBB3/posting.php?mode=quote&amp;f=16&amp;p=7323"><strong>'Quote</strong></a> 
+                          ] </font></div></td>
+                    </tr>
+                    <tr bgcolor="#F1F4F8"> 
+                      <td colspan="2"><img src="ir_prox_sensors.php_files/line2_002.gif" height="5" width="100%"></td>
+                    </tr>
+                    <tr bgcolor="#F1F4F8"> 
+                      <td colspan="2"><font size="2"> 
+                        Hi all. I didn't understand some details for 
+"design 2". I want to use PIC 16F877. I don't get that; what should i 
+set "pwm_duty" and timer2_setup?                        <br>
+                                                </font></td>
+                    </tr>
+                  </tbody></table></td>
+              </tr>
+            </tbody></table></td>
+        </tr>
+      </tbody></table></td>
+  </tr>
+</tbody></table>
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+  <tbody><tr>
+    <td><img src="ir_prox_sensors.php_files/line2_002.gif" height="5" width="100%"></td>
+  </tr>
+</tbody></table>
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+  <tbody><tr> 
+    <td bgcolor=""><table width="100%" border="0" cellpadding="4" cellspacing="0">
+        <tbody><tr> 
+          <td valign="top" width="20%" bgcolor="#AFC2E0"><font size="1">Posted 
+            by:<br>
+            <strong> <font size="2" color="#003399"> </font><font size="2"> <a href="http://www.ikalogic.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=35851">oblan            </a></font></strong><br>
+            on: 
+            13 Dec 2011            </font></td>
+          <td valign="top" width="80%" bgcolor="#F1F4F8">
+<table width="100%" border="0" cellpadding="3" cellspacing="3">
+              <tbody><tr>
+                <td><table width="100%" bgcolor="#F1F4F8" border="0" cellpadding="0" cellspacing="0">
+                    <tbody><tr> 
+                      <td width="93%"><font size="2"> <strong> <img src="ir_prox_sensors.php_files/a3_002.gif" height="9" width="8"> 
+                        </strong> 
+                        <a href="http://www.ikalogic.com/phpBB3/viewtopic.php?f=16&amp;start=105&amp;t=12#p7283">Re: urgent</a>                         </font></td>
+                      <td nowrap="nowrap" width="7%"><div align="center"><font size="1">[<a href="http://www.ikalogic.com/phpBB3/posting.php?mode=quote&amp;f=16&amp;p=7283"><strong>'Quote</strong></a> 
+                          ] </font></div></td>
+                    </tr>
+                    <tr bgcolor="#F1F4F8"> 
+                      <td colspan="2"><img src="ir_prox_sensors.php_files/line2_002.gif" height="5" width="100%"></td>
+                    </tr>
+                    <tr bgcolor="#F1F4F8"> 
+                      <td colspan="2"><font size="2"> 
+                        <br><table width="98%" align="center" bgcolor="#E5E5E5" border="0" cellpadding="5" cellspacing="1"><tbody><tr><td bgcolor="#CCCCCC"><i><font size="1"><u><b>Quoting bluedragon_raj:</b></u> hello sir,<br>
+          before viewing this websitew, i had done the same project 
+using a 741, but i was geting the output as 1.7 volts continuosly and 
+the led connectd to the non inverting terminal had no affect on the 
+output voltage... i have to submit the project by next week.. cud u 
+please explain y doesnt it work with 741 as comparator? please reply its
+ urgent..</font></i></td></tr></tbody></table><br>it also works with 741 as a comparator. i have tried this ....                        <br>
+                                                </font></td>
+                    </tr>
+                  </tbody></table></td>
+              </tr>
+            </tbody></table></td>
+        </tr>
+      </tbody></table></td>
+  </tr>
+</tbody></table>
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+  <tbody><tr>
+    <td><img src="ir_prox_sensors.php_files/line2_002.gif" height="5" width="100%"></td>
+  </tr>
+</tbody></table>
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+  <tbody><tr> 
+    <td bgcolor=""><table width="100%" border="0" cellpadding="4" cellspacing="0">
+        <tbody><tr> 
+          <td valign="top" width="20%" bgcolor="#AFC2E0"><font size="1">Posted 
+            by:<br>
+            <strong> <font size="2" color="#003399"> </font><font size="2"> <a href="http://www.ikalogic.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=36011">joefliz            </a></font></strong><br>
+            on: 
+            13 Dec 2011            </font></td>
+          <td valign="top" width="80%" bgcolor="#F1F4F8">
+<table width="100%" border="0" cellpadding="3" cellspacing="3">
+              <tbody><tr>
+                <td><table width="100%" bgcolor="#F1F4F8" border="0" cellpadding="0" cellspacing="0">
+                    <tbody><tr> 
+                      <td width="93%"><font size="2"> <strong> <img src="ir_prox_sensors.php_files/a3_002.gif" height="9" width="8"> 
+                        </strong> 
+                        <a href="http://www.ikalogic.com/phpBB3/viewtopic.php?f=16&amp;start=105&amp;t=12#p7282">Infra-Red proximity sensors PART 1</a>                         </font></td>
+                      <td nowrap="nowrap" width="7%"><div align="center"><font size="1">[<a href="http://www.ikalogic.com/phpBB3/posting.php?mode=quote&amp;f=16&amp;p=7282"><strong>'Quote</strong></a> 
+                          ] </font></div></td>
+                    </tr>
+                    <tr bgcolor="#F1F4F8"> 
+                      <td colspan="2"><img src="ir_prox_sensors.php_files/line2_002.gif" height="5" width="100%"></td>
+                    </tr>
+                    <tr bgcolor="#F1F4F8"> 
+                      <td colspan="2"><font size="2"> 
+                        for "Design 2: High range, Pulsed IR" u use IR 
+LED for sender,  and also another IR LED for receiver. correct me if im 
+wrong. what type of emitting diode u use at receiver which is D3?<br>just to make sure before buying the component, ty                        <br>
+                                                </font></td>
+                    </tr>
+                  </tbody></table></td>
+              </tr>
+            </tbody></table></td>
+        </tr>
+      </tbody></table></td>
+  </tr>
+</tbody></table>
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+  <tbody><tr>
+    <td><img src="ir_prox_sensors.php_files/line2_002.gif" height="5" width="100%"></td>
+  </tr>
+</tbody></table>
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+  <tbody><tr> 
+    <td bgcolor=""><table width="100%" border="0" cellpadding="4" cellspacing="0">
+        <tbody><tr> 
+          <td valign="top" width="20%" bgcolor="#AFC2E0"><font size="1">Posted 
+            by:<br>
+            <strong> <font size="2" color="#003399"> </font><font size="2"> <a href="http://www.ikalogic.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=35851">oblan            </a></font></strong><br>
+            on: 
+            30 Nov 2011            </font></td>
+          <td valign="top" width="80%" bgcolor="#F1F4F8">
+<table width="100%" border="0" cellpadding="3" cellspacing="3">
+              <tbody><tr>
+                <td><table width="100%" bgcolor="#F1F4F8" border="0" cellpadding="0" cellspacing="0">
+                    <tbody><tr> 
+                      <td width="93%"><font size="2"> <strong> <img src="ir_prox_sensors.php_files/a3_002.gif" height="9" width="8"> 
+                        </strong> 
+                        <a href="http://www.ikalogic.com/phpBB3/viewtopic.php?f=16&amp;start=105&amp;t=12#p7175">Infra-Red proximity sensors PART 1</a>                         </font></td>
+                      <td nowrap="nowrap" width="7%"><div align="center"><font size="1">[<a href="http://www.ikalogic.com/phpBB3/posting.php?mode=quote&amp;f=16&amp;p=7175"><strong>'Quote</strong></a> 
+                          ] </font></div></td>
+                    </tr>
+                    <tr bgcolor="#F1F4F8"> 
+                      <td colspan="2"><img src="ir_prox_sensors.php_files/line2_002.gif" height="5" width="100%"></td>
+                    </tr>
+                    <tr bgcolor="#F1F4F8"> 
+                      <td colspan="2"><font size="2"> 
+                        can we use TSOP1738 IR module as receiver for the IR sensor??                        <br>
+                                                </font></td>
+                    </tr>
+                  </tbody></table></td>
+              </tr>
+            </tbody></table></td>
+        </tr>
+      </tbody></table></td>
+  </tr>
+</tbody></table>
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+  <tbody><tr>
+    <td><img src="ir_prox_sensors.php_files/line2_002.gif" height="5" width="100%"></td>
+  </tr>
+</tbody></table>
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+  <tbody><tr> 
+    <td bgcolor=""><table width="100%" border="0" cellpadding="4" cellspacing="0">
+        <tbody><tr> 
+          <td valign="top" width="20%" bgcolor="#AFC2E0"><font size="1">Posted 
+            by:<br>
+            <strong> <font size="2" color="#003399"> </font><font size="2"> <a href="http://www.ikalogic.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=35364">fhdnwr            </a></font></strong><br>
+            on: 
+            13 Nov 2011            </font></td>
+          <td valign="top" width="80%" bgcolor="#F1F4F8">
+<table width="100%" border="0" cellpadding="3" cellspacing="3">
+              <tbody><tr>
+                <td><table width="100%" bgcolor="#F1F4F8" border="0" cellpadding="0" cellspacing="0">
+                    <tbody><tr> 
+                      <td width="93%"><font size="2"> <strong> <img src="ir_prox_sensors.php_files/a3_002.gif" height="9" width="8"> 
+                        </strong> 
+                        <a href="http://www.ikalogic.com/phpBB3/viewtopic.php?f=16&amp;start=105&amp;t=12#p7150">Infra-Red proximity sensors PART 1</a>                         </font></td>
+                      <td nowrap="nowrap" width="7%"><div align="center"><font size="1">[<a href="http://www.ikalogic.com/phpBB3/posting.php?mode=quote&amp;f=16&amp;p=7150"><strong>'Quote</strong></a> 
+                          ] </font></div></td>
+                    </tr>
+                    <tr bgcolor="#F1F4F8"> 
+                      <td colspan="2"><img src="ir_prox_sensors.php_files/line2_002.gif" height="5" width="100%"></td>
+                    </tr>
+                    <tr bgcolor="#F1F4F8"> 
+                      <td colspan="2"><font size="2"> 
+                        hey... the zip file for high range sensor is corrupt!! plz post a new 1                        <br>
+                                                </font></td>
+                    </tr>
+                  </tbody></table></td>
+              </tr>
+            </tbody></table></td>
+        </tr>
+      </tbody></table></td>
+  </tr>
+</tbody></table>
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+  <tbody><tr>
+    <td><img src="ir_prox_sensors.php_files/line2_002.gif" height="5" width="100%"></td>
+  </tr>
+</tbody></table>
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+  <tbody><tr> 
+    <td bgcolor=""><table width="100%" border="0" cellpadding="4" cellspacing="0">
+        <tbody><tr> 
+          <td valign="top" width="20%" bgcolor="#AFC2E0"><font size="1">Posted 
+            by:<br>
+            <strong> <font size="2" color="#003399"> </font><font size="2"> <a href="http://www.ikalogic.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=33939">nikhilnv123            </a></font></strong><br>
+            on: 
+            20 Oct 2011            </font></td>
+          <td valign="top" width="80%" bgcolor="#F1F4F8">
+<table width="100%" border="0" cellpadding="3" cellspacing="3">
+              <tbody><tr>
+                <td><table width="100%" bgcolor="#F1F4F8" border="0" cellpadding="0" cellspacing="0">
+                    <tbody><tr> 
+                      <td width="93%"><font size="2"> <strong> <img src="ir_prox_sensors.php_files/a3_002.gif" height="9" width="8"> 
+                        </strong> 
+                        <a href="http://www.ikalogic.com/phpBB3/viewtopic.php?f=16&amp;start=105&amp;t=12#p7079">Infra-Red proximity sensors PART 1</a>                         </font></td>
+                      <td nowrap="nowrap" width="7%"><div align="center"><font size="1">[<a href="http://www.ikalogic.com/phpBB3/posting.php?mode=quote&amp;f=16&amp;p=7079"><strong>'Quote</strong></a> 
+                          ] </font></div></td>
+                    </tr>
+                    <tr bgcolor="#F1F4F8"> 
+                      <td colspan="2"><img src="ir_prox_sensors.php_files/line2_002.gif" height="5" width="100%"></td>
+                    </tr>
+                    <tr bgcolor="#F1F4F8"> 
+                      <td colspan="2"><font size="2"> 
+                        Dear Sir,<br><br>I have seen the circuit diagram
+ and functioning of Contactless digital tachometer. I found it very 
+interesting. I attempted to make the circuit of IR proximity sensor 
+given therein, however, I faced certain difficulties. Would you kind 
+help me on the following points:<br><br>1. Whether the IR LED being used
+ for the sender and receiver is the same. If yes can you kindly provide 
+more details about it and the source from where it could be purchased.<br>2.
+ I purchased two different IR LEDs as the sender and receiver from the 
+market and tried to make the circuit. I found that instead of increase 
+in potential drop across the LED, there is decrease in the potential 
+drop and the circuit does not work.<br><br>I shall greatly appreciate receiving your help in this matter.<br><br>With regards,<br><br>Yours sincerely,<br><br>Nikhil Vadera, Jodhpur                        <br>
+                                                </font></td>
+                    </tr>
+                  </tbody></table></td>
+              </tr>
+            </tbody></table></td>
+        </tr>
+      </tbody></table></td>
+  </tr>
+</tbody></table>
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+  <tbody><tr>
+    <td><img src="ir_prox_sensors.php_files/line2_002.gif" height="5" width="100%"></td>
+  </tr>
+</tbody></table>
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+  <tbody><tr> 
+    <td bgcolor=""><table width="100%" border="0" cellpadding="4" cellspacing="0">
+        <tbody><tr> 
+          <td valign="top" width="20%" bgcolor="#AFC2E0"><font size="1">Posted 
+            by:<br>
+            <strong> <font size="2" color="#003399"> </font><font size="2"> <a href="http://www.ikalogic.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=33964">bluedragon_raj            </a></font></strong><br>
+            on: 
+            24 Sep 2011            </font></td>
+          <td valign="top" width="80%" bgcolor="#F1F4F8">
+<table width="100%" border="0" cellpadding="3" cellspacing="3">
+              <tbody><tr>
+                <td><table width="100%" bgcolor="#F1F4F8" border="0" cellpadding="0" cellspacing="0">
+                    <tbody><tr> 
+                      <td width="93%"><font size="2"> <strong> <img src="ir_prox_sensors.php_files/a3_002.gif" height="9" width="8"> 
+                        </strong> 
+                        <a href="http://www.ikalogic.com/phpBB3/viewtopic.php?f=16&amp;start=105&amp;t=12#p6952">urgent</a>                         </font></td>
+                      <td nowrap="nowrap" width="7%"><div align="center"><font size="1">[<a href="http://www.ikalogic.com/phpBB3/posting.php?mode=quote&amp;f=16&amp;p=6952"><strong>'Quote</strong></a> 
+                          ] </font></div></td>
+                    </tr>
+                    <tr bgcolor="#F1F4F8"> 
+                      <td colspan="2"><img src="ir_prox_sensors.php_files/line2_002.gif" height="5" width="100%"></td>
+                    </tr>
+                    <tr bgcolor="#F1F4F8"> 
+                      <td colspan="2"><font size="2"> 
+                        hello sir,<br>          before viewing this 
+websitew, i had done the same project using a 741, but i was geting the 
+output as 1.7 volts continuosly and the led connectd to the non 
+inverting terminal had no affect on the output voltage... i have to 
+submit the project by next week.. cud u please explain y doesnt it work 
+with 741 as comparator? please reply its urgent..                       
+ <br>
+                                                </font></td>
+                    </tr>
+                  </tbody></table></td>
+              </tr>
+            </tbody></table></td>
+        </tr>
+      </tbody></table></td>
+  </tr>
+</tbody></table>
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+  <tbody><tr>
+    <td><img src="ir_prox_sensors.php_files/line2_002.gif" height="5" width="100%"></td>
+  </tr>
+</tbody></table>
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+  <tbody><tr> 
+    <td bgcolor=""><table width="100%" border="0" cellpadding="4" cellspacing="0">
+        <tbody><tr> 
+          <td valign="top" width="20%" bgcolor="#AFC2E0"><font size="1">Posted 
+            by:<br>
+            <strong> <font size="2" color="#003399"> </font><font size="2"> <a href="http://www.ikalogic.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=32520">venkateshmanchali            </a></font></strong><br>
+            on: 
+            28 Jul 2011            </font></td>
+          <td valign="top" width="80%" bgcolor="#F1F4F8">
+<table width="100%" border="0" cellpadding="3" cellspacing="3">
+              <tbody><tr>
+                <td><table width="100%" bgcolor="#F1F4F8" border="0" cellpadding="0" cellspacing="0">
+                    <tbody><tr> 
+                      <td width="93%"><font size="2"> <strong> <img src="ir_prox_sensors.php_files/a3_002.gif" height="9" width="8"> 
+                        </strong> 
+                        <a href="http://www.ikalogic.com/phpBB3/viewtopic.php?f=16&amp;start=0&amp;t=12#p6621">Re: Infra-Red proximity sensors PART 1</a>                         </font></td>
+                      <td nowrap="nowrap" width="7%"><div align="center"><font size="1">[<a href="http://www.ikalogic.com/phpBB3/posting.php?mode=quote&amp;f=16&amp;p=6621"><strong>'Quote</strong></a> 
+                          ] </font></div></td>
+                    </tr>
+                    <tr bgcolor="#F1F4F8"> 
+                      <td colspan="2"><img src="ir_prox_sensors.php_files/line2_002.gif" height="5" width="100%"></td>
+                    </tr>
+                    <tr bgcolor="#F1F4F8"> 
+                      <td colspan="2"><font size="2"> 
+                        <br><table width="98%" align="center" bgcolor="#E5E5E5" border="0" cellpadding="5" cellspacing="1"><tbody><tr><td bgcolor="#CCCCCC"><i><font size="1"><u><b>Quoting Messy Sachu:</b></u> Hello sir,<br><br>I used the 741 opamp to build this circuit.<br>But when i connect the output to a transistor it wont switch as required.<br>I read that 741 is NOT TTL compatible.<br>Is the transistor not switching because of this reason or is it because i am too dumb to use it??</font></i></td></tr></tbody></table><br><br><!-- s:) --><img src="ir_prox_sensors.php_files/icon_smile.gif" alt=":)" title="Smile"><!-- s:) --> you are not too dumb to use it.<br>Well, yes 741 is not TTL compatible, you might want to use a OP07 if LM358 is not available.                        <br>
+                                                </font></td>
+                    </tr>
+                  </tbody></table></td>
+              </tr>
+            </tbody></table></td>
+        </tr>
+      </tbody></table></td>
+  </tr>
+</tbody></table>
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+  <tbody><tr>
+    <td><img src="ir_prox_sensors.php_files/line2_002.gif" height="5" width="100%"></td>
+  </tr>
+</tbody></table>
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+  <tbody><tr> 
+    <td bgcolor=""><table width="100%" border="0" cellpadding="4" cellspacing="0">
+        <tbody><tr> 
+          <td valign="top" width="20%" bgcolor="#AFC2E0"><font size="1">Posted 
+            by:<br>
+            <strong> <font size="2" color="#003399"> </font><font size="2"> <a href="http://www.ikalogic.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=31887">arpit jain            </a></font></strong><br>
+            on: 
+            27 Jun 2011            </font></td>
+          <td valign="top" width="80%" bgcolor="#F1F4F8">
+<table width="100%" border="0" cellpadding="3" cellspacing="3">
+              <tbody><tr>
+                <td><table width="100%" bgcolor="#F1F4F8" border="0" cellpadding="0" cellspacing="0">
+                    <tbody><tr> 
+                      <td width="93%"><font size="2"> <strong> <img src="ir_prox_sensors.php_files/a3_002.gif" height="9" width="8"> 
+                        </strong> 
+                        <a href="http://www.ikalogic.com/phpBB3/viewtopic.php?f=16&amp;start=0&amp;t=12#p6486">Infra-Red proximity sensors PART 1</a>                         </font></td>
+                      <td nowrap="nowrap" width="7%"><div align="center"><font size="1">[<a href="http://www.ikalogic.com/phpBB3/posting.php?mode=quote&amp;f=16&amp;p=6486"><strong>'Quote</strong></a> 
+                          ] </font></div></td>
+                    </tr>
+                    <tr bgcolor="#F1F4F8"> 
+                      <td colspan="2"><img src="ir_prox_sensors.php_files/line2_002.gif" height="5" width="100%"></td>
+                    </tr>
+                    <tr bgcolor="#F1F4F8"> 
+                      <td colspan="2"><font size="2"> 
+                        hey thanks<br>     what i think if we use a pot of 1k instead of r5 we can make variable range proximity.<br>i have not tested that but if i m right this can work.<br>please check and update me.                        <br>
+                                                </font></td>
+                    </tr>
+                  </tbody></table></td>
+              </tr>
+            </tbody></table></td>
+        </tr>
+      </tbody></table></td>
+  </tr>
+</tbody></table>
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+  <tbody><tr>
+    <td><img src="ir_prox_sensors.php_files/line2_002.gif" height="5" width="100%"></td>
+  </tr>
+</tbody></table>
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+  <tbody><tr> 
+    <td bgcolor=""><table width="100%" border="0" cellpadding="4" cellspacing="0">
+        <tbody><tr> 
+          <td valign="top" width="20%" bgcolor="#AFC2E0"><font size="1">Posted 
+            by:<br>
+            <strong> <font size="2" color="#003399"> </font><font size="2"> <a href="http://www.ikalogic.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=30608">messy sachu            </a></font></strong><br>
+            on: 
+            25 Jun 2011            </font></td>
+          <td valign="top" width="80%" bgcolor="#F1F4F8">
+<table width="100%" border="0" cellpadding="3" cellspacing="3">
+              <tbody><tr>
+                <td><table width="100%" bgcolor="#F1F4F8" border="0" cellpadding="0" cellspacing="0">
+                    <tbody><tr> 
+                      <td width="93%"><font size="2"> <strong> <img src="ir_prox_sensors.php_files/a3_002.gif" height="9" width="8"> 
+                        </strong> 
+                        <a href="http://www.ikalogic.com/phpBB3/viewtopic.php?f=16&amp;start=0&amp;t=12#p6482">Infra-Red proximity sensors PART 1</a>                         </font></td>
+                      <td nowrap="nowrap" width="7%"><div align="center"><font size="1">[<a href="http://www.ikalogic.com/phpBB3/posting.php?mode=quote&amp;f=16&amp;p=6482"><strong>'Quote</strong></a> 
+                          ] </font></div></td>
+                    </tr>
+                    <tr bgcolor="#F1F4F8"> 
+                      <td colspan="2"><img src="ir_prox_sensors.php_files/line2_002.gif" height="5" width="100%"></td>
+                    </tr>
+                    <tr bgcolor="#F1F4F8"> 
+                      <td colspan="2"><font size="2"> 
+                        Hello sir,<br><br>I used the 741 opamp to build this circuit.<br>But when i connect the output to a transistor it wont switch as required.<br>I read that 741 is NOT TTL compatible.<br>Is the transistor not switching because of this reason or is it because i am too dumb to use it??                        <br>
+                                                </font></td>
+                    </tr>
+                  </tbody></table></td>
+              </tr>
+            </tbody></table></td>
+        </tr>
+      </tbody></table></td>
+  </tr>
+</tbody></table>
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+  <tbody><tr>
+    <td><img src="ir_prox_sensors.php_files/line2_002.gif" height="5" width="100%"></td>
+  </tr>
+</tbody></table>
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+  <tbody><tr> 
+    <td bgcolor=""><table width="100%" border="0" cellpadding="4" cellspacing="0">
+        <tbody><tr> 
+          <td valign="top" width="20%" bgcolor="#AFC2E0"><font size="1">Posted 
+            by:<br>
+            <strong> <font size="2" color="#003399"> </font><font size="2"> <a href="http://www.ikalogic.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=31831">aira87            </a></font></strong><br>
+            on: 
+            24 Jun 2011            </font></td>
+          <td valign="top" width="80%" bgcolor="#F1F4F8">
+<table width="100%" border="0" cellpadding="3" cellspacing="3">
+              <tbody><tr>
+                <td><table width="100%" bgcolor="#F1F4F8" border="0" cellpadding="0" cellspacing="0">
+                    <tbody><tr> 
+                      <td width="93%"><font size="2"> <strong> <img src="ir_prox_sensors.php_files/a3_002.gif" height="9" width="8"> 
+                        </strong> 
+                        <a href="http://www.ikalogic.com/phpBB3/viewtopic.php?f=16&amp;start=0&amp;t=12#p6480">Infra-Red proximity sensors PART 1</a>                         </font></td>
+                      <td nowrap="nowrap" width="7%"><div align="center"><font size="1">[<a href="http://www.ikalogic.com/phpBB3/posting.php?mode=quote&amp;f=16&amp;p=6480"><strong>'Quote</strong></a> 
+                          ] </font></div></td>
+                    </tr>
+                    <tr bgcolor="#F1F4F8"> 
+                      <td colspan="2"><img src="ir_prox_sensors.php_files/line2_002.gif" height="5" width="100%"></td>
+                    </tr>
+                    <tr bgcolor="#F1F4F8"> 
+                      <td colspan="2"><font size="2"> 
+                        Hi, Im a student and doing my final year 
+project.my project is to design and build an energy efficient classroom 
+electrical system. So, i have implement a PIR motion sensor in the 
+classroom to control the use of light. i also have put a kwh meter to 
+check the usage of the electricity everyday. Now the problem is, i would
+ like to use microcontroller to generate the result as the programmed 
+you create above "Software based ambient light detection". I hope you 
+can help me                        <br>
+                                                </font></td>
+                    </tr>
+                  </tbody></table></td>
+              </tr>
+            </tbody></table></td>
+        </tr>
+      </tbody></table></td>
+  </tr>
+</tbody></table>
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+  <tbody><tr>
+    <td><img src="ir_prox_sensors.php_files/line2_002.gif" height="5" width="100%"></td>
+  </tr>
+</tbody></table>
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+  <tbody><tr> 
+    <td bgcolor=""><table width="100%" border="0" cellpadding="4" cellspacing="0">
+        <tbody><tr> 
+          <td valign="top" width="20%" bgcolor="#AFC2E0"><font size="1">Posted 
+            by:<br>
+            <strong> <font size="2" color="#003399"> </font><font size="2"> <a href="http://www.ikalogic.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=2"> 
+<img src="ir_prox_sensors.php_files/file.jpg" alt="User avatar" width="80" border="0">            <br>ikalogic            </a></font></strong><br>
+            on: 
+            29 Mar 2011            </font></td>
+          <td valign="top" width="80%" bgcolor="#F1F4F8">
+<table width="100%" border="0" cellpadding="3" cellspacing="3">
+              <tbody><tr>
+                <td><table width="100%" bgcolor="#F1F4F8" border="0" cellpadding="0" cellspacing="0">
+                    <tbody><tr> 
+                      <td width="93%"><font size="2"> <strong> <img src="ir_prox_sensors.php_files/a3_002.gif" height="9" width="8"> 
+                        </strong> 
+                        <a href="http://www.ikalogic.com/phpBB3/viewtopic.php?f=16&amp;start=0&amp;t=12#p6181">Re: Infra-Red proximity sensors PART 1</a>                         </font></td>
+                      <td nowrap="nowrap" width="7%"><div align="center"><font size="1">[<a href="http://www.ikalogic.com/phpBB3/posting.php?mode=quote&amp;f=16&amp;p=6181"><strong>'Quote</strong></a> 
+                          ] </font></div></td>
+                    </tr>
+                    <tr bgcolor="#F1F4F8"> 
+                      <td colspan="2"><img src="ir_prox_sensors.php_files/line2_002.gif" height="5" width="100%"></td>
+                    </tr>
+                    <tr bgcolor="#F1F4F8"> 
+                      <td colspan="2"><font size="2"> 
+                        <br><table width="98%" align="center" bgcolor="#E5E5E5" border="0" cellpadding="5" cellspacing="1"><tbody><tr><td bgcolor="#CCCCCC"><i><font size="1"><u><b>Quoting proeng:</b></u>
+ Hey, you say: "It doesn't matter how big is the difference between the 
++ve and -ve inputs, even a 0.0001 volts difference will be detected, and
+ the the output will swing to 0v or 5v according to which input has a 
+higher voltage."(For the op-amp)<br><br><br>In the electrical 
+engineering textbook, which I use it says that v(out) = V(+) - V(-). In 
+other words the output voltage from the opamp depends on the difference 
+between the voltages at the terminals.<br><br>Can you please refer me to some website where I can get things cleared up.<br><br><br>Thanks</font></i></td></tr></tbody></table><br><br>Hello proeng,<br><br>yes, but no! i am explaining!<br><br>yes :  v(out) = V(+) - V(-), but no, not only, you are missing the gain!<br><br>the correct formula is  <br><br><br><table width="98%" align="center" bgcolor="#BBBBBB" border="0" cellpadding="5" cellspacing="1"><tbody><tr><td bgcolor="#ffffff"><font size="1" color="#009933">v(out) = A * [V(+) - V(-)]</font></td></tr></tbody></table><br><br><br>Where A is the gain.<br><br>Gain is set using feedback resistors like in this image: <br><a href="http://www.ikalogic.com/phpBB3/viewtopic.php?f=16&amp;start=0&amp;t=12#p6181"><img alt="Full size image available in the full-featured forum" src="ir_prox_sensors.php_files/300px-Op-Amp_Inverting_Amplifier.png" width="200" border="0"></a><br><br><br><br>In
+ case there are no resistors (which is our case), the gain will be 
+theoretically infinite. Since there is nothing such as infinite gain, 
+the Op Amp will amplify till it reaches it's maximum supply voltages. 
+This is called saturation.<br><br>Hope this clears out your doubts, in case it does not, continue digging here:<br><!-- m --><a class="postlink" href="http://en.wikipedia.org/wiki/Operational_amplifier">http://en.wikipedia.org/wiki/Operational_amplifier</a><!-- m --><br><!-- m --><a class="postlink" href="http://en.wikipedia.org/wiki/Comparator">http://en.wikipedia.org/wiki/Comparator</a><!-- m -->                        <br>
+                                                </font></td>
+                    </tr>
+                  </tbody></table></td>
+              </tr>
+            </tbody></table></td>
+        </tr>
+      </tbody></table></td>
+  </tr>
+</tbody></table>
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+  <tbody><tr>
+    <td><img src="ir_prox_sensors.php_files/line2_002.gif" height="5" width="100%"></td>
+  </tr>
+</tbody></table>
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+  <tbody><tr> 
+    <td bgcolor=""><table width="100%" border="0" cellpadding="4" cellspacing="0">
+        <tbody><tr> 
+          <td valign="top" width="20%" bgcolor="#AFC2E0"><font size="1">Posted 
+            by:<br>
+            <strong> <font size="2" color="#003399"> </font><font size="2"> <a href="http://www.ikalogic.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=29833">proeng            </a></font></strong><br>
+            on: 
+            29 Mar 2011            </font></td>
+          <td valign="top" width="80%" bgcolor="#F1F4F8">
+<table width="100%" border="0" cellpadding="3" cellspacing="3">
+              <tbody><tr>
+                <td><table width="100%" bgcolor="#F1F4F8" border="0" cellpadding="0" cellspacing="0">
+                    <tbody><tr> 
+                      <td width="93%"><font size="2"> <strong> <img src="ir_prox_sensors.php_files/a3_002.gif" height="9" width="8"> 
+                        </strong> 
+                        <a href="http://www.ikalogic.com/phpBB3/viewtopic.php?f=16&amp;start=0&amp;t=12#p6180">Infra-Red proximity sensors PART 1</a>                         </font></td>
+                      <td nowrap="nowrap" width="7%"><div align="center"><font size="1">[<a href="http://www.ikalogic.com/phpBB3/posting.php?mode=quote&amp;f=16&amp;p=6180"><strong>'Quote</strong></a> 
+                          ] </font></div></td>
+                    </tr>
+                    <tr bgcolor="#F1F4F8"> 
+                      <td colspan="2"><img src="ir_prox_sensors.php_files/line2_002.gif" height="5" width="100%"></td>
+                    </tr>
+                    <tr bgcolor="#F1F4F8"> 
+                      <td colspan="2"><font size="2"> 
+                        Hey, you say: "It doesn't matter how big is the 
+difference between the +ve and -ve inputs, even a 0.0001 volts 
+difference will be detected, and the the output will swing to 0v or 5v 
+according to which input has a higher voltage."(For the op-amp)<br><br><br>In
+ the electrical engineering textbook, which I use it says that v(out) = 
+V(+) - V(-). In other words the output voltage from the opamp depends on
+ the difference between the voltages at the terminals.<br><br>Can you please refer me to some website where I can get things cleared up.<br><br><br>Thanks                        <br>
+                                                </font></td>
+                    </tr>
+                  </tbody></table></td>
+              </tr>
+            </tbody></table></td>
+        </tr>
+      </tbody></table></td>
+  </tr>
+</tbody></table>
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+  <tbody><tr>
+    <td><img src="ir_prox_sensors.php_files/line2_002.gif" height="5" width="100%"></td>
+  </tr>
+</tbody></table>
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+  <tbody><tr> 
+    <td bgcolor=""><table width="100%" border="0" cellpadding="4" cellspacing="0">
+        <tbody><tr> 
+          <td valign="top" width="20%" bgcolor="#AFC2E0"><font size="1">Posted 
+            by:<br>
+            <strong> <font size="2" color="#003399"> </font><font size="2"> <a href="http://www.ikalogic.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=26981">jhayvee            </a></font></strong><br>
+            on: 
+            11 Dec 2010            </font></td>
+          <td valign="top" width="80%" bgcolor="#F1F4F8">
+<table width="100%" border="0" cellpadding="3" cellspacing="3">
+              <tbody><tr>
+                <td><table width="100%" bgcolor="#F1F4F8" border="0" cellpadding="0" cellspacing="0">
+                    <tbody><tr> 
+                      <td width="93%"><font size="2"> <strong> <img src="ir_prox_sensors.php_files/a3_002.gif" height="9" width="8"> 
+                        </strong> 
+                        <a href="http://www.ikalogic.com/phpBB3/viewtopic.php?f=16&amp;start=0&amp;t=12#p5835">Infra-Red proximity sensors PART 1</a>                         </font></td>
+                      <td nowrap="nowrap" width="7%"><div align="center"><font size="1">[<a href="http://www.ikalogic.com/phpBB3/posting.php?mode=quote&amp;f=16&amp;p=5835"><strong>'Quote</strong></a> 
+                          ] </font></div></td>
+                    </tr>
+                    <tr bgcolor="#F1F4F8"> 
+                      <td colspan="2"><img src="ir_prox_sensors.php_files/line2_002.gif" height="5" width="100%"></td>
+                    </tr>
+                    <tr bgcolor="#F1F4F8"> 
+                      <td colspan="2"><font size="2"> 
+                        I really need the first design. However, I use 
+LM741 instead of LM358. I grounded the pin 4 of LM741 and use pin 2, 3, 6
+ and 7 for the other connections. the sensor didn't work and I noticed 
+that the IR-LED for D1 doesn't emit light. How can I fix this? <!-- s:?: --><img src="ir_prox_sensors.php_files/icon_question_002.gif" alt=":?:" title="Question"><!-- s:?: -->  Please help me!! Tnx!!   <!-- s:cry: --><img src="ir_prox_sensors.php_files/icon_cry_002.gif" alt=":cry:" title="Crying or Very sad"><!-- s:cry: --> <!-- s:roll: --><img src="ir_prox_sensors.php_files/icon_rolleyes.gif" alt=":roll:" title="Rolling Eyes"><!-- s:roll: -->                        <br>
+                                                </font></td>
+                    </tr>
+                  </tbody></table></td>
+              </tr>
+            </tbody></table></td>
+        </tr>
+      </tbody></table></td>
+  </tr>
+</tbody></table>
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+  <tbody><tr>
+    <td><img src="ir_prox_sensors.php_files/line2_002.gif" height="5" width="100%"></td>
+  </tr>
+</tbody></table>
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+  <tbody><tr> 
+    <td bgcolor=""><table width="100%" border="0" cellpadding="4" cellspacing="0">
+        <tbody><tr> 
+          <td valign="top" width="20%" bgcolor="#AFC2E0"><font size="1">Posted 
+            by:<br>
+            <strong> <font size="2" color="#003399"> </font><font size="2"> <a href="http://www.ikalogic.com/phpBB3/memberlist.php?mode=viewprofile&amp;u=26972">triggerunleashed89            </a></font></strong><br>
+            on: 
+            11 Dec 2010            </font></td>
+          <td valign="top" width="80%" bgcolor="#F1F4F8">
+<table width="100%" border="0" cellpadding="3" cellspacing="3">
+              <tbody><tr>
+                <td><table width="100%" bgcolor="#F1F4F8" border="0" cellpadding="0" cellspacing="0">
+                    <tbody><tr> 
+                      <td width="93%"><font size="2"> <strong> <img src="ir_prox_sensors.php_files/a3_002.gif" height="9" width="8"> 
+                        </strong> 
+                        <a href="http://www.ikalogic.com/phpBB3/viewtopic.php?f=16&amp;start=0&amp;t=12#p5833">Infra-Red proximity sensors PART 1</a>                         </font></td>
+                      <td nowrap="nowrap" width="7%"><div align="center"><font size="1">[<a href="http://www.ikalogic.com/phpBB3/posting.php?mode=quote&amp;f=16&amp;p=5833"><strong>'Quote</strong></a> 
+                          ] </font></div></td>
+                    </tr>
+                    <tr bgcolor="#F1F4F8"> 
+                      <td colspan="2"><img src="ir_prox_sensors.php_files/line2_002.gif" height="5" width="100%"></td>
+                    </tr>
+                    <tr bgcolor="#F1F4F8"> 
+                      <td colspan="2"><font size="2"> 
+                        hi.first of all im so glad ive found this 
+site.ive just joind 2day.! anyway i am planning to do a project based on
+ IR proximity sensor.but i stay in a place(DUBAI) where getting stuff is
+ not easy.so sir,i was wondering whether i could get the low range 
+design 1 circuit assembled,so that i could be able to understand things 
+better.!                        <br>
+                                                </font></td>
+                    </tr>
+                  </tbody></table></td>
+              </tr>
+            </tbody></table></td>
+        </tr>
+      </tbody></table></td>
+  </tr>
+</tbody></table>
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+  <tbody><tr>
+    <td><img src="ir_prox_sensors.php_files/line2_002.gif" height="5" width="100%"></td>
+  </tr>
+</tbody></table>
+<table width="659" bgcolor="#333333" border="0" cellpadding="1" cellspacing="1">
+  <tbody><tr> 
+    <td bgcolor="#DAE2F1">
+        <table width="100%" border="0" cellpadding="0" cellspacing="0">
+          <tbody><tr> 
+            
+          <td> <strong><font face="Times New Roman" size="5" color="#000066"><a name="mini_forum" id="mini_forum"></a></font></strong>
+                        <form abinetype="unknown" abineprocessed="true" aburl="phpBB3/posting.php?mode=reply&amp;f=16&amp;sid=a71e99cf59d4f9186422b00c64174cda&amp;t=12" abhost="ikalogic.com" abaction="phpBB3/posting.php?mode=reply&amp;f=16&amp;sid=a71e99cf59d4f9186422b00c64174cda&amp;t=12" abhfe="1" id="postform" method="post" action="phpBB3/posting.php?mode=reply&amp;f=16&amp;sid=a71e99cf59d4f9186422b00c64174cda&amp;t=12" enctype="multipart/form-data">
+                  
+                
+              <table width="100%" border="0" cellpadding="0" cellspacing="0">
+                <tbody><tr> 
+                  <td><strong><font size="2" color="#003333">POST A REPLY</font><font face="Times New Roman" size="5" color="#000066"><br>
+                    <img src="ir_prox_sensors.php_files/line2_002.gif" height="5" width="659"></font></strong></td>
+                </tr>
+                <tr> 
+                  <td><font size="2">&nbsp;Subject:</font> <input abinetype="" abinelabel="Subject" abineprocessed="true" name="subject" id="subject" size="105" maxlength="64" tabindex="2" value="Infra-Red proximity sensors PART 1" class="inputbox autowidth" type="text"></td>
+                </tr>
+                <tr> 
+                  <td>
+                    <table width="100%" border="0" cellpadding="0" cellspacing="0">
+                      <tbody><tr> 
+                        <td height="25" nowrap="nowrap" valign="middle" width="15%"><font size="2">&nbsp;Insert 
+                          BB code: </font></td>
+                        <td height="25" valign="middle" width="85%"><font size="2"><a href="#mini_forum" onclick="insert_text(':D', true); return false;"><img src="ir_prox_sensors.php_files/icon_biggrin.gif" alt=":D" title="Very Happy" height="15" width="15" border="0"></a> 
+                          <a href="#mini_forum" onclick="insert_text(':)', true); return false;"><img src="ir_prox_sensors.php_files/icon_smile_002.gif" alt=":)" title="Smile" height="15" width="15" border="0"></a> 
+                          <a href="#mini_forum" onclick="insert_text(':(', true); return false;"><img src="ir_prox_sensors.php_files/icon_sad.gif" alt=":(" title="Sad" height="15" width="15" border="0"></a> 
+                          <a href="#mini_forum" onclick="insert_text(':o', true); return false;"><img src="ir_prox_sensors.php_files/icon_surprised.gif" alt=":o" title="Surprised" height="15" width="15" border="0"> 
+                          </a> <a href="#mini_forum" onclick="insert_text(':shock:', true); return false;"><img src="ir_prox_sensors.php_files/icon_eek.gif" alt=":shock:" title="Shocked" height="15" width="15" border="0"></a> 
+                          <a href="#mini_forum" onclick="insert_text(':?', true); return false;"><img src="ir_prox_sensors.php_files/icon_confused.gif" alt=":?" title="Confused" height="15" width="15" border="0"></a> 
+                          <a href="#mini_forum" onclick="insert_text('8)', true); return false;"><img src="ir_prox_sensors.php_files/icon_cool.gif" alt="8)" title="Cool" height="15" width="15" border="0"></a> 
+                          <a href="#mini_forum" onclick="insert_text(':lol:', true); return false;"><img src="ir_prox_sensors.php_files/icon_lol.gif" alt=":lol:" title="Laughing" height="15" width="15" border="0"> 
+                          </a> <a href="#mini_forum" onclick="insert_text(':x', true); return false;"><img src="ir_prox_sensors.php_files/icon_mad.gif" alt=":x" title="Mad" height="15" width="15" border="0"></a> 
+                          <a href="#mini_forum" onclick="insert_text(':P', true); return false;"><img src="ir_prox_sensors.php_files/icon_razz.gif" alt=":P" title="Razz" height="15" width="15" border="0"></a> 
+                          <a href="#mini_forum" onclick="insert_text(':oops:', true); return false;"><img src="ir_prox_sensors.php_files/icon_redface.gif" alt=":oops:" title="Embarassed" height="15" width="15" border="0"></a> 
+                          <a href="#mini_forum" onclick="insert_text(':cry:', true); return false;"><img src="ir_prox_sensors.php_files/icon_cry.gif" alt=":cry:" title="Crying or Very sad" height="15" width="15" border="0"> 
+                          </a> <a href="#mini_forum" onclick="insert_text(':evil:', true); return false;"><img src="ir_prox_sensors.php_files/icon_evil.gif" alt=":evil:" title="Evil or Very Mad" height="15" width="15" border="0"></a> 
+                          <a href="#mini_forum" onclick="insert_text(':twisted:', true); return false;"><img src="ir_prox_sensors.php_files/icon_twisted.gif" alt=":twisted:" title="Twisted Evil" height="15" width="15" border="0"></a> 
+                          <a href="#mini_forum" onclick="insert_text(':roll:', true); return false;"><img src="ir_prox_sensors.php_files/icon_rolleyes_002.gif" alt=":roll:" title="Rolling Eyes" height="15" width="15" border="0"></a> 
+                          <a href="#mini_forum" onclick="insert_text(':wink:', true); return false;"><img src="ir_prox_sensors.php_files/icon_wink.gif" alt=":wink:" title="Wink" height="15" width="15" border="0"> 
+                          </a> <a href="#mini_forum" onclick="insert_text(':!:', true); return false;"><img src="ir_prox_sensors.php_files/icon_exclaim.gif" alt=":!:" title="Exclamation" height="15" width="15" border="0"></a> 
+                          <a href="#mini_forum" onclick="insert_text(':?:', true); return false;"><img src="ir_prox_sensors.php_files/icon_question.gif" alt=":?:" title="Question" height="15" width="15" border="0"></a> 
+                          <a href="#mini_forum" onclick="insert_text(':idea:', true); return false;"><img src="ir_prox_sensors.php_files/icon_idea.gif" alt=":idea:" title="Idea" height="15" width="15" border="0"></a> 
+                          <a href="#mini_forum" onclick="insert_text(':arrow:', true); return false;"><img src="ir_prox_sensors.php_files/icon_arrow.gif" alt=":arrow:" title="Arrow" height="15" width="15" border="0"> 
+                          </a> <a href="#mini_forum" onclick="insert_text(':|', true); return false;"><img src="ir_prox_sensors.php_files/icon_neutral.gif" alt=":|" title="Neutral" height="15" width="15" border="0"></a> 
+                          <a href="#mini_forum" onclick="insert_text(':mrgreen:', true); return false;"><img src="ir_prox_sensors.php_files/icon_mrgreen.gif" alt=":mrgreen:" title="Mr. Green" height="15" width="15" border="0"></a> 
+                          </font></td>
+                      </tr>
+                      <tr valign="middle"> 
+                        <td height="25" nowrap="nowrap"><font size="2">&nbsp;Text Formating:</font></td>
+                        <td height="25"><font size="2"><a href="#mini_forum" onclick="insert_text('[b][/b]', true); return false;"><img src="ir_prox_sensors.php_files/bold.gif" height="19" width="31" border="0"></a><a href="#"> 
+                          </a><a href="#mini_forum" onclick="insert_text('[i][/i]', true); return false;"><img src="ir_prox_sensors.php_files/italic.gif" height="19" width="28" border="0"></a><a href="#"> 
+                          </a><a href="#mini_forum" onclick="insert_text('[u][/u]', true); return false;"><img src="ir_prox_sensors.php_files/underline.gif" height="19" width="29" border="0"></a><a href="#"> 
+                          </a><a href="#mini_forum" onclick="insert_text('[quote][/quote]', true); return false;"><img src="ir_prox_sensors.php_files/quote.gif" height="19" width="58" border="0"></a><a href="#"> 
+                          </a><a href="#mini_forum" onclick="insert_text('[code][/code]', true); return false;"><img src="ir_prox_sensors.php_files/code.gif" height="19" width="52" border="0"></a><a href="#"> 
+                          </a><a href="#mini_forum" onclick="insert_text('[img][/img]', true); return false;"><img src="ir_prox_sensors.php_files/img.gif" height="19" width="41" border="0"></a><a href="#"> 
+                          </a><a href="#mini_forum" onclick="insert_text('[url][/url]', true); return false;"><img src="ir_prox_sensors.php_files/url.gif" height="19" width="40" border="0"></a><a href="#"> 
+                          </a><a href="#"> </a></font></td>
+                      </tr>
+                    </tbody></table>
+                   </td>
+                </tr>
+                <tr> 
+                  <td valign="top">&nbsp;<textarea abinetype="/message" abinelabel="Insert BB code Text Formating" abineprocessed="true" name="message" id="message" rows="15" cols="90" tabindex="3"></textarea> 
+                    <div align="center"> </div></td>
+                </tr>
+                <tr> 
+                  <td><div align="center"> 
+                      <input accesskey="s" tabindex="6" name="post" value="Submit" class="button1" type="submit">
+                      <br>
+                      <font size="2"> 
+                      <input abinetype="" abinelabel="Notify me when a reply is posted" abineprocessed="true" name="notify" id="notify" checked="checked" type="checkbox">
+                      Notify me when a reply is posted 
+                      <input name="lastclick" value="1325441390" type="hidden">
+                      <input name="creation_time" value="1325441390" type="hidden">
+                      <input name="form_token" value="9e73f3c76733519c192caf75e135509e1748966f" type="hidden">
+                      </font> </div></td>
+                </tr>
+              </tbody></table>
+            </form></td>
+          </tr>
+        </tbody></table></td>
+  </tr>
+</tbody></table>
+              </font></em></font></em></font></em></font></em></font></em></font></em></font></em></font></em></font> 
+            </div></td>
+        </tr>
+      </tbody></table> </td>
+  </tr> 
+</tbody></table>
+        
+<div align="center"> <font size="2"><em><strong><font size="1" color="#CC0000">Unless 
+  mentioned, all content is written and designed by Ibrahim Kamal, copying is 
+  prohibited and unethical </font></strong></em></font> </div>
+<div align="center"> 
+   
+
+
+<title>ikalogic.com: Electronics and Robotics related projects.</title>
+<meta name="Description" content="Ikalogic's repository of projects! You will find mostly electronics and robotics related stuff.">
+<meta name="Keywords" content="electronics,robotics,pcb,free,diagram,schematic,idea,problem,home made,hobby,projects,picture,tutorial,learn,how to,understand,articles">
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<style>BODY {
+	 FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+	 
+
+
+}
+A:Link {color: #004A95; text-decoration: none; }
+
+A:Visited {color: #004A95; text-decoration: none; }
+
+A:Active {color: #000066; text-decoration: underline; }
+
+A:Hover {color: #0066CC; text-decoration: underline; }</style>
+
+
+
+<div align="center"><font size="2"><font size="2"><font size="1"> </font></font></font> 
+  <table width="659" border="0" cellspacing="0">
+    <tbody><tr bgcolor="#FFFFFF"> 
+      <td valign="middle" bgcolor="#FFFFFF"><div align="center"><font size="2"><font size="2"><font size="2"><font size="2"><font face="Times New Roman" size="5" color="#000066"><img src="ir_prox_sensors.php_files/line2_002.gif" height="8" width="650"><br>
+          </font><a href="http://www.ikalogic.com/index.php">Home</a> | <font size="2"><font size="2"><font size="2"><font size="2"><font size="2"><font size="2"><a href="http://www.ikalogic.com/phpBB3/">Forums</a> 
+          </font></font></font>|</font></font></font><font size="2"><font size="2"><font size="2"><font size="2"><font size="2"><a href="http://www.ikalogicstore.com/"> 
+          Store</a> </font></font>|</font></font></font><a href="http://www.ikalogic.com/contact.php"> 
+          contact </a> | <a href="http://69.57.128.8/horde/imp/" target="_blank"> 
+          Check mail </a> | <a href="http://www.ikalogic.com/ika.php">About Ibrahim 
+          KAMAL </a></font></font></font></font></div>
+        <div align="center"> 
+          <noscript>
+          </noscript>
+        </div>
+        <noscript>
+        </noscript></td>
+    </tr>
+    <tr bgcolor="#FFFFFF">
+      <td valign="middle" bgcolor="#FFFFFF"><div align="center">
+          <table width="100%" border="0" cellspacing="0">
+            <tbody><tr> 
+              <td colspan="2"><div align="center"><script type="text/javascript"><!--
+google_ad_client = "pub-6530907032528013";
+/* 468x15, created 2/29/08 */
+google_ad_slot = "7219971318";
+google_ad_width = 468;
+google_ad_height = 15;
+//-->
+</script>
+<script type="text/javascript" src="ir_prox_sensors.php_files/show_ads.js">
+</script>               </div></td>
+            </tr>
+          </tbody></table> 
+          <table width="100%" border="0" cellpadding="0" cellspacing="0">
+            <tbody><tr>
+              <td><img src="ir_prox_sensors.php_files/sep2.gif" height="8" width="39"></td>
+            </tr>
+            <tr>
+              <td><div align="center"> <font size="1">All content on this site 
+                  is provided as is and without any guarantee of any kind. We 
+                  cannot be held responsible for any errors, omissions, or damages 
+                  arising out of use of information available on this web site.
+                                    </font><br>
+                </div></td>
+            </tr>
+            <tr>
+              <td><img src="ir_prox_sensors.php_files/sep2.gif" height="8" width="39"></td>
+            </tr>
+          </tbody></table>
+          <table width="100%" border="1" bordercolor="#CC0000" cellpadding="2" cellspacing="0">
+            <tbody><tr> 
+              <td><div align="center"><a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/3.0/us/"> 
+                  </a> 
+                  <table width="100%" border="0" cellpadding="0" cellspacing="2">
+                    <tbody><tr>
+                      <td width="6%"><a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/3.0/us/"><img src="ir_prox_sensors.php_files/somerights20.png" alt="Creative Commons License" style="border-width: 0pt;" border="0"></a></td>
+                      <td width="94%"><div align="center"><font size="2"><span xmlns:dc="http://purl.org/dc/elements/1.1/" href="http://purl.org/dc/dcmitype/Text" property="dc:title" rel="dc:type"><strong><font color="#CC0000">IMPORTANT 
+                          COPYRIGHT NOTE:</font></strong> Electronics and Robotics 
+                          Articles</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="http://www.ikalogic.com/" property="cc:attributionName" rel="cc:attributionURL">Ibrahim 
+                          KAMAL</a> are licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/3.0/us/">Creative 
+                          Commons Attribution-Noncommercial-No Derivative Works 
+                          3.0 United States License</a>.</font></div></td>
+                    </tr>
+                  </tbody></table>
+                  
+                </div></td>
+            </tr>
+          </tbody></table>
+      <script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script><script src="ir_prox_sensors.php_files/ga.js" type="text/javascript"></script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-3773889-1");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>     </div></td>
+    </tr>
+  </tbody></table>
+</div>
+
+
+</div>
+
+
+</div></body></html>
